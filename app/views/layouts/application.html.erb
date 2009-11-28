@@ -10,7 +10,21 @@
 <%= yield :styles %>
 </head>
 <body>
-<%= yield %>
+  <div id="singleColWpr">
+    <div id="singleCol">
+      <div id="gblNav">
+        <%= link_to 'About Us', about_us_path %>
+        <%= link_to 'Couples', about_us_path %>
+        <%= link_to 'Organizations', about_us_path %>
+        <%= link_to 'Families', about_us_path %>
+        <%= link_to 'Workshops', about_us_path %>
+        <%= link_to 'Testimonials', about_us_path %>
+        <%= link_to 'Contact', about_us_path %>
+      </div>
+      <%= image_tag 'penwood_watermark1.gif', :class => 'gblWatermark' %>
+      <%= yield %>
+    </div>
+  </div>
 <%= static_asset_javascript 'javascripts/common/global', 'cache/common/global' %>
 <%= yield :scripts %>
 </body>

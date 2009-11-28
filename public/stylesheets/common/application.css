@@ -1,0 +1,45 @@
+html, body {
+    background:#C41425;
+    font-family:Helvetica,Arial,sans-serif;
+    color:#C5351C;
+    font-size:14px;
+}
+
+a {
+    color:#C5351C;
+}
+
+#singleColWpr {
+    text-align:center;
+}
+
+#singleCol {
+    width:1083px;
+    height:575px;
+    margin:25px auto 40px auto;
+    background:#FFE6CB;
+    text-align:left;
+}
+
+#gblNav {
+    float:right;
+}
+
+.gblWatermark {
+    padding:10px 0 0 10px;
+    float:left;
+}
+
+.homeCopy {
+    clear:both;
+    padding-top:55px;
+}
+
+.homeCopy p {
+    text-align:center;
+    font-family:serif;
+    color:#666;
+    margin-left:50px;
+    margin-right:560px;
+    font-size:24px;
+}
