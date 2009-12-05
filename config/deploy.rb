@@ -6,7 +6,7 @@ set :scm, :git
 
 set :user, "penwood"
 set :use_sudo, false
-set :password, "penwd"
+set :password, "penw00d"
 set :domain, "174.143.146.192"
 server domain, :app, :web
 role :db, domain, :primary => true
@@ -18,12 +18,5 @@ namespace :deploy do
   end
 end
 
-namespace(:customs) do
-  task :config, :roles => :app do
-    
-  end
-end
-
-after "deploy:update_code", "customs:config"
 after "deploy:update_code", "deploy:migrate"
 after "deploy", "deploy:cleanup"

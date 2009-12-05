@@ -1,0 +1,77 @@
+a.nav_about-lnk {
+    background:url(/images/gbl_nav/nav_about-lnk.gif) no-repeat top left;
+    width:79px;
+    height:15px;
+    display:block;
+    position:relative;
+    float:left;
+}
+
+a.nav_about-lnk:hover {
+    background:url(/images/gbl_nav/nav_about-hover.gif) no-repeat top left;
+}
+
+a.nav_couples-lnk {
+    background:url(/images/gbl_nav/nav_couples-lnk.gif) no-repeat top left;
+    width:64px;
+    height:15px;
+    display:block;
+    position:relative;
+    float:left;
+}
+
+a.nav_couples-lnk:hover {
+    background:url(/images/gbl_nav/nav_couples-hover.gif) no-repeat top left;
+}
+
+a.nav_orgs-lnk {
+    background:url(/images/gbl_nav/nav_orgs-lnk.gif) no-repeat top left;
+    width:112px;
+    height:15px;
+    display:block;
+    position:relative;
+    float:left;
+}
+
+a.nav_orgs-lnk:hover {
+    background:url(/images/gbl_nav/nav_orgs-hover.gif) no-repeat top left;
+}
+
+a.nav_families-lnk {
+    background:url(/images/gbl_nav/nav_families-lnk.gif) no-repeat top left;
+    width:66;
+    height:15px;
+    display:block;
+    position:relative;
+    float:left;
+}
+
+a.nav_families-lnk:hover {
+    background:url(/images/gbl_nav/nav_families-hover.gif) no-repeat top left;
+}
+
+a.nav_workshops-lnk {
+    background:url(/images/gbl_nav/nav_workshops-lnk.gif) no-repeat top left;
+    width:91px;
+    height:15px;
+    display:block;
+    position:relative;
+    float:left;
+}
+
+a.nav_workshops-lnk:hover {
+    background:url(/images/gbl_nav/nav_workshops-hover.gif) no-repeat top left;
+}
+
+a.nav_contact-lnk {
+    background:url(/images/gbl_nav/nav_contact-lnk.gif) no-repeat top left;
+    width:65px;
+    height:15px;
+    display:block;
+    position:relative;
+    float:left;
+}
+
+a.nav_contact-lnk:hover {
+    background:url(/images/gbl_nav/nav_contact-hover.gif) no-repeat top left;
+}
