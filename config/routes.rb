@@ -12,6 +12,7 @@ ActionController::Routing::Routes.draw do |map|
   end
   
   map.namespace :admin do |admin|
+    admin.root :controller => 'contents'
     admin.resources :contents
   end
   

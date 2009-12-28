@@ -1,6 +1,8 @@
 <div class="homeCopy">
-  <p>Penwood specializes in working with individuals in their relationships—in organizational, family and intimate settings. Penwood's approach is based upon facilitating open-ended inquiry into each person's experience of the relationship in the moment.</p>
+  <%= cms_content_for('home_copy') %>
 </div>
+<%= link_to '', '', :class => 'homeLearnMoreButton' %>
+<div class="clear"></div>
 
 <% content_for :scripts do %>
 <%= static_asset_javascript 'javascripts/views/welcome/index', 'cache/views/welcome/index' %>

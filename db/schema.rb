@@ -9,13 +9,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091228195737) do
+ActiveRecord::Schema.define(:version => 20091228212259) do
 
   create_table "contents", :force => true do |t|
     t.integer  "page_id"
     t.text     "body"
     t.string   "title"
     t.integer  "charlimit"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "text_identifier"
+  end
+
+  create_table "pages", :force => true do |t|
+    t.string   "title"
+    t.string   "path"
+    t.integer  "parent_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -40,6 +49,7 @@ ActiveRecord::Schema.define(:version => 20091228195737) do
     t.string   "last_name"
     t.string   "phone"
     t.boolean  "admin"
+    t.boolean  "super_user"
   end
 
 end

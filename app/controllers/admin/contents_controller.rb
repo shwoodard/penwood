@@ -1,4 +1,6 @@
 class Admin::ContentsController < Admin::AdminController
+  # before_filter :require_super_user, :only => [:new, :create]
+  
   def index
     # TODO
   end
@@ -15,7 +17,7 @@ class Admin::ContentsController < Admin::AdminController
     @content = Content.new(params[:content])
     if @content.save
       flash[:notice] = 'You have successfully added a new artifact to the content management system (cms).'
-      redirect_to @content
+      redirect_to :action => 'show', :id => @content
     else
       render :action => 'new'
     end
@@ -29,7 +31,7 @@ class Admin::ContentsController < Admin::AdminController
     @content = Content.find(params[:id])
     if @content.update_attributes(params[:content])
       flash[:notice] = 'You have successfully updated an artifact in the content management system (cms).'
-      redirect_to @content
+      redirect_to :action => 'show', :id => @content
     else
       render :action => 'edit'
     end

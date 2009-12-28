@@ -1,0 +1,17 @@
+.homeCopy {
+    float:right;
+    width:395px;
+    height:350px;
+    margin-right:30px;
+}
+
+.homeCopy p {
+  line-height:20pt;
+}
+
+.homeLearnMoreButton {
+  width:358px;
+  height:53px;
+  display:block;
+  background:url(/images/home_learn-more.png) no-repeat top left;
+}

@@ -1,5 +1,5 @@
-<h1>New Content</h1>
-<% form_for @content, :url => admin_contents_path do |f| %>
+<h1>Edit Content</h1>
+<% form_for @content, :url => admin_content_path(@content) do |f| %>
 <table class="adminFormTable">
   <thead><thead>
   <tbody>
@@ -24,9 +24,9 @@
 
 
 <% content_for :scripts do %>
-<%= static_asset_javascript 'javascripts/views/admin/contents/new', 'cache/views/admin/contents/new' %>
+<%= static_asset_javascript 'javascripts/views/admin/contents/edit', 'cache/views/admin/contents/edit' %>
 <% end %>
 
 <% content_for :styles do %>
-<%= static_asset_stylesheet 'stylesheets/views/admin/contents/new', 'cache/views/admin/contents/new' %>
+<%= static_asset_stylesheet 'stylesheets/views/admin/contents/edit', 'cache/views/admin/contents/edit' %>
 <% end %>

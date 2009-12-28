@@ -7,6 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=7" />
 <%= static_asset_stylesheet 'stylesheets/common/global', 'cache/common/global' %>
+<%= stylesheet_link_tag 'common/admin' %>
 <%= yield :styles %>
 </head>
 <body>
@@ -18,6 +19,7 @@
             <a href="<%= root_path-%>"><span id="gblLogo" class="block float"></span></a>
           </div>
         </div>
+        <% if flash[:notice] %><div class="flashNotice"><%= flash[:notice] -%></div><% end %>
       <%= yield %>
       </div>
     </div>

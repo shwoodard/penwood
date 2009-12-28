@@ -1,0 +1,8 @@
+h1 {
+  padding:10px 0;
+}
+
+.adminFormTable tbody tr td {
+  vertical-align:top;
+  padding:10px;
+}

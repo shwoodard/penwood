@@ -13,3 +13,14 @@ p {
 .block {
   display:block;
 }
+
+.clear {
+    clear:both;
+    display:block;
+    font-size:0px;
+    height:1px;
+    line-height:0px;
+    margin-bottom:-1px;
+    overflow:hidden;
+    width:1px;
+}

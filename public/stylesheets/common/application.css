@@ -23,12 +23,14 @@ a {
 
 #singleColLiner {
   padding-left:12px;
+  padding-right:25px;
 }
 
 #singleCol #gblTop {
   width:918px;
   height:146px;
   background:url(/images/main-container-top.png) top left no-repeat;
+  margin-bottom:30px;
 }
 
 #singleCol #gblTop #gblTopLiner {
@@ -48,20 +50,6 @@ a {
 .gblWatermark {
     padding:10px 0 0 10px;
     float:left;
-}
-
-.homeCopy {
-    clear:both;
-    padding-top:55px;
-}
-
-.homeCopy p {
-    text-align:center;
-    font-family:serif;
-    color:#666;
-    margin-left:50px;
-    margin-right:560px;
-    font-size:24px;
 }
 
 #gblNav {
