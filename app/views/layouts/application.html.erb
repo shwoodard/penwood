@@ -12,17 +12,15 @@
 <body>
   <div id="singleColWpr">
     <div id="singleCol">
-      <div id="gblNav">
-        <%= link_to '', about_us_path, :class => 'nav_about-lnk' %>
-        <%= link_to '', about_us_path, :class => 'nav_couples-lnk' %>
-        <%= link_to '', about_us_path, :class => 'nav_orgs-lnk' %>
-        <%= link_to '', about_us_path, :class => 'nav_families-lnk' %>
-        <%= link_to '', about_us_path, :class => 'nav_workshops-lnk' %>
-        <%= link_to '', about_us_path, :class => 'nav_testimonials-lnk' %>
-        <%= link_to '', contact_path, :class => 'nav_contact-lnk' %>
-      </div>
-      <%= image_tag 'penwood_watermark1.gif', :class => 'gblWatermark' %>
+      <div id="singleColLiner">
+        <div id="gblTop">
+          <div id="gblTopLiner">
+            <a href="<%= root_path-%>"><span id="gblLogo" class="block float"></span></a>
+            <%= render :partial => 'partials/gbl_nav.html.erb' %>
+          </div>
+        </div>
       <%= yield %>
+      </div>
     </div>
   </div>
 <%= static_asset_javascript 'javascripts/common/global', 'cache/common/global' %>

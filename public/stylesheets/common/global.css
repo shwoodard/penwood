@@ -5,3 +5,11 @@ a {
 p {
     padding-bottom:10px;
 }
+
+.float {
+  float:left;
+}
+
+.block {
+  display:block;
+}

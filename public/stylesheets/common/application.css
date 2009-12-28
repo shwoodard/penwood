@@ -1,5 +1,5 @@
 html, body {
-    background:#C41425;
+    background:url(/images/bg-pattern.gif) top left repeat;
     font-family:Helvetica,Arial,sans-serif;
     color:#C5351C;
     font-size:14px;
@@ -14,11 +14,31 @@ a {
 }
 
 #singleCol {
-    width:1083px;
-    height:575px;
-    margin:25px auto 40px auto;
-    background:#FFE6CB;
+    width:946px;
+    margin:0 auto;
+    background:url(/images/main-container-bg.png) top left repeat-y;
     text-align:left;
+    padding-top:5px;
+}
+
+#singleColLiner {
+  padding-left:12px;
+}
+
+#singleCol #gblTop {
+  width:918px;
+  height:146px;
+  background:url(/images/main-container-top.png) top left no-repeat;
+}
+
+#singleCol #gblTop #gblTopLiner {
+  padding:30px;
+}
+
+#singleCol #gblTop #gblTopLiner #gblLogo {
+  width:183px;
+  height:88px;
+  background:url(/images/logo.png) top left no-repeat;
 }
 
 #gblNav {
@@ -42,4 +62,18 @@ a {
     margin-left:50px;
     margin-right:560px;
     font-size:24px;
+}
+
+#gblNav {
+    margin-top:11px;
+}
+
+#gblNav a {
+    margin:0 5px;
+    font-family:Georgia,serif;
+    color:#a3483f;
+    font-size:16pt;
+    display:block;
+    position:relative;
+    float:left;
 }

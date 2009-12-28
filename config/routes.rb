@@ -2,6 +2,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resource :user_session
   map.resource :account, :controller => 'users'
   map.resources :users
+  map.resources :dialogs
   
   map.with_options :controller => 'contact' do |contact|
     contact.contact 'contact', :action => 'index', :conditions => {:method => :get}
