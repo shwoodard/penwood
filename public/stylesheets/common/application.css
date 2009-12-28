@@ -65,7 +65,8 @@ a {
 }
 
 #gblNav {
-    margin-top:11px;
+    margin-top:35px;
+    margin-right:25px;
 }
 
 #gblNav a {
@@ -76,4 +77,56 @@ a {
     display:block;
     position:relative;
     float:left;
+}
+
+#gblNav a span {
+  line-height:28pt;
+  text-align:center;
+  display:block;
+  float:left;
+  width:100%;
+}
+
+#gblNav a.nav_about-lnk {
+  width:97px;
+  height:37px;
+}
+
+#gblNav a.nav_about-lnk:hover {
+  background:url(/images/gbl_nav/about_bg.gif) no-repeat top left;
+}
+
+#gblNav a.nav_services-lnk {
+  width:97px;
+  height:37px;
+}
+
+#gblNav a.nav_services-lnk:hover {
+  background:url(/images/gbl_nav/services_bg.gif) no-repeat top left;
+}
+
+#gblNav a.nav_articles-lnk {
+  width:88px;
+  height:37px;
+}
+
+#gblNav a.nav_articles-lnk:hover {
+  background:url(/images/gbl_nav/articles_bg.gif) no-repeat top left;
+}
+#gblNav a.nav_testimonials-lnk {
+  width:130px;
+  height:37px;
+}
+
+#gblNav a.nav_testimonials-lnk:hover {
+  background:url(/images/gbl_nav/testimonials_bg.gif) no-repeat top left;
+}
+
+#gblNav a.nav_contact-lnk {
+  width:114px;
+  height:37px;
+}
+
+#gblNav a.nav_contact-lnk:hover {
+  background:url(/images/gbl_nav/contact_bg.gif) no-repeat top left;
 }
