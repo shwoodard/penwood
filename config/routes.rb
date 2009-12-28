@@ -11,5 +11,9 @@ ActionController::Routing::Routes.draw do |map|
     welcome.about_us 'about', :action => 'about_us', :conditions => {:method => :get}
   end
   
+  map.namespace :admin do |admin|
+    admin.resources :contents
+  end
+  
   map.root :controller => "welcome"
 end

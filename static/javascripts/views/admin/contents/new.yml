@@ -1,0 +1,3 @@
+"javascripts/views/admin/contents/new":
+  - "common/tinymce/jquery.tinymce"
+  - "views/admin/contents/new"

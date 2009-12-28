@@ -9,7 +9,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091205182646) do
+ActiveRecord::Schema.define(:version => 20091228195737) do
+
+  create_table "contents", :force => true do |t|
+    t.integer  "page_id"
+    t.text     "body"
+    t.string   "title"
+    t.integer  "charlimit"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                              :null => false
@@ -27,6 +36,10 @@ ActiveRecord::Schema.define(:version => 20091205182646) do
     t.string   "last_login_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "phone"
+    t.boolean  "admin"
   end
 
 end

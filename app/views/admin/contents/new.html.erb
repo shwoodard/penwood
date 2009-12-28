@@ -1,0 +1,13 @@
+<h1>New Content</h1>
+<% form_for @content, :url => admin_contents_path do |f| %>
+<%= f.text_area :body, :class => 'rte' %>
+<% end %>
+
+
+<% content_for :scripts do %>
+<%= static_asset_javascript 'javascripts/views/admin/contents/new', 'cache/views/admin/contents/new' %>
+<% end %>
+
+<% content_for :styles do %>
+<%= static_asset_stylesheet 'stylesheets/views/admin/contents/new', 'cache/views/admin/contents/new' %>
+<% end %>
