@@ -1,26 +1,6 @@
 <h1>New Testimonial</h1>
 <% form_for @testimonial, :url => admin_testimonials_path do |f| %>
-<div><%= f.error_messages %></div>
-<table class="adminFormTable">
-  <thead><thead>
-  <tbody>
-    <tr>
-      <td><%= f.label :body -%></td>
-      <td><%= f.text_area :body %></td>
-    </tr>
-    <tr>
-      <td><%= f.label :name -%></td>
-      <td><%= f.text_field :name %></td>
-    </tr>
-    <tr>
-      <td><%= f.label :location -%></td>
-      <td><%= f.text_field :location %></td>
-    </tr>
-    <tr>
-      <td colspan="2"><%= f.submit -%></td>
-    </tr>
-  </tbody>
-</table>
+<%= render :partial => 'admin/testimonials/form.html.erb', :locals => {:f => f} %>
 <% end %>
 
 <% content_for :scripts do %>

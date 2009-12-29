@@ -1,5 +1,9 @@
 <tr>
   <td><%= truncate testimonial.body, :length => 75 %></td>
   <td><%= testimonial.name %></td>
-  <td></td>
+  <td class="adminModelIndexControls">
+    <span><%= link_to 'Show', admin_testimonial_path(testimonial) -%></span>
+    <span><%= link_to 'Edit', edit_admin_testimonial_path(testimonial) -%></span>
+    <span><%= link_to 'Delete', admin_testimonial_path(testimonial), :method => :delete, :confirmt => "Are you sure?" -%></span>
+  </td>
 </tr>

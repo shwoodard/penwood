@@ -1,4 +1,9 @@
-<div>
+<h1>Testimonial by <i><%= @testimonial.name %></i></h1>
+<div class="adminShowContainer"><%= textilize @testimonial.body %></div>
+<div class="adminShowContainer">Location: <%= @testimonial.location %></div>
+
+<div class="adminShowNav">
+  <span><%= link_to 'Edit', edit_admin_testimonial_path(@testimonial) %></span><br /><br />
   <span><%= link_to 'New Testimonial', new_admin_testimonial_path %></span>
 </div>
 

@@ -19,8 +19,8 @@
             <a href="<%= root_path-%>"><span id="gblLogo" class="block float"></span></a>
           </div>
         </div>
-        <% if flash[:notice] %><div class="flashNotice"><%= flash[:notice] -%></div><% end %>
         <div id="gblContent">
+          <% if flash[:notice] %><div class="flashNotice"><%= flash[:notice] -%></div><% end %>
           <%= yield %>
         </div>
         <div id="gblFooter">

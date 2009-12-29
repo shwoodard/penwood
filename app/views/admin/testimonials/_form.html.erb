@@ -1,0 +1,21 @@
+<div><%= f.error_messages %></div>
+<table class="adminFormTable">
+  <thead><thead>
+  <tbody>
+    <tr>
+      <td><%= f.label :body -%></td>
+      <td><%= f.text_area :body %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :name -%></td>
+      <td><%= f.text_field :name %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :location -%></td>
+      <td><%= f.text_field :location %></td>
+    </tr>
+    <tr>
+      <td colspan="2"><%= f.submit -%> <%= link_to 'Cancel', admin_testimonials_path %></td>
+    </tr>
+  </tbody>
+</table>

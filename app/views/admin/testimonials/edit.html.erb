@@ -1,3 +1,7 @@
+<h1>Edit Testimonial</h1>
+<% form_for @testimonial, :url => admin_testimonial_path(@testimonial) do |f| %>
+<%= render :partial => 'admin/testimonials/form.html.erb', :locals => {:f => f} %>
+<% end %>
 
 <% content_for :scripts do %>
 <%= static_asset_javascript 'javascripts/views/admin/testimonials/edit', 'cache/views/admin/testimonials/edit' %>
