@@ -1,5 +1,25 @@
+body {
+  font-family:Georgia,serif;
+}
+
 a {
+    color:#C5351C;
     text-decoration:none;
+}
+
+.heading1 {
+  font-size:30pt;
+  color:#585555;
+}
+
+.heading2 {
+  font-size:22pt;
+  color:#585555;
+}
+
+.para {
+  font-size:16px;
+  color:#7e7e7e;
 }
 
 p {
@@ -8,6 +28,10 @@ p {
 
 .float {
   float:left;
+}
+
+.float.right {
+  float:right;
 }
 
 .block {

@@ -1,3 +1,4 @@
 "javascripts/views/admin/contents/edit":
   - "common/tinymce/jquery.tinymce"
+  - "common/jquery.penwoodmce"
   - "views/admin/contents/edit"

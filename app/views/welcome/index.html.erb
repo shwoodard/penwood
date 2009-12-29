@@ -2,6 +2,14 @@
   <%= cms_content_for('home_copy') %>
 </div>
 <%= link_to '', '', :class => 'homeLearnMoreButton' %>
+<div class="homePictureFrame"><div class="homePictureFrameLiner"></div></div>
+<div class="homeHorizontal">
+  <ol id="penwoodServices">
+    <li><%= cms_content_for('home_couples') %></li>
+    <li><%= cms_content_for('home_orgs') %></li>
+    <li class="last"><%= cms_content_for('home_families') %></li>
+  </ol>
+</div>
 <div class="clear"></div>
 
 <% content_for :scripts do %>

@@ -1,11 +1,5 @@
 html, body {
     background:url(/images/bg-pattern.gif) top left repeat;
-    font-family:Helvetica,Arial,sans-serif;
-    color:#C5351C;
-    font-size:14px;
-}
-
-a {
     color:#C5351C;
 }
 
