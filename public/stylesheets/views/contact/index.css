@@ -1,6 +1,7 @@
 .contactRight {
   margin-left:380px;
   padding-left:50px;
+  width:360px;
 }
 
 .contactRight form div {
@@ -25,7 +26,6 @@
 .contactInfo {
   margin-bottom:20px;
 }
-
 
 .contactInfo a {
   color:#585555;
