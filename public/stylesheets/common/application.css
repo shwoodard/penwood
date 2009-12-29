@@ -17,7 +17,7 @@ html, body {
 
 #singleColLiner {
   padding-left:12px;
-  padding-right:25px;
+  padding-right:16px;
 }
 
 #singleCol #gblTop {
@@ -39,14 +39,6 @@ html, body {
 
 #gblNav {
     float:right;
-}
-
-.gblWatermark {
-    padding:10px 0 0 10px;
-    float:left;
-}
-
-#gblNav {
     margin-top:35px;
     margin-right:25px;
 }
@@ -111,4 +103,41 @@ html, body {
 
 #gblNav a.nav_contact-lnk:hover {
   background:url(/images/gbl_nav/contact_bg.gif) no-repeat top left;
+}
+
+#gblFooter {
+  background:url(/images/gbl_footer-bg.jpg) no-repeat top left;
+  height:138px;
+}
+
+#gblFooter #gblFooterLiner {
+  padding:44px;
+  text-align:center;
+}
+
+#gblFooter #gblFooterLiner #gblFooterContent {
+  width:600px;
+  margin:0 auto;
+  text-align:center;
+}
+
+#gblFooter #gblFooterLiner ul li {
+  display:inline;
+  padding-right:5px;
+  border-right:1px solid #e7d4b8;
+}
+
+#gblFooter #gblFooterLiner ul li.last {
+  border-right:none;
+}
+
+#gblFooter #gblFooterLiner ul li a {
+  font-size:12px;
+}
+
+#gblCopyright {
+  clear:both;
+  font-size:12px;
+  padding-top:15px;
+  color:#b1b1b1;
 }
