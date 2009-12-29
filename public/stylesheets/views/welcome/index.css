@@ -2,7 +2,7 @@
     float:right;
     width:395px;
     height:220px;
-    margin-right:50px;
+    margin-right:35px;
 }
 
 .homeCopy p {
@@ -23,7 +23,7 @@
   background:url(/images/home_picture-frame.png) no-repeat top left;
   width:408px;
   height:307px;
-  margin-left:20px;
+  margin-left:5px;
 }
 
 .homeHorizontal {

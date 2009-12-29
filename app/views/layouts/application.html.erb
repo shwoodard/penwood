@@ -19,7 +19,9 @@
             <%= render :partial => 'partials/gbl_nav.html.erb' %>
           </div>
         </div>
-        <%= yield %>
+        <div id="gblContent">
+          <%= yield %>
+        </div>
         <div id="gblFooter">
           <div id="gblFooterLiner">
             <%= render :partial => 'partials/gbl_footer.html.erb' %>

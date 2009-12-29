@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091228212259) do
+ActiveRecord::Schema.define(:version => 20091229192738) do
 
   create_table "contents", :force => true do |t|
     t.integer  "page_id"
@@ -27,6 +27,17 @@ ActiveRecord::Schema.define(:version => 20091228212259) do
     t.integer  "parent_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "testimonials", :force => true do |t|
+    t.text     "body"
+    t.string   "name"
+    t.string   "location"
+    t.integer  "user_id"
+    t.boolean  "published",  :default => false, :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "position"
   end
 
   create_table "users", :force => true do |t|

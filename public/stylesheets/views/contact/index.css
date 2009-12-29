@@ -1,0 +1,33 @@
+.contactRight {
+  margin-left:380px;
+  padding-left:50px;
+}
+
+.contactRight form div {
+  padding:10px 0;
+}
+
+.contactLoginForm {
+  float:left;
+  width:380px;
+}
+
+.contactLoginFormLiner {
+  width:270px;
+  margin-top:38px;
+  padding-left:10px;
+}
+
+.contactInfo {
+  margin-bottom:20px;
+}
+
+
+.contactInfo a {
+  color:#585555;
+  text-decoration:underline;
+}
+
+#gblContent {
+  padding-bottom:45px;
+}

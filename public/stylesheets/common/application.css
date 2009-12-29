@@ -3,6 +3,11 @@ html, body {
     color:#C5351C;
 }
 
+label {
+  font-size:14px;
+  color:#b1b1b1;
+}
+
 #singleColWpr {
     text-align:center;
 }
@@ -103,6 +108,10 @@ html, body {
 
 #gblNav a.nav_contact-lnk:hover {
   background:url(/images/gbl_nav/contact_bg.gif) no-repeat top left;
+}
+
+#gblContent {
+  padding:0 15px;
 }
 
 #gblFooter {

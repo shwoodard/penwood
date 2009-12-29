@@ -9,23 +9,20 @@ a {
     text-decoration:none;
 }
 
-.heading1 {
+h1, .heading1 {
   font-size:30pt;
   color:#585555;
 }
 
-.heading2 {
+h2, .heading2 {
   font-size:22px;
   color:#585555;
 }
 
-.para {
+p, .para {
   font-size:16px;
   color:#7e7e7e;
-}
-
-p {
-    padding-bottom:10px;
+  padding-bottom:10px;
 }
 
 .float {
@@ -49,4 +46,10 @@ p {
     margin-bottom:-1px;
     overflow:hidden;
     width:1px;
+}
+
+input[type=text],
+input[type=file],
+input[type=password] {
+  height:25px;
 }

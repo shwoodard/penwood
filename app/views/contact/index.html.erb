@@ -1,34 +1,43 @@
 <h1>Contact</h1>
-<div style="float:right;">
-  <ul>
+
+<div class="contactLoginForm">
+  <div class="contactLoginFormLiner">
+    <h2>Login</h2>
+    <% form_for @user_session, :url => user_session_path do |f| %>
+      <%= f.error_messages %>
+      <%= f.label :email %><br />
+      <%= f.text_field :email %><br />
+      <br />
+      <%= f.label :password %><br />
+      <%= f.password_field :password %><br />
+      <br />
+      <%= f.check_box :remember_me %><%= f.label :remember_me %><br />
+      <br />
+      <%= f.submit "Login" %>
+    <% end %>
+  </div>
+</div>
+
+<div class="contactRight">
+  <ul class="contactInfo">
+    <li>Terry Pennebaker and Doug Woodard</li>
+    <li>Email <%= mail_to 'terry@penwoodpartners.com', 'Terry'-%> or <%= mail_to 'doug@penwoodpartners.com', 'Doug' -%></li>
     <li>Phone: 415-524-8400</li>
     <li>Fax: 415-524-8402</li>
   </ul>
-
+  
+  <% unless member? %>
   <% form_for :contact do |f| %>
-  <div><%= f.label :name %><%= f.text_field :name, :class => 'gblTextField'%></div>
-  <div><%= f.label :email %><%= f.text_field :email, :class => 'gblTextField'%></div>
-  <div><%= f.label :email_confirmation, "Confirm Email" %><%= f.text_field :email_confirmation, :class => 'gblTextField'%></div>
-  <div><%= f.label :phone %><%= f.text_field :phone, :class => 'gblTextField'%></div>
-  <div><%= f.label :note, "Send us a note:" %><%= f.text_area :note, :class => 'gblTextField'%></div>
+  <div><%= f.label :name %><br /><%= f.text_field :name, :class => 'gblTextField'%></div>
+  <div><%= f.label :email %><br /><%= f.text_field :email, :class => 'gblTextField'%></div>
+  <div><%= f.label :email_confirmation, "Confirm Email" %><br /><%= f.text_field :email_confirmation, :class => 'gblTextField'%></div>
+  <div><%= f.label :phone %><br /><%= f.text_field :phone, :class => 'gblTextField'%></div>
+  <div><%= f.label :note, "Send us a note:" %><br /><%= f.text_area :note, :class => 'gblTextField'%></div>
+  <div><%= f.submit 'Submit' -%></div>
+  <% end %>
   <% end %>
 </div>
-
-<div style="margin-top:120px;">
-  <h2>Login</h2>
-  <% form_for @user_session, :url => user_session_path do |f| %>
-    <%= f.error_messages %>
-    <%= f.label :email %><br />
-    <%= f.text_field :email %><br />
-    <br />
-    <%= f.label :password %><br />
-    <%= f.password_field :password %><br />
-    <br />
-    <%= f.check_box :remember_me %><%= f.label :remember_me %><br />
-    <br />
-    <%= f.submit "Login" %>
-  <% end %>
-</div>
+<div class="clear"></div>
 
 <% content_for :scripts do %>
 <%= static_asset_javascript 'javascripts/views/contact/index', 'cache/views/contact/index' %>
