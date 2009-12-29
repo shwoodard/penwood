@@ -1,0 +1,11 @@
+<h1>Testimonials</h1>
+<%= render :partial => 'testimonials/testimonial.html.erb', :collection => @testimonials %>
+
+
+<% content_for :scripts do %>
+<%= static_asset_javascript 'javascripts/views/testimonials/index', 'cache/views/testimonials/index' %>
+<% end %>
+
+<% content_for :styles do %>
+<%= static_asset_stylesheet 'stylesheets/views/testimonials/index', 'cache/views/testimonials/index' %>
+<% end %>

@@ -12,6 +12,7 @@ a {
 h1, .heading1 {
   font-size:30pt;
   color:#585555;
+  padding-bottom:30px;
 }
 
 h2, .heading2 {

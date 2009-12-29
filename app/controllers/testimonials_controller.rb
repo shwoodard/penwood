@@ -1,5 +1,5 @@
 class TestimonialsController < ApplicationController
   def index
-    @testimonials = Testimonal.all(:order => :position)
+    @testimonials = Testimonial.all(:order => :position)
   end
 end

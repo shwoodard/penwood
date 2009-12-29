@@ -100,12 +100,14 @@ label {
 #gblNav a.nav_articles-lnk:hover {
   background:url(/images/gbl_nav/articles_bg.gif) no-repeat top left;
 }
-#gblNav a.nav_testimonials-lnk {
+#gblNav a.nav_testimonials-lnk,
+#gblNav span.testimonials.active {
   width:130px;
   height:37px;
 }
 
-#gblNav a.nav_testimonials-lnk:hover {
+#gblNav a.nav_testimonials-lnk:hover,
+#gblNav span.testimonials.active {
   background:url(/images/gbl_nav/testimonials_bg.gif) no-repeat top left;
 }
 
@@ -122,6 +124,7 @@ label {
 
 #gblContent {
   padding:0 25px;
+  min-height:750px;
 }
 
 #gblFooter {
