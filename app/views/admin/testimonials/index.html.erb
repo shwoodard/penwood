@@ -1,0 +1,23 @@
+<h1>Testimonials</h1>
+<table class="adminModelIndex">
+  <thead>
+    <tr>
+      <th>Body</th>
+      <th>Author</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render :partial => 'admin/testimonials/testimonial.html.erb', :collection => @testimonials-%>
+  </tbody>
+</table>
+<div>
+  <span><%= link_to 'New Testimonial', new_admin_testimonial_path %></span>
+</div>
+<% content_for :scripts do %>
+<%= static_asset_javascript 'javascripts/views/admin/testimonials/index', 'cache/views/admin/testimonials/index' %>
+<% end %>
+
+<% content_for :styles do %>
+<%= static_asset_stylesheet 'stylesheets/views/admin/testimonials/index', 'cache/views/admin/testimonials/index' %>
+<% end %>

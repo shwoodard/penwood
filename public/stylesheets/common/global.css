@@ -5,7 +5,7 @@ body {
 }
 
 a {
-    color:#C5351C;
+    color:#333333;
     text-decoration:none;
 }
 
@@ -51,6 +51,8 @@ p, .para {
 input[type=text],
 input[type=file],
 input[type=password] {
+  font-size:20px;
+  padding-top:2px;
   height:25px;
 }
 

@@ -6,3 +6,7 @@ h1 {
   vertical-align:top;
   padding:10px;
 }
+
+a {
+  text-decoration:underline;
+}

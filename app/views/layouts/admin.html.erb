@@ -20,7 +20,14 @@
           </div>
         </div>
         <% if flash[:notice] %><div class="flashNotice"><%= flash[:notice] -%></div><% end %>
-      <%= yield %>
+        <div id="gblContent">
+          <%= yield %>
+        </div>
+        <div id="gblFooter">
+          <div id="gblFooterLiner">
+            <%= render :partial => 'partials/gbl_footer.html.erb' %>
+          </div>
+        </div>
       </div>
     </div>
   </div>
