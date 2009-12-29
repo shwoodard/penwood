@@ -154,6 +154,10 @@ label {
   font-size:12px;
 }
 
+#gblFooter #gblFooterLiner ul li a:hover {
+  color:#C5351C;
+}
+
 #gblCopyright {
   clear:both;
   font-size:12px;
