@@ -18,6 +18,10 @@
   padding-left:10px;
 }
 
+.contactLoginForm h2 {
+  margin-bottom:15px;
+}
+
 .contactInfo {
   margin-bottom:20px;
 }
@@ -26,6 +30,10 @@
 .contactInfo a {
   color:#585555;
   text-decoration:underline;
+}
+
+.contactInfo a:hover {
+  text-decoration:none;
 }
 
 #gblContent {

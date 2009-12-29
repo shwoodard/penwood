@@ -3,5 +3,9 @@
   <%= link_to '<span>Services</span>', about_us_path, :class => 'nav_services-lnk' %>
   <%= link_to '<span>Articles</span>', about_us_path, :class => 'nav_articles-lnk' %>
   <%= link_to '<span>Testimonials</span>', testimonials_path, :class => 'nav_testimonials-lnk' %>
-  <%= link_to '<span>Contact Us</span>', about_us_path, :class => 'nav_contact-lnk' %>
+  <%= 
+    link_to_unless_current '<span>Contact Us</span>', contact_path, :class => 'nav_contact-lnk' do
+      '<span class="contact active">Contact Us</span>'
+    end  
+  %>
 </div>

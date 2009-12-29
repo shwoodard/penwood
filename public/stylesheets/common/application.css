@@ -6,6 +6,7 @@ html, body {
 label {
   font-size:14px;
   color:#b1b1b1;
+  padding-bottom:3px;
 }
 
 #singleColWpr {
@@ -48,7 +49,8 @@ label {
     margin-right:25px;
 }
 
-#gblNav a {
+#gblNav a,
+#gblNav span.active {
     margin:0 5px;
     font-family:Georgia,serif;
     color:#a3483f;
@@ -64,6 +66,12 @@ label {
   display:block;
   float:left;
   width:100%;
+}
+
+#gblNav span.active {
+  line-height:28pt;
+  text-align:center;
+  color:#7e6a63;
 }
 
 #gblNav a.nav_about-lnk {
@@ -101,12 +109,14 @@ label {
   background:url(/images/gbl_nav/testimonials_bg.gif) no-repeat top left;
 }
 
-#gblNav a.nav_contact-lnk {
+#gblNav a.nav_contact-lnk,
+#gblNav span.contact.active {
   width:114px;
   height:37px;
 }
 
-#gblNav a.nav_contact-lnk:hover {
+#gblNav a.nav_contact-lnk:hover,
+#gblNav span.contact.active {
   background:url(/images/gbl_nav/contact_bg.gif) no-repeat top left;
 }
 

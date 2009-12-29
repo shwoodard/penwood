@@ -53,3 +53,11 @@ input[type=file],
 input[type=password] {
   height:25px;
 }
+
+input[type=checkbox] {
+  margin-right:5px;
+}
+
+.gblTextArea {
+  height:95px;
+}
