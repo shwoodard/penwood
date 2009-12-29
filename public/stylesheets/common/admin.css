@@ -7,6 +7,10 @@ h1 {
   padding:10px;
 }
 
+.adminFormTable textarea {
+  height:300px;
+}
+
 a {
   text-decoration:underline;
 }
@@ -32,3 +36,5 @@ table.adminModelIndex tr td {
 .adminShowContainer {
   margin:15px 0;
 }
+
+
