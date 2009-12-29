@@ -41,4 +41,10 @@ class Admin::TestimonialsController < Admin::AdminController
     flash[:notice] = 'You have delete a testimonial.'
     redirect_to :action => 'index'
   end
+  
+  def move
+    testimonial = Testimonial.find(params[:id])
+    testimonial.send("move_#{params[:direction]}".to_sym)
+    redirect_to :action => 'index'
+  end
 end

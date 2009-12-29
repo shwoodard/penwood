@@ -25,6 +25,10 @@ table.adminModelIndex tr th {
   color:#333333;
 }
 
+table.adminModelIndex tr td.adminModelIndexControls {
+  font-size:13px;
+}
+
 table.adminModelIndex tr td {
   padding-bottom:30px;
 }
@@ -36,5 +40,3 @@ table.adminModelIndex tr td {
 .adminShowContainer {
   margin:15px 0;
 }
-
-

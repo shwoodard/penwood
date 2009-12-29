@@ -15,7 +15,7 @@ ActionController::Routing::Routes.draw do |map|
   map.namespace :admin do |admin|
     admin.root :controller => 'contents'
     admin.resources :contents
-    admin.resources :testimonials
+    admin.resources :testimonials, :member => {:move => :put}
   end
   
   map.root :controller => "welcome"

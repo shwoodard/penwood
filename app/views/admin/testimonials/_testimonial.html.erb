@@ -4,6 +4,8 @@
   <td class="adminModelIndexControls">
     <span><%= link_to 'Show', admin_testimonial_path(testimonial) -%></span>
     <span><%= link_to 'Edit', edit_admin_testimonial_path(testimonial) -%></span>
-    <span><%= link_to 'Delete', admin_testimonial_path(testimonial), :method => :delete, :confirmt => "Are you sure?" -%></span>
+    <span><%= link_to 'Delete', admin_testimonial_path(testimonial), :method => :delete, :confirm => "Are you sure?" -%></span>
+    <span class="move up"><%= link_to 'Move Up', move_admin_testimonial_path(testimonial, :direction => 'higher'), :method => :put -%></span>
+    <span class="move down"><%= link_to 'Move Down', move_admin_testimonial_path(testimonial, :direction => 'lower'), :method => :put -%></span>
   </td>
 </tr>
