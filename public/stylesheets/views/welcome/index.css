@@ -1,7 +1,7 @@
 .homeCopy {
     float:right;
     width:395px;
-    height:250px;
+    height:220px;
     margin-right:30px;
 }
 
@@ -16,18 +16,21 @@
   background:url(/images/home_learn-more.png) no-repeat top left;
   float:right;
   clear:right;
+  margin-right:50px;
 }
 
 .homePictureFrame {
   background:url(/images/home_picture-frame.png) no-repeat top left;
   width:408px;
   height:307px;
+  margin-left:20px;
 }
 
 .homeHorizontal {
   background:url(/images/home_horizontal.png) no-repeat top left;
   width:836px;
   height:277px;
+  margin:50px auto;
 }
 
 .homeHorizontal ol#penwoodServices {
@@ -42,4 +45,12 @@
 
 .homeHorizontal ol#penwoodServices li.last {
   margin-right:0;
+}
+
+.homeLearnMoreSm {
+  background:url(/images/home_learn-more-sm.png) no-repeat top left;
+  width:139px;
+  height:37px;
+  display:block;
+  margin-top:5px;
 }

@@ -5,12 +5,11 @@
 <div class="homePictureFrame"><div class="homePictureFrameLiner"></div></div>
 <div class="homeHorizontal">
   <ol id="penwoodServices">
-    <li><%= cms_content_for('home_couples') %></li>
-    <li><%= cms_content_for('home_orgs') %></li>
-    <li class="last"><%= cms_content_for('home_families') %></li>
+    <li><%= cms_content_for('home_couples') %><%= link_to '', root_path, :class => 'homeLearnMoreSm' -%></li>
+    <li><%= cms_content_for('home_orgs') %><%= link_to '', root_path, :class => 'homeLearnMoreSm' -%></li>
+    <li class="last"><%= cms_content_for('home_families') %><%= link_to '', root_path, :class => 'homeLearnMoreSm' -%></li>
   </ol>
 </div>
-<div class="clear"></div>
 
 <% content_for :scripts do %>
 <%= static_asset_javascript 'javascripts/views/welcome/index', 'cache/views/welcome/index' %>
