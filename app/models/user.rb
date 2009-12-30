@@ -5,11 +5,14 @@ class User < ActiveRecord::Base
     conf.merge_validates_length_of_password_field_options(:unless => Proc.new {|user| !user.register })
   end
   
+  has_many :user_conversations
+  has_many :conversations, :through => :user_conversations
+  
   has_many :user_groups
   has_many :groups, :through => :user_groups
   
   named_scope :enabled, :conditions => 'active = 1 AND banned = 0'
-  named_scope :basic_admin, :conditions => 'admin_user = 1 AND super_user = 0'
+  named_scope :basic_admin, :conditions => 'admin = 1 AND super_user = 0'
   
   validates_presence_of :name
   validates_confirmation_of :email

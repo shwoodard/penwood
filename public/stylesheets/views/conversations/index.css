@@ -1,0 +1,14 @@
+.quickNote {
+  height:200px;
+}
+
+.currentParticipants h2 {
+  float:left;
+  line-height:34px;
+}
+
+.potentialRecipientsContainer {
+  margin-top:-10px;
+  min-height:35px;
+  margin-bottom:10px;
+} 

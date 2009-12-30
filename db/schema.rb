@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091230153100) do
+ActiveRecord::Schema.define(:version => 20091230213613) do
 
   create_table "contents", :force => true do |t|
     t.integer  "page_id"
@@ -29,9 +29,9 @@ ActiveRecord::Schema.define(:version => 20091230153100) do
   end
 
   create_table "conversations", :force => true do |t|
-    t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "subject"
   end
 
   create_table "groups", :force => true do |t|
