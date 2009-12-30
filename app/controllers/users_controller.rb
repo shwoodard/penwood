@@ -33,4 +33,16 @@ class UsersController < ApplicationController
       render :action => :edit
     end
   end
+  
+  def activate
+    user = User.find_using_perishable_token(params[:activation_code], 1.week)
+    if user
+      user.activate!
+      flash[:notice] = 'You have successfully activated your account'
+      UserSession.create(user, true)
+      redirect_to root_path
+    else
+      
+    end
+  end
 end

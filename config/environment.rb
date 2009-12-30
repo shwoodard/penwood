@@ -6,6 +6,14 @@ RAILS_GEM_VERSION = '2.3.4' unless defined? RAILS_GEM_VERSION
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
 
+# APPLICATION CONFIGURATION
+# load application specific configurations
+AppConfig = YAML::load(File.open("#{RAILS_ROOT}/config/config.yml"))
+
+# merge in environment specific configuration
+AppConfig.merge!(YAML::load(File.open("#{RAILS_ROOT}/config/environments/#{RAILS_ENV}.yml")))
+# END APPLICATION CONFIGURATION
+
 Rails::Initializer.run do |config|
   config.gem 'mislav-will_paginate', :lib => 'will_paginate', :source => 'http://gems.github.com'
   config.gem 'RedCloth', :lib => 'redcloth'

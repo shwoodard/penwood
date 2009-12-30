@@ -64,3 +64,28 @@ input[type=checkbox] {
 .gblTextArea {
   height:95px;
 }
+
+.errorExplanation {
+  margin-bottom:20px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border:1px solid #666666;
+  padding:6px;
+  padding-left:11px;
+}
+
+.errorExplanation h2 {
+  display:none;
+}
+
+.fieldWithErrors {
+  display:inline;
+}
+
+.fieldWithErrors label {
+  color:#C5351C;
+}
+
+.hidden {
+  display:none;
+}
