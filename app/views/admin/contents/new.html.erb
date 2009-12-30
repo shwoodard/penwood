@@ -4,6 +4,10 @@
   <thead><thead>
   <tbody>
     <tr>
+      <td><%= f.label :page -%></td>
+      <td><%= f.select :page_id, Page.all.collect{|p| [p.path, p.id]} %></td>
+    </tr>
+    <tr>
       <td><%= f.label :title -%></td>
       <td><%= f.text_field :title %></td>
     </tr>
@@ -21,7 +25,6 @@
   </tbody>
 </table>
 <% end %>
-
 
 <% content_for :scripts do %>
 <%= static_asset_javascript 'javascripts/views/admin/contents/new', 'cache/views/admin/contents/new' %>

@@ -2,7 +2,12 @@ class Admin::ContentsController < Admin::AdminController
   before_filter :require_super_user, :only => [:new, :create]
   
   def index
-    # TODO
+    @pages = Page.all.reject {|p| !p.contents.any?}
+  end
+  
+  def page
+    @page = Page.find(params[:page][:page_id])
+    @contents = @page.contents
   end
   
   def show
