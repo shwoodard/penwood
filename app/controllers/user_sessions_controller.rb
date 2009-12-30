@@ -6,7 +6,8 @@ class UserSessionsController < ApplicationController
     @user_session = UserSession.new(params[:user_session])
     if @user_session.save
       flash[:notice] = "Login successful!"
-      redirect_back_or_default account_url
+      set_member_cookie
+      redirect_back_or_default edit_account_url
     else
       @user = User.new unless member?
       render :template => 'contact/index.html.erb'

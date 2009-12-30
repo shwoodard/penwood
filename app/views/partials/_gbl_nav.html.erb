@@ -7,16 +7,16 @@
       '<span class="testimonials active">Testimonials</span>'
     end
   %>
-  <% unless member? %>
+  <% if member? && !current_user  %>
   <%= 
-    link_to_unless_current '<span>Contact Us</span>', contact_path, :class => 'nav_contact-lnk' do
-      '<span class="contact active">Contact Us</span>'
+    link_to_unless_current '<span>Sign in</span>', contact_path, :class => 'nav_contact-lnk' do
+      '<span class="contact active">Sign in</span>'
     end  
   %>
   <% else %>
   <%= 
-    link_to_unless_current '<span>Login</span>', contact_path, :class => 'nav_contact-lnk' do
-      '<span class="contact active">Login</span>'
+    link_to_unless_current '<span>Contact Us</span>', contact_path, :class => 'nav_contact-lnk' do
+      '<span class="contact active">Contact Us</span>'
     end  
   %>
   <% end %>
