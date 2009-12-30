@@ -9,8 +9,8 @@
   %>
   <% if member? && !current_user  %>
   <%= 
-    link_to_unless_current '<span>Sign in</span>', contact_path, :class => 'nav_contact-lnk' do
-      '<span class="contact active">Sign in</span>'
+    link_to_unless_current '<span>Sign in</span>', contact_path, :class => 'nav_signin-lnk' do
+      '<span class="signin active">Sign in</span>'
     end  
   %>
   <% else %>

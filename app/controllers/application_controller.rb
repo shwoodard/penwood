@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   before_filter :clear_static_assets if Rails.env.development?
 
   helper :all 
-  helper_method :current_user_session, :current_user, :member?, :logged_in?, :guest?
+  helper_method :current_user_session, :current_user, :member?, :logged_in?, :guest?, :current_user_admin?
 
   protect_from_forgery 
   filter_parameter_logging :password, :password_confirmation

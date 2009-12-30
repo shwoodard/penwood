@@ -123,6 +123,17 @@ label {
   background:url(/images/gbl_nav/contact_bg.gif) no-repeat top left;
 }
 
+#gblNav a.nav_signin-lnk,
+#gblNav span.signin.active {
+  width:82px;
+  height:37px;
+}
+
+#gblNav a.nav_signin-lnk:hover,
+#gblNav span.signin.active {
+  background:url(/images/gbl_nav/signin_bg.gif) no-repeat top left;
+}
+
 #gblContent {
   padding:0 25px;
   min-height:550px;
