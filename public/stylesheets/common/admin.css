@@ -40,3 +40,8 @@ table.adminModelIndex tr td {
 .adminShowContainer {
   margin:15px 0;
 }
+
+#gblNav.admin a,
+#gblNav.admin span.active {
+  font-size:13px !important;
+}

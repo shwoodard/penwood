@@ -1,0 +1,10 @@
+<div id="gblNav" class="float admin ">
+  <%= link_to '<span>Content Management System</span>', admin_contents_path %>
+  <%= link_to '<span>Users & Groups</span>', admin_contents_path %>
+  <%= link_to '<span>Articles</span>', admin_contents_path %>
+  <%= 
+    link_to_unless_current '<span>Testimonials</span>', admin_testimonials_path do
+      '<span class="active">Testimonials</span>'
+    end
+  %>
+</div>
