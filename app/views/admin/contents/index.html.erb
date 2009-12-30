@@ -1,7 +1,7 @@
 <h1>Content Management System</h1>
 <h2>Step 1</h2>
 <p>Select the page on which you would like to edit content below.</p>
-<% form_for :page, :url => page_admin_contents_path, :html => {:method => :get} do |f| %>
+<% form_for :next, :url => page_admin_contents_path, :html => {:method => :get} do |f| %>
 <%= f.select :page_id, @pages.collect {|p| [page_display(p), p.id]} %>
 <%= f.submit 'Next' %>
 <% end %>

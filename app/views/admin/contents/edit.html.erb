@@ -1,4 +1,7 @@
-<h1>Edit Content</h1>
+<h1>Content Management System</h1>
+<h2>Edit Content</h2>
+<h2>Step 3</h2>
+<p>Edit the content and click 'Save changes'</p>
 <% form_for @content, :url => admin_content_path(@content) do |f| %>
 <table class="adminFormTable">
   <thead><thead>
@@ -11,12 +14,14 @@
       <td><%= f.label :body -%></td>
       <td><%= f.text_area :body, :class => 'rte' %></td>
     </tr>
+    <% if current_user_super_user? %>
     <tr>
       <td><%= f.label :text_identifier -%></td>
       <td><%= f.text_field :text_identifier %></td>
     </tr>
+    <% end %>
     <tr>
-      <td colspan="2"><%= f.submit -%></td>
+      <td colspan="2"><%= f.submit -%> <%= link_to 'Back', page_admin_contents_path(:next => {:page_id => @content.page.id})%></td>
     </tr>
   </tbody>
 </table>

@@ -3,6 +3,8 @@ class Admin::AdminController < ApplicationController
   before_filter :require_user
   before_filter :require_admin_user
   
+  helper_method :current_user_super_user?
+  
   def current_user_super_user?
     current_user_admin? && current_user.super_user?
   end

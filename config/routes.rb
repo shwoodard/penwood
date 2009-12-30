@@ -20,6 +20,8 @@ ActionController::Routing::Routes.draw do |map|
     admin.root :controller => 'contents'
     admin.resources :contents, :collection => {:page => :get}
     admin.resources :testimonials, :member => {:move => :put}
+    admin.resources :users
+    admin.resources :groups
   end
   
   map.root :controller => "welcome"

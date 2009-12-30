@@ -18,6 +18,12 @@ h1, .heading1 {
 h2, .heading2 {
   font-size:22px;
   color:#585555;
+  padding-bottom:15px;
+}
+
+h3 {
+  font-size:18px;
+  color:#585555;
 }
 
 p, .para {

@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   has_many :user_groups
   has_many :groups, :through => :user_groups
   
+  named_scope :enabled, :conditions => 'active = 1 AND banned = 0'
   named_scope :basic_admin, :conditions => 'admin_user = 1 AND super_user = 0'
   
   validates_presence_of :name
@@ -21,5 +22,10 @@ class User < ActiveRecord::Base
   
   def register=(value)
     @register = value == "0" ? false : true
+  end
+  
+  def ban!
+    self.banned = true
+    save!
   end
 end

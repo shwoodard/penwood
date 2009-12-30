@@ -6,8 +6,8 @@ class Admin::ContentsController < Admin::AdminController
   end
   
   def page
-    @page = Page.find(params[:page][:page_id])
-    @contents = @page.contents
+    @page = Page.find(params[:next][:page_id])
+    @contents = @page.contents.paginate(:all, :page => params[:page] || 1)
   end
   
   def show
