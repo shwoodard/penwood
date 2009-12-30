@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   before_filter :clear_static_assets if Rails.env.development?
 
   helper :all 
-  helper_method :current_user_session, :current_user, :member?
+  helper_method :current_user_session, :current_user, :member?, :logged_in?, :guest?
 
   protect_from_forgery 
   filter_parameter_logging :password, :password_confirmation
@@ -20,6 +20,14 @@ class ApplicationController < ActionController::Base
   
   def member?
     !!cookies[:member]
+  end
+  
+  def logged_in?
+    !!current_user
+  end
+  
+  def guest?
+    !logged_in?
   end
 
   def current_user_admin?
@@ -51,7 +59,10 @@ class ApplicationController < ActionController::Base
     session[:return_to] = nil
   end
   
-
+  def set_member_cookie
+    cookies[:member] = true
+  end
+  
   def clear_static_assets 
     Static::Asset.descriptor.clear
   end

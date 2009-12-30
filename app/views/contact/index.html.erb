@@ -1,5 +1,6 @@
 <h1>Contact</h1>
 
+<% unless current_user%>
 <div class="contactLoginForm">
   <div class="contactLoginFormLiner">
     <h2>Login</h2>
@@ -17,6 +18,7 @@
     <% end %>
   </div>
 </div>
+
 
 <div class="contactRight">
   <ul class="contactInfo">
@@ -42,6 +44,9 @@
   <% end %>
 </div>
 <div class="clear"></div>
+<% else %>
+
+<% end %>
 
 <% content_for :scripts do %>
 <%= static_asset_javascript 'javascripts/views/contact/index', 'cache/views/contact/index' %>

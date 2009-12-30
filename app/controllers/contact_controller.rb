@@ -2,8 +2,9 @@ class ContactController < ApplicationController
   before_filter :require_no_user, :only => :create
   
   def index
-    @user_session = UserSession.new unless current_user
-    @user = User.new unless member? or current_user
+    redirect_to conversations_path if current_user
+    @user_session = UserSession.new
+    @user = User.new unless member?
   end
   
   def create

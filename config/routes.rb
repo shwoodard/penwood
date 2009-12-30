@@ -2,9 +2,9 @@ ActionController::Routing::Routes.draw do |map|
   map.resource :user_session
   map.signout 'signout', :controller => 'user_sessions', :action => 'destroy', :conditions => {:method => :get}
   map.resource :account, :controller => 'users'
-  map.resources :users
-  map.activate_user 'users/:activation_code/activate', :controller => 'users', :action => 'activate', :conditions => {:method => :get}
+  map.activate_user 'account/:activation_code/activate', :controller => 'users', :action => 'activate', :conditions => {:method => :get}
   map.resources :testimonials
+  map.resources :conversations
   
   map.with_options :controller => 'contact' do |contact|
     contact.contact 'contact', :action => 'index', :conditions => {:method => :get}

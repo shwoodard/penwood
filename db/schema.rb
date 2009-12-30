@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091229225116) do
+ActiveRecord::Schema.define(:version => 20091230024015) do
 
   create_table "contents", :force => true do |t|
     t.integer  "page_id"
@@ -19,6 +19,26 @@ ActiveRecord::Schema.define(:version => 20091229225116) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "text_identifier"
+  end
+
+  create_table "conversation_entries", :force => true do |t|
+    t.text     "body"
+    t.integer  "conversation_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "conversations", :force => true do |t|
+    t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "groups", :force => true do |t|
+    t.integer  "group_type_id"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "pages", :force => true do |t|
@@ -40,6 +60,22 @@ ActiveRecord::Schema.define(:version => 20091229225116) do
     t.integer  "position"
   end
 
+  create_table "user_conversations", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "conversation_id"
+    t.boolean  "creator",         :default => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "user_groups", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "group_id"
+    t.boolean  "moderator",  :default => false, :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "users", :force => true do |t|
     t.string   "email",                                  :null => false
     t.string   "crypted_password",                       :null => false
@@ -57,8 +93,8 @@ ActiveRecord::Schema.define(:version => 20091229225116) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "phone"
-    t.boolean  "admin"
-    t.boolean  "super_user"
+    t.boolean  "admin",               :default => false, :null => false
+    t.boolean  "super_user",          :default => false, :null => false
     t.string   "name"
     t.boolean  "registered",          :default => true,  :null => false
     t.boolean  "active",              :default => false, :null => false

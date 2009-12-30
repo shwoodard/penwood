@@ -35,6 +35,7 @@ label {
 
 #singleCol #gblTop #gblTopLiner {
   padding:30px;
+  position:relative;
 }
 
 #singleCol #gblTop #gblTopLiner #gblLogo {

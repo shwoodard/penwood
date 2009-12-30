@@ -15,6 +15,7 @@
       <div id="singleColLiner">
         <div id="gblTop">
           <div id="gblTopLiner">
+            <%= render :partial => 'partials/gbl_session_nav.html.erb' unless guest? %>
             <a href="<%= root_path-%>"><span id="gblLogo" class="block float"></span></a>
             <%= render :partial => 'partials/gbl_nav.html.erb' %>
           </div>

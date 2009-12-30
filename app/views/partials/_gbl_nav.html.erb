@@ -7,9 +7,17 @@
       '<span class="testimonials active">Testimonials</span>'
     end
   %>
+  <% unless member? %>
   <%= 
     link_to_unless_current '<span>Contact Us</span>', contact_path, :class => 'nav_contact-lnk' do
       '<span class="contact active">Contact Us</span>'
     end  
   %>
+  <% else %>
+  <%= 
+    link_to_unless_current '<span>Login</span>', contact_path, :class => 'nav_contact-lnk' do
+      '<span class="contact active">Login</span>'
+    end  
+  %>
+  <% end %>
 </div>
