@@ -1,7 +1,7 @@
-class Admin::UsersController < ApplicationController
+class Admin::UsersController < Admin::AdminController
   def index
-    @users = User.enabled.paginate(:all, :page => params[:page], :order => 'created_at DESC')
-    @groups = Group.paginate(:all :page => params[:page], :order => 'created_at DESC')
+    @users = User.enabled.paginate(:all, :page => params[:page] || 1, :order => 'created_at DESC')
+    @groups = Group.paginate(:all, :page => params[:page] || 1, :order => 'created_at DESC')
   end
   
   def show

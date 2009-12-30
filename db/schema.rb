@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091230024015) do
+ActiveRecord::Schema.define(:version => 20091230153100) do
 
   create_table "contents", :force => true do |t|
     t.integer  "page_id"
@@ -98,6 +98,7 @@ ActiveRecord::Schema.define(:version => 20091230024015) do
     t.string   "name"
     t.boolean  "registered",          :default => true,  :null => false
     t.boolean  "active",              :default => false, :null => false
+    t.boolean  "banned",              :default => false, :null => false
   end
 
 end
