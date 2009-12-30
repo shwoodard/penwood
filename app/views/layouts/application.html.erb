@@ -21,6 +21,7 @@
           </div>
         </div>
         <div id="gblContent">
+          <% if flash[:notice] %><div class="flashNotice"><%= flash[:notice] %></div><% end %>
           <%= yield %>
         </div>
         <div id="gblFooter">

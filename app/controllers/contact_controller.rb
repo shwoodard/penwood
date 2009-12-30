@@ -4,7 +4,7 @@ class ContactController < ApplicationController
   def index
     redirect_to conversations_path if current_user
     @user_session = UserSession.new
-    @user = User.new unless member?
+    @user = User.new
   end
   
   def create

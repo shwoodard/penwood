@@ -39,3 +39,9 @@
 #gblContent {
   padding-bottom:45px;
 }
+
+.contactNewUserButton {
+  padding-left:5px;
+  margin-top:20px;
+  font-size:18px;
+}

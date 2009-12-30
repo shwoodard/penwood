@@ -46,7 +46,7 @@ label {
 
 #gblNav {
     float:right;
-    margin-top:35px;
+    margin-top:30px;
     margin-right:25px;
 }
 
@@ -136,7 +136,7 @@ label {
 
 #gblContent {
   padding:0 25px;
-  min-height:550px;
+  min-height:400px;
 }
 
 #gblFooter {
@@ -178,4 +178,12 @@ label {
   font-size:12px;
   padding-top:15px;
   color:#b1b1b1;
+}
+
+.gblAddButton {
+  background:url(/images/gbl_add-button.gif) no-repeat top right;
+  padding-right:30px;
+  display:block;
+  float:left;
+  height:27px;
 }

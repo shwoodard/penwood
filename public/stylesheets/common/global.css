@@ -97,3 +97,13 @@ input[type=checkbox] {
   top:25px;
   right:20px;
 }
+
+.flashNotice {
+	width: 840px;
+	padding: 8px;
+	margin: 0 auto 25px auto;
+	background: #FFF3E2;
+	border: solid 1px #C5351C;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}

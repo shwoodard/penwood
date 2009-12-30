@@ -1,5 +1,5 @@
 class Admin::ContentsController < Admin::AdminController
-  # before_filter :require_super_user, :only => [:new, :create]
+  before_filter :require_super_user, :only => [:new, :create]
   
   def index
     # TODO

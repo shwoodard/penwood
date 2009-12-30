@@ -1,6 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
   map.resource :user_session
   map.signout 'signout', :controller => 'user_sessions', :action => 'destroy', :conditions => {:method => :get}
+  map.resources :users, :collection => {:resend_activation_email => :get, :send_activation_email => :post}
   map.resource :account, :controller => 'users'
   map.activate_user 'account/:activation_code/activate', :controller => 'users', :action => 'activate', :conditions => {:method => :get}
   map.resources :testimonials
