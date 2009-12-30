@@ -9,6 +9,8 @@
 <%= static_asset_stylesheet 'stylesheets/common/global', 'cache/common/global' %>
 <%= stylesheet_link_tag 'common/admin' %>
 <%= yield :styles %>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<%= yield :google_js %>
 </head>
 <body>
   <div id="singleColWpr">
@@ -33,7 +35,7 @@
       </div>
     </div>
   </div>
-<%= static_asset_javascript 'javascripts/common/global', 'cache/common/global' %>
+<%= static_asset_javascript 'javascripts/common/admin', 'cache/common/admin' %>
 <%= yield :scripts %>
 </body>
 </html>

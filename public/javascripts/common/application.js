@@ -7,6 +7,10 @@
     }
   };
   
+  $.fn.boolVal = function () {
+    return !!parseInt($(this).val(), 10);
+  };
+  
   $.extend(jQuery, {
       _ajax: jQuery.ajax,
       
