@@ -13,7 +13,7 @@ class Admin::AdminController < ApplicationController
     unless current_user_admin?
       flash[:notice] = 'You do not have access.'
       current_user_session.destroy
-      redirect_to root_path
+      redirect_to contact_path
     end
   end
   

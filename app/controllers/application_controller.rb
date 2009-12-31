@@ -38,7 +38,7 @@ class ApplicationController < ActionController::Base
     unless current_user
       store_location
       flash[:notice] = 'You must be logged in to do this.'
-      redirect_to root_path
+      redirect_to contact_path
     end
   end
   

@@ -1,9 +1,10 @@
-<h1>My Conversations</h1>
+<h1>Dialogues</h1>
 <h2>Drop a quick note</h2>
 <% form_for @conversation do |f| %>
   <%= f.error_messages %>
   <%= f.hidden_field :subject, :value => "A quick note from #{current_user.name}"%>
   <% f.fields_for :conversation_entries do |ces| %>
+    <%= ces.hidden_field :user_id, :value => current_user.id %>
     <%= ces.text_area :body, :class => 'quickNote' %>
   <% end %>
   <div class="currentParticipants">

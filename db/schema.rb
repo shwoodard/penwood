@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091230213613) do
+ActiveRecord::Schema.define(:version => 20091231025838) do
 
   create_table "contents", :force => true do |t|
     t.integer  "page_id"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(:version => 20091230213613) do
     t.integer  "conversation_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
 
   create_table "conversations", :force => true do |t|
