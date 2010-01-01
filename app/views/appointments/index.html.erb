@@ -1,0 +1,10 @@
+<h1>My Appointments</h1>
+<p><%= link_to 'New appointment', new_appointment_path %></p>
+
+<% content_for :scripts do %>
+<%= static_asset_javascript 'javascripts/views/appointments/index', 'cache/views/appointments/index' %>
+<% end %>
+
+<% content_for :styles do %>
+<%= static_asset_stylesheet 'stylesheets/views/appointments/index', 'cache/views/appointments/index' %>
+<% end %>

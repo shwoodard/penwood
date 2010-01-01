@@ -6,6 +6,7 @@ ActionController::Routing::Routes.draw do |map|
   map.activate_user 'account/:activation_code/activate', :controller => 'users', :action => 'activate', :conditions => {:method => :get}
   map.resources :testimonials
   map.resources :conversations
+  map.resources :appointments
   
   map.with_options :controller => 'contact' do |contact|
     contact.contact 'contact', :action => 'index', :conditions => {:method => :get}

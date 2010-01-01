@@ -3,6 +3,10 @@ html, body {
     color:#C5351C;
 }
 
+p a {
+  text-decoration:underline;
+}
+
 label {
   font-size:14px;
   color:#999999;

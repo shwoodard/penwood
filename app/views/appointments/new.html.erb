@@ -1,0 +1,26 @@
+<h1>New Appointment</h1>
+<p>Here, you can submit new appointment requests to Doug and Terry</p>
+<% form_for :appointment, :url => appointments_path, :html => {:class => 'new_appointment_form'} do |f| %>
+<h2>Start</h2>
+<p class="dateContainer"><%= f.label :start_date -%><br /><%= f.text_field :start_date, :class => 'date_picker' -%></p>
+<p class="timeContainer"><%= f.label :start_time -%><br /><%= f.text_field :start_time, :class => 'time_picker' -%></p>
+<div class="clear"></div>
+<h2>End</h2>
+<p class="dateContainer"><%= f.label :end_date -%><br /><%= f.text_field :end_date, :class => 'date_picker' -%></p>
+<p class="timeContainer"><%= f.label :end_time -%><br /><%= f.text_field :end_time, :class => 'time_picker' -%></p>
+<div class="clear"></div>
+<div><%= f.submit 'Submit' %></div>
+<% end %>
+
+<% content_for :scripts do %>
+<%= static_asset_javascript 'javascripts/views/appointments/new', 'cache/views/appointments/new' %>
+<% end %>
+
+<% content_for :styles do %>
+<%= static_asset_stylesheet 'stylesheets/views/appointments/new', 'cache/views/appointments/new' %>
+<% end %>
+
+<% content_for :google_js do %>
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">google.load("gdata", "2.x");</script>
+<% end %>

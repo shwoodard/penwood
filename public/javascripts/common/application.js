@@ -1,4 +1,14 @@
+var penwood = penwood || {};
+
 (function ($) {
+  $.namespace = function (nss) {
+      nss = nss.split('.');
+      var o = penwood;
+      for (var i = 1; i < nss.length; i++) {
+          o = o[nss[i]] = o[nss[i]] || {};
+      }
+  };
+  
   $.fn.setClass = function (klass, bSet) {
     if (bSet) {
       $(this).addClass(klass);
