@@ -24,6 +24,8 @@ class ConversationsController < ApplicationController
       @conversation.deliver_invitations!
       redirect_to @conversation
     else
+      @conversation.user_conversations.clear
+      User.basic_admin.each {|u| @conversation.user_conversations.build(:user => u)}
       render :action => params[:quick] ? 'index' : 'new'
     end
   end
