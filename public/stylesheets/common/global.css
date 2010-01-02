@@ -26,6 +26,11 @@ h3 {
   color:#585555;
 }
 
+h4 {
+  font-size:18px;
+  padding-bottom:10px;
+}
+
 p, .para {
   font-size:16px;
   color:#7e7e7e;

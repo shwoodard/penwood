@@ -1,10 +1,4 @@
-<%= hidden_field_tag 'google_cal_login_callback_url', admin_google_call_login_callback_url %>
-<%= hidden_field_tag 'google_has_session', !!session[:google_account_token] ? '1' : '0' %>
-<% if session[:google_account_token] %>
-<%= hidden_field_tag 'google_account_token', session[:google_account_token] %>
-<%= hidden_field_tag 'google_account_login', "#{current_user.name.downcase}@penwoodpartners.com" %>
-<% end %>
-<%= image_tag 'bg-pattern.gif', :style => 'position:absolute;top:-1000px;'%>
+<%= render :partial => 'admin/calendar/event.html.erb', :collection => @events %>
 
 <% content_for :scripts do %>
 <%= static_asset_javascript 'javascripts/views/admin/calendar/index', 'cache/views/admin/calendar/index' %>
@@ -12,10 +6,4 @@
 
 <% content_for :styles do %>
 <%= static_asset_stylesheet 'stylesheets/views/admin/calendar/index', 'cache/views/admin/calendar/index' %>
-<% end %>
-
-<% content_for :google_js do %>
-<script type="text/javascript" src="http://www.google.com/jsapi"></script>
-<%= javascript_include_tag 'views/admin/calendar/google' %>
-<!-- <script src="http://www.google.com/calendar/feeds/doug@penwoodpartners.com/private/full?alt=json-in-script&callback=callbackFn"></script> -->
 <% end %>

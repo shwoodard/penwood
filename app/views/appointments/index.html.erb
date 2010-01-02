@@ -1,4 +1,14 @@
 <h1>My Appointments</h1>
+<h2>Tentative Appointments</h2>
+<ul>
+<%= render :partial => 'appointments/appointment.html.erb', :collection => @tentative_appointments %>
+</ul>
+<div class="clear"></div>
+<h2>Confirmed Appointments</h2>
+<ul>
+<%= render :partial => 'appointments/appointment.html.erb', :collection => @confirmed_appointments %>
+</ul>
+
 <p><%= link_to 'New appointment', new_appointment_path %></p>
 
 <% content_for :scripts do %>

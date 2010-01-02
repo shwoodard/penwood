@@ -2,13 +2,14 @@
 <p>Here, you can submit new appointment requests to Doug and Terry</p>
 <% form_for :appointment, :url => appointments_path, :html => {:class => 'new_appointment_form'} do |f| %>
 <h2>Start</h2>
-<p class="dateContainer"><%= f.label :start_date -%><br /><%= f.text_field :start_date, :class => 'date_picker' -%></p>
-<p class="timeContainer"><%= f.label :start_time -%><br /><%= f.text_field :start_time, :class => 'time_picker' -%></p>
+<p class="dateContainer"><%= f.label :start_date -%><br /><%= f.text_field :start_date, :class => 'start date_picker' -%></p>
+<p class="timeContainer"><%= f.label :start_time -%><br /><%= f.text_field :start_time, :class => 'start time_picker' -%></p>
 <div class="clear"></div>
 <h2>End</h2>
-<p class="dateContainer"><%= f.label :end_date -%><br /><%= f.text_field :end_date, :class => 'date_picker' -%></p>
-<p class="timeContainer"><%= f.label :end_time -%><br /><%= f.text_field :end_time, :class => 'time_picker' -%></p>
+<p class="dateContainer"><%= f.label :end_date -%><br /><%= f.text_field :end_date, :class => 'end date_picker' -%></p>
+<p class="timeContainer"><%= f.label :end_time -%><br /><%= f.text_field :end_time, :class => 'end time_picker' -%></p>
 <div class="clear"></div>
+<p class="note"><%= f.label :note -%><br /><%= f.text_area :note %></p>
 <div><%= f.submit 'Submit' %></div>
 <% end %>
 

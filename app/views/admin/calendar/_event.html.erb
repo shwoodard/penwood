@@ -1,0 +1,10 @@
+<li class="event">
+  <h4><%= event.title %></h4>
+  <ul>
+  <% event.attendees.each do |attendee| %>
+    <p><%= attendee[:name]-%> - <%= mail_to attendee[:email] -%></p>
+  <% end %>
+  </ul>
+  <div>Start: <%= l event.start %></div>
+  <div>End: <%= l event.end %></div>
+</li>

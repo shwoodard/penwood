@@ -5,3 +5,7 @@
 .timeContainer {
   margin-left:380px;
 }
+
+.note textarea {
+  height:130px;
+}
