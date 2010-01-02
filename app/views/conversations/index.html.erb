@@ -2,6 +2,7 @@
 <h2>Drop a quick note</h2>
 <% form_for @conversation do |f| %>
   <%= f.error_messages %>
+  <%= hidden_field_tag 'quick', 'true' %>
   <%= f.hidden_field :subject, :value => "A quick note from #{current_user.name}"%>
   <% f.fields_for :conversation_entries do |ces| %>
     <%= ces.hidden_field :user_id, :value => current_user.id %>
@@ -15,14 +16,12 @@
     <% end %>
   </div>
   <div class="clear"></div>
-  <div class="potentialRecipients hidden">
-    <h2>Add Participants</h2>
-    <div class="potentialRecipientsContainer potential_participants_container"></div>
-  </div>
-  <div class="clear"></div>
   <div><%= f.submit 'Send' %></div>
 <% end %>
-
+<div class="potentialRecipients hidden">
+  <h2>Add Participants</h2>
+  <div class="potentialRecipientsContainer potential_participants_container"></div>
+</div>
 
 <% content_for :scripts do %>
 <%= static_asset_javascript 'javascripts/views/conversations/index', 'cache/views/conversations/index' %>

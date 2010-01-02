@@ -24,8 +24,7 @@ class ConversationsController < ApplicationController
       @conversation.deliver_invitations!
       redirect_to @conversation
     else
-      # TODO change to new
-      render :action => 'index'
+      render :action => params[:quick] ? 'index' : 'new'
     end
   end
 end

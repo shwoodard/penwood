@@ -170,3 +170,16 @@ a.miniPersonaTagLink:hover span.smIcon {
   height:16px;
 }
 
+a.miniPersonaTagLink.add:hover span.smIcon {
+  background:url(/images/gbl_add-button-sm-alt.gif) no-repeat top left;
+}
+
+a.add span.smIcon {
+  background:url(/images/gbl_add-button-sm.gif) no-repeat top left;
+}
+
+a.miniPersonaTagLink.add:hover span.smIcon {
+  width:18px;
+  height:18px;
+}
+

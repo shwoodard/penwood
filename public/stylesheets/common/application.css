@@ -13,6 +13,15 @@ label {
   padding-bottom:3px;
 }
 
+.breadcrumbs,
+.breadcrumbs a {
+  font-size:14px;
+}
+
+.breadcrumbs a {
+  color:#C5351C;
+}
+
 #singleColWpr {
     text-align:center;
 }
