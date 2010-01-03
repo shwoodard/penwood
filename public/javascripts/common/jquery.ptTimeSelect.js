@@ -1,3 +1,5 @@
+(function () {
+
 /***********************************************************************
  * FILE: jquery.ptTimeSelect.js
  * 
@@ -477,3 +479,4 @@ jQuery.fn.ptTimeSelect = function (opt) {
  */
 
 
+})();
