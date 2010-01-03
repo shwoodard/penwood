@@ -1,13 +1,13 @@
 <h1>My Appointments</h1>
 <h2>Tentative Appointments</h2>
 <% if @tentative_appointments.empty? %><p>You do not have any unapproved appointments.</p><% end %>
-<ul>
+<ul class="appointments">
 <%= render :partial => 'appointments/appointment.html.erb', :collection => @tentative_appointments %>
 </ul>
 <div class="clear"></div>
 <h2>Confirmed Appointments</h2>
 <% if @confirmed_appointments.empty? %><p>You do not have any confirmed appointments.</p><% end %>
-<ul>
+<ul class="appointments">
 <%= render :partial => 'appointments/appointment.html.erb', :collection => @confirmed_appointments %>
 </ul>
 

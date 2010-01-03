@@ -35,8 +35,10 @@ class AppointmentsController < ApplicationController
   end
   
   def service
-    service = GCal4Ruby::Service.new
-    service.authenticate('doug@penwoodpartners.com', 'daw7852')
-    service
+    @service ||= begin
+      s = GCal4Ruby::Service.new
+      s.authenticate('doug@penwoodpartners.com', 'daw7852')
+      s
+    end
   end
 end

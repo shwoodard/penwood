@@ -1,5 +1,5 @@
 <li class="appointment">
-  <h3 class="float"><%= appointment.title %></h3>
-  <div class="float">Start: <%= l appointment.start %></div>
-  <div class="float">End: <%= l appointment.end %></div>
+  <h3><%= appointment.title %></h3>
+  <div>Start: <%= appointment.start.strftime('%A, %B %e, %Y, %l:%M %p') %></div>
+  <div>End: <%= appointment.end.strftime('%A, %B %e, %Y, %l:%M %p') %></div>
 </li>
