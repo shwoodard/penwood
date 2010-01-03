@@ -4,17 +4,18 @@
   <%= f.error_messages %>
   <%= hidden_field_tag 'quick', 'true' %>
   <%= f.hidden_field :subject, :value => "A quick note from #{current_user.name}"%>
-  <% f.fields_for :conversation_entries do |ces| %>
-    <%= ces.hidden_field :user_id, :value => current_user.id %>
-    <%= ces.text_area :body, :class => 'quickNote' %>
-  <% end %>
   <div class="currentParticipants">
-    <h2>Participants</h2>
+    <h2>To</h2>
     <% f.fields_for :user_conversations do |users| %>
       <%= users.hidden_field :user_id %>
       <%= link_to mini_persona_tag(users.object.user), 'javascript:;', :class => 'miniPersonaTagLink mini_persona_tag_lnk remove' %>
     <% end %>
   </div>
+  <div class="clear"></div>
+  <% f.fields_for :conversation_entries do |ces| %>
+    <%= ces.hidden_field :user_id, :value => current_user.id %>
+    <%= ces.text_area :body, :class => 'quickNote' %>
+  <% end %>
   <div class="clear"></div>
   <div><%= f.submit 'Send' %></div>
 <% end %>
