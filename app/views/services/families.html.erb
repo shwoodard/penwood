@@ -1,0 +1,10 @@
+<%= render :partial => 'services/local_nav.html.erb' %>
+<h1>Families</h1>
+
+<% content_for :scripts do %>
+<%= static_asset_javascript 'javascripts/views/services/families', 'cache/views/services/families' %>
+<% end %>
+
+<% content_for :styles do %>
+<%= static_asset_stylesheet 'stylesheets/views/services/families', 'cache/views/services/families' %>
+<% end %>

@@ -1,0 +1,16 @@
+<%= render :partial => 'services/local_nav.html.erb' %>
+<h1>Couples</h1>
+<div id="servicesContent">
+  <div id="servicesContentRight">
+    <div class="subPictureFrame"></div>
+  </div>
+</div>
+<div class="clear"></div>
+
+<% content_for :scripts do %>
+<%= static_asset_javascript 'javascripts/views/services/couples', 'cache/views/services/couples' %>
+<% end %>
+
+<% content_for :styles do %>
+<%= static_asset_stylesheet 'stylesheets/views/services/couples', 'cache/views/services/couples' %>
+<% end %>

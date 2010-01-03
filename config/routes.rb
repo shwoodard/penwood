@@ -7,6 +7,13 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :testimonials
   map.resources :conversations
   map.resources :appointments
+
+  map.with_options :controller => 'services' do |services|
+    services.services 'services', :action => 'couples', :conditions => {:method => :get}
+    services.couples_services 'services/couples', :action => 'couples', :conditions => {:method => :get}
+    services.organizations_services 'services/organizations', :action => 'organizations', :conditions => {:method => :get}
+    services.families_services 'services/families', :action => 'families', :conditions => {:method => :get}
+  end
   
   map.with_options :controller => 'contact' do |contact|
     contact.contact 'contact', :action => 'index', :conditions => {:method => :get}

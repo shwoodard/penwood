@@ -1,0 +1,10 @@
+<%= render :partial => 'services/local_nav.html.erb' %>
+<h1>Organizations</h1>
+
+<% content_for :scripts do %>
+<%= static_asset_javascript 'javascripts/views/services/organizations', 'cache/views/services/organizations' %>
+<% end %>
+
+<% content_for :styles do %>
+<%= static_asset_stylesheet 'stylesheets/views/services/organizations', 'cache/views/services/organizations' %>
+<% end %>

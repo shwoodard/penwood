@@ -200,3 +200,55 @@ label {
   float:left;
   height:27px;
 }
+
+
+/*Services Section*/
+
+#servicesLocalNav {
+  width:325px;
+  height:46px;
+  background:url(/images/services_nav-bg.png) no-repeat top left;
+  position:absolute;
+  top:145px;
+  left:795px;
+}
+
+#servicesLocalNavLiner {
+  padding:13px;
+  padding-left:25px;
+}
+
+#servicesLocalNav a {
+  color:#C5351C;
+}
+
+#servicesLocalNav a:hover {
+  text-decoration:underline;
+}
+
+#servicesLocalNav span.active {
+  color:#7e6a63;
+}
+
+#servicesLocalNav a,
+#servicesLocalNav span.active {
+  border-right:2px solid #f0e5d3;
+  padding:0 10px 0 5px;
+}
+
+#servicesLocalNav .last {
+  border:none;
+}
+
+#servicesContent #servicesContentRight {
+  float:right;
+  width:300px;
+}
+
+/*End Services Styles*/
+
+.subPictureFrame {
+  width:278px;
+  height:319px;
+  background:url(/images/sub_pic-frame.png) no-repeat top left;
+}
