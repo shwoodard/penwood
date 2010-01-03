@@ -97,12 +97,14 @@ label {
   background:url(/images/gbl_nav/about_bg.gif) no-repeat top left;
 }
 
-#gblNav a.nav_services-lnk {
+#gblNav a.nav_services-lnk,
+#gblNav span.services.active {
   width:97px;
   height:37px;
 }
 
-#gblNav a.nav_services-lnk:hover {
+#gblNav a.nav_services-lnk:hover,
+#gblNav span.services.active {
   background:url(/images/gbl_nav/services_bg.gif) no-repeat top left;
 }
 
