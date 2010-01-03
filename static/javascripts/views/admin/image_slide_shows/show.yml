@@ -1,0 +1,3 @@
+"javascripts/views/admin/image_slide_shows/show":
+  - "common/jquery.cj-simple-slideshow"
+  - "views/admin/image_slide_shows/show"

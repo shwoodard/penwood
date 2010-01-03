@@ -1,0 +1,22 @@
+<h1>Image Slide Shows</h1>
+<table class="adminModelIndex">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Text identifier</th>
+      <th>Page</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render :partial => 'admin/image_slide_shows/image_slide_show.html.erb', :collection => @slide_shows %>
+  </tbody>
+</table>
+<div><%= link_to 'New', new_admin_image_slide_show_path -%></div>
+<% content_for :scripts do %>
+<%= static_asset_javascript 'javascripts/views/admin/image_slide_shows/index', 'cache/views/admin/image_slide_shows/index' %>
+<% end %>
+
+<% content_for :styles do %>
+<%= static_asset_stylesheet 'stylesheets/views/admin/image_slide_shows/index', 'cache/views/admin/image_slide_shows/index' %>
+<% end %>

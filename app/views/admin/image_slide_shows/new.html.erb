@@ -1,0 +1,44 @@
+<h1>New Image Slide Show</h1>
+<% form_for @slide_show, :url => admin_image_slide_shows_path, :html => {:multipart => true} do |f| %>
+<%= f.error_messages %>
+<table class="adminFormTable">
+  <thead></thead>
+  <tbody>
+    <tr>
+      <td><%= f.label :page_id -%></td>
+      <td><%= f.select :page_id, Page.all.collect{|p| [page_display(p), p.id]} %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :title %></td><td><%= f.text_field :title -%></td>
+    </tr>
+    <tr>
+      <td><%= f.label :text_identifier %></td><td><%= f.text_field :text_identifier -%></td>
+    </tr>
+    <% f.fields_for :images do |images| %>
+    <tr>
+      <td colspan="2">Image</td>
+    </tr>
+    <tr>
+      <td><%= images.label :title -%></td><td><%= images.text_field :title -%></td>
+    </tr>
+    <tr>
+      <td><%= images.label :image -%></td><td><%= images.file_field :image -%></td>
+    </tr>
+    <% end %>
+    <tr>
+      <td colspan="2"><%= f.submit 'Save and Add image' -%></td>
+    </tr>
+    <tr>
+      <td colspan="2"><%= f.submit -%></td>
+    </tr>
+  </tbody>
+</table>
+<% end %>
+
+<% content_for :scripts do %>
+<%= static_asset_javascript 'javascripts/views/admin/image_slide_shows/new', 'cache/views/admin/image_slide_shows/new' %>
+<% end %>
+
+<% content_for :styles do %>
+<%= static_asset_stylesheet 'stylesheets/views/admin/image_slide_shows/new', 'cache/views/admin/image_slide_shows/new' %>
+<% end %>

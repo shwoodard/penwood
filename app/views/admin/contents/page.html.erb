@@ -2,9 +2,11 @@
 <h2>Content for, <i><%= page_display(@page) %></i></h2>
 <h2 style="margin-top:15px;">Step 2</h2>
 <p>Please select a content region on the page to edit.</p>
+<h3>Text Content</h3>
 <% paginated_section @contents do %>
 <%= render :partial => 'admin/contents/content.html.erb', :collection => @contents %>
 <% end %>
+<h3>Image Slide Shows</h3>
 <p><%= link_to 'Back', admin_contents_path -%></p>
 
 <% content_for :scripts do %>

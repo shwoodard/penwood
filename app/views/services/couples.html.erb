@@ -2,7 +2,9 @@
 <h1>Couples</h1>
 <div id="servicesContent">
   <div id="servicesContentRight">
-    <div class="subPictureFrame"></div>
+    <div class="subPictureFrame"><div class="subPictureFrameLiner"><div class="subpage slideShow">
+      <%= render :partial => 'partials/image.html.erb', :collection => ImageSlideShow.find_by_text_identifier('services_couples').images %>
+    </div></div></div>
   </div>
 </div>
 <div class="clear"></div>

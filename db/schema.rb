@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091231025838) do
+ActiveRecord::Schema.define(:version => 20100103164224) do
 
   create_table "contents", :force => true do |t|
     t.integer  "page_id"
@@ -38,6 +38,29 @@ ActiveRecord::Schema.define(:version => 20091231025838) do
   create_table "groups", :force => true do |t|
     t.integer  "group_type_id"
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "image_slide_shows", :force => true do |t|
+    t.string   "title"
+    t.string   "text_identifier"
+    t.integer  "page_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "images", :force => true do |t|
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.integer  "image_slide_show_id"
+    t.string   "title"
+    t.integer  "position"
+    t.integer  "page_id"
+    t.string   "text_identifier"
+    t.text     "caption"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

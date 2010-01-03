@@ -252,3 +252,17 @@ label {
   height:319px;
   background:url(/images/sub_pic-frame.png) no-repeat top left;
 }
+
+.subPictureFrame .subPictureFrameLiner {
+  padding-left:13px;
+  padding-top:14px;
+}
+
+.slideShow {
+  display:none;
+}
+
+.subpage.slideShow {
+  width:249px;
+  height:289px;
+}

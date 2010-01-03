@@ -1,0 +1,51 @@
+<h1>Edit Image Slide Show</h1>
+<% form_for @slide_show, :url => admin_image_slide_show_path(@slide_show), :html => {:multipart => true} do |f| %>
+<%= f.error_messages %>
+<table class="adminFormTable">
+  <thead></thead>
+  <tbody>
+    <tr>
+      <td><%= f.label :title %></td><td><%= f.text_field :title -%></td>
+    </tr>
+    <% if current_user_super_user? %>
+    <tr>
+      <td><%= f.label :text_identifier %></td><td><%= f.text_field :text_identifier -%></td>
+    </tr>
+    <tr>
+      <td><%= f.label :page_id -%></td>
+      <td><%= f.select :page_id, Page.all.collect{|p| [page_display(p), p.id]} %></td>
+    </tr>
+    <% end %>
+    <% f.fields_for :images do |images| %>
+    <tr>
+      <td colspan="2">Image</td>
+    </tr>
+    <tr>
+      <td><%= images.label :title -%></td><td><%= images.text_field :title -%></td>
+    </tr>
+    <% unless images.object.new_record? %>
+    <tr>
+      <td><%= images.label :_delete -%></td><td><%= images.check_box :_delete -%></td>
+    </tr>
+    <% end %>
+    <tr>
+      <td><%= images.label :image -%></td><td><%= images.file_field :image -%><% if images.object.image.file? %><span class="imagePreview"><%= image_tag images.object.image.url -%></span><% end %></td>
+    </tr>
+    <% end %>
+    <tr>
+      <td colspan="2"><%= f.submit 'Save and Add image' -%></td>
+    </tr>
+    <tr>
+      <td colspan="2"><%= f.submit -%></td>
+    </tr>
+  </tbody>
+</table>
+<% end %>
+
+<% content_for :scripts do %>
+<%= static_asset_javascript 'javascripts/views/admin/image_slide_shows/edit', 'cache/views/admin/image_slide_shows/edit' %>
+<% end %>
+
+<% content_for :styles do %>
+<%= static_asset_stylesheet 'stylesheets/views/admin/image_slide_shows/edit', 'cache/views/admin/image_slide_shows/edit' %>
+<% end %>
