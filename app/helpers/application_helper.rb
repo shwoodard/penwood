@@ -9,4 +9,13 @@ module ApplicationHelper
     s << " (#{page.title})" if page.title
     s
   end
+  
+  def quote(qte)
+    s = <<-END_S
+      <div class="quote">
+        <div class="float">#{image_tag('gbl_qte-left.gif')}</div><div class="body">#{qte.body}<div class="quoteWpr">#{image_tag('gbl_qte-right.gif', :class => 'rightQuote')}</div></div>
+        <div class="float right author">- #{qte.author}</div>
+      </div
+    END_S
+  end
 end

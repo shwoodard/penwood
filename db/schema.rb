@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100103164224) do
+ActiveRecord::Schema.define(:version => 20100103203545) do
 
   create_table "contents", :force => true do |t|
     t.integer  "page_id"
@@ -69,6 +69,15 @@ ActiveRecord::Schema.define(:version => 20100103164224) do
     t.string   "title"
     t.string   "path"
     t.integer  "parent_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "quotes", :force => true do |t|
+    t.text     "body"
+    t.string   "author"
+    t.integer  "page_id"
+    t.string   "text_identifier"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

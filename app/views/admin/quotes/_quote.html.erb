@@ -1,0 +1,10 @@
+<tr>
+  <td><%= page_display quote.page %></td>
+  <td><%= truncate quote.body, :length => 75 %></td>
+  <td><%= quote.author %></td>
+  <td class="adminModelIndexControls">
+    <span><%= link_to 'Show', admin_quote_path(quote) -%></span>
+    <span><%= link_to 'Edit', edit_admin_quote_path(quote) -%></span>
+    <span><%= link_to 'Delete', admin_quote_path(quote), :method => :delete, :confirm => "Are you sure?" -%></span>
+  </td>
+</tr>

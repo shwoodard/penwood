@@ -109,7 +109,7 @@ label {
 }
 
 #gblNav a.nav_articles-lnk {
-  width:88px;
+  width:98px;
   height:37px;
 }
 
@@ -152,6 +152,7 @@ label {
 #gblContent {
   padding:0 25px;
   min-height:400px;
+  padding-bottom:30px;
 }
 
 #gblFooter {
@@ -247,6 +248,18 @@ label {
   width:300px;
 }
 
+#servicesContent #servicesContentLeft {
+  margin-right:300px;
+  width:550px;
+  border-right:1px solid #ececec;
+  margin-bottom:50px;
+}
+
+#servicesContent #servicesContentLeft #servicesContentLeftLiner {
+  padding-right:30px;
+}
+
+
 /*End Services Styles*/
 
 .subPictureFrame {
@@ -267,4 +280,40 @@ label {
 .subpage.slideShow {
   width:249px;
   height:289px;
+}
+
+.servicesQuote {
+  padding-top:30px;
+}
+
+.quote {
+  font-style:italic;
+  color:#7e7e7e;
+  font-size:16px;
+}
+
+.quote .body {
+  margin-left:35px;
+}
+
+.quote .rightQuote {
+  position:absolute;
+  padding-top:5px;
+  padding-left:10px;
+}
+
+.quote .quoteWpr {
+  position:relative;
+  display:inline;
+}
+
+.quote .author {
+  font-size:12px;
+  font-style:normal;
+  padding-top:20px;
+  padding-right:30px;
+}
+
+.appointmentButtonWpr {
+  padding-top:20px;
 }

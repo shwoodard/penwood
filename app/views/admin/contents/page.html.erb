@@ -1,8 +1,9 @@
 <h1>Content Management System</h1>
 <h2>Content for, <i><%= page_display(@page) %></i></h2>
-<h2 style="margin-top:15px;">Step 2</h2>
-<p>Please select a content region on the page to edit.</p>
-<h3>Text Content</h3>
+<h2 class="float">Step 2</h2>
+<p style="line-height:30px;">&nbsp;&nbsp;&nbsp;&nbsp;Please select a content region on the page to edit.</p>
+<div class="clear"></div>
+<h2>Text Content</h2>
 <% paginated_section @contents do %>
 <%= render :partial => 'admin/contents/content.html.erb', :collection => @contents %>
 <% end %>

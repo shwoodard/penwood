@@ -1,0 +1,13 @@
+<h1>Edit Quote</h1>
+  
+<% form_for @quote, :url => admin_quote_path(@quote) do |f| %>
+<%= render :partial => 'admin/quotes/form.html.erb', :locals => {:f => f}%>
+<% end %>
+
+<% content_for :scripts do %>
+<%= static_asset_javascript 'javascripts/views/admin/quotes/edit', 'cache/views/admin/quotes/edit' %>
+<% end %>
+
+<% content_for :styles do %>
+<%= static_asset_stylesheet 'stylesheets/views/admin/quotes/edit', 'cache/views/admin/quotes/edit' %>
+<% end %>

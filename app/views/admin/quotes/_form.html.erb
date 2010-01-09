@@ -1,0 +1,29 @@
+<div><%= f.error_messages %></div>
+<table class="adminFormTable">
+  <thead><thead>
+  <tbody>
+    <% if current_user_super_user? %>
+    <tr>
+      <td><%= f.label :page_id %></td>
+      <td><%= f.select :page_id, Page.all.collect{|p| [page_display(p), p.id]} -%></td>
+    </tr>
+    <% end %>
+    <tr>
+      <td><%= f.label :body -%></td>
+      <td><%= f.text_area :body %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :author -%></td>
+      <td><%= f.text_field :author %></td>
+    </tr>
+    <% if current_user_super_user? %>
+    <tr>
+      <td><%= f.label :text_identifier -%></td>
+      <td><%= f.text_field :text_identifier %></td>
+    </tr>
+    <% end %>
+    <tr>
+      <td colspan="2"><%= f.submit -%> <%= link_to 'Cancel', admin_quotes_path %></td>
+    </tr>
+  </tbody>
+</table>

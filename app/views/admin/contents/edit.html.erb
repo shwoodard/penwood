@@ -26,7 +26,9 @@
   </tbody>
 </table>
 <% end %>
-
+<% if current_user_super_user? %>
+<%= link_to 'Delete', admin_content_path(@content), :method => 'delete', :confirm => 'Are you sure?' %>
+<% end %>
 
 <% content_for :scripts do %>
 <%= static_asset_javascript 'javascripts/views/admin/contents/edit', 'cache/views/admin/contents/edit' %>

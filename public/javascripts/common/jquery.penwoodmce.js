@@ -16,7 +16,7 @@
       
       convert_fonts_to_spans : true,
       content_css : "/stylesheets/common/global.css",
-      theme_advanced_styles: "h1=heading1,h2=heading2,p=para"
+      theme_advanced_styles: "h1=heading1,h2=heading2,p=para,big_text=bigText"
     });
   };
 })(jQuery);

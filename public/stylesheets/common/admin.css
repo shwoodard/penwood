@@ -2,6 +2,10 @@ h1 {
   padding:10px 0;
 }
 
+textarea {
+  height:175px;
+}
+
 .adminFormTable tbody tr td {
   vertical-align:top;
   padding:10px;

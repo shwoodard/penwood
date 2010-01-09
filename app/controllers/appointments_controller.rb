@@ -1,5 +1,4 @@
 require 'gcal4ruby'
-require 'uuidtools'
 
 class AppointmentsController < ApplicationController
   before_filter :require_user
@@ -24,11 +23,10 @@ class AppointmentsController < ApplicationController
     event.end = Time.parse("#{params[:appointment][:end_date]} #{params[:appointment][:end_time]}")
     event.attendees = [{:name => current_user.name, :email => current_user.email}]
     event.content = params[:appointment][:note]
-    event.id = UUIDTools::UUID.random_create.to_s
     
     if event.save
       flash[:notice] = 'Your event request has been submitted.  Thank you.'
-      redirect_to :action => 'show', :id => event.id
+      redirect_to :action => 'index'
     else
       render :action => 'new'
     end

@@ -1,0 +1,28 @@
+<h1>Quotes</h1>
+<table class="adminModelIndex">
+  <thead>
+    <tr>
+      <th>Page</th>
+      <th>Body</th>
+      <th>Author</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render :partial => 'admin/quotes/quote.html.erb', :collection => @quotes-%>
+  </tbody>
+</table>
+<% if current_user_super_user? %>
+<div>
+  <span><%= link_to 'New Quote', new_admin_quote_path %></span>
+</div>
+<% end %>
+
+
+<% content_for :scripts do %>
+<%= static_asset_javascript 'javascripts/views/admin/quotes/index', 'cache/views/admin/quotes/index' %>
+<% end %>
+
+<% content_for :styles do %>
+<%= static_asset_stylesheet 'stylesheets/views/admin/quotes/index', 'cache/views/admin/quotes/index' %>
+<% end %>

@@ -21,6 +21,10 @@ h2, .heading2 {
   padding-bottom:15px;
 }
 
+span.heading2 {
+  display:block;
+}
+
 h3 {
   font-size:18px;
   color:#585555;
@@ -32,6 +36,12 @@ h4 {
 }
 
 p, .para {
+  font-size:13px;
+  color:#7e7e7e;
+  padding-bottom:10px;
+}
+
+.bigText {
   font-size:16px;
   color:#7e7e7e;
   padding-bottom:10px;
