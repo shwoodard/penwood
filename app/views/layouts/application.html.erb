@@ -17,7 +17,7 @@
         <div id="gblTop">
           <div id="gblTopLiner">
             <%= render :partial => 'partials/gbl_session_nav.html.erb' unless guest? %>
-            <% unless logged_in? || member? %><div class="gblSessionNav"><%= link_to 'Sign in', contact_path-%></div><% end %>
+            <% unless logged_in? || member? %><div class="gblSessionNav"><%= link_to 'Sign in', contact_path-%> | <%= link_to 'Register', contact_path(:register => true)-%></div><% end %>
             <a href="<%= root_path-%>"><span id="gblLogo" class="block float"></span></a>
             <%= render :partial => 'partials/gbl_nav.html.erb' %>
           </div>

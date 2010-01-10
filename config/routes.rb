@@ -21,7 +21,7 @@ ActionController::Routing::Routes.draw do |map|
   end
   
   map.with_options :controller => 'welcome' do |welcome|
-    welcome.about_us 'about', :action => 'about_us', :conditions => {:method => :get}
+    welcome.about_us 'about', :action => 'about', :conditions => {:method => :get}
   end
   
   map.namespace :admin do |admin|
