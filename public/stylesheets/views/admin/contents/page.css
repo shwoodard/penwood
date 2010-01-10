@@ -1,9 +1,20 @@
 div.adminContent {
-  margin:20px 0;
-  border-bottom:5px solid #333333;
+  border:1px solid #000000;
+  background:#EEEEEE;
+  padding:12px;
+  margin-bottom:10px;
 }
 
 .adminContent p,
 .adminContent p span {
   font-size:16px !important;
+}
+
+h2 {
+  padding:20px 0;
+}
+
+.quotesTable td {
+  padding:20px;
+  vertical-align:top;
 }

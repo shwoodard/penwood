@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  before_filter :set_page
   before_filter :clear_static_assets if Rails.env.development?
 
   helper :all 
@@ -65,6 +66,10 @@ class ApplicationController < ActionController::Base
   
   def clear_static_assets 
     Static::Asset.descriptor.clear
+  end
+  
+  def set_page
+    @page = Page.find_by_path(request.path)
   end
   
 end

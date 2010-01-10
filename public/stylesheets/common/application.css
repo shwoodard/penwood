@@ -213,7 +213,7 @@ label {
   background:url(/images/services_nav-bg.png) no-repeat top left;
   position:absolute;
   top:145px;
-  left:795px;
+  right:300px;
 }
 
 #servicesLocalNavLiner {
@@ -236,7 +236,7 @@ label {
 #servicesLocalNav a,
 #servicesLocalNav span.active {
   border-right:2px solid #f0e5d3;
-  padding:0 10px 0 5px;
+  padding:0 12px 0 6px;
 }
 
 #servicesLocalNav .last {
@@ -290,6 +290,8 @@ label {
   font-style:italic;
   color:#7e7e7e;
   font-size:16px;
+  width:300px;
+  margin-top:20px;
 }
 
 .quote .body {

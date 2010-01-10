@@ -3,9 +3,9 @@
 <div id="servicesContent">
   <div id="servicesContentRight">
     <div class="subPictureFrame"><div class="subPictureFrameLiner"><div class="subpage slideShow">
-      <%= render :partial => 'partials/image.html.erb', :collection => ImageSlideShow.find_by_text_identifier('services_couples').images %>
+      <%= render :partial => 'partials/image.html.erb', :collection => ImageSlideShow.find_by_text_identifier('services_organizations').images %>
     </div></div></div>
-    <div class="servicesQuote"><%= quote Quote.find_by_text_identifier('carl_jung1') %></div>
+    <div class="servicesQuote"><%= quotes %></div>
   </div>
   <div id="servicesContentLeft"><div id="servicesContentLeftLiner">
     <%= cms_content_for('services_couples_copy') %>

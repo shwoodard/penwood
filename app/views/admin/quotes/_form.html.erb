@@ -1,3 +1,4 @@
+<%= f.hidden_field :page_id %>
 <div><%= f.error_messages %></div>
 <table class="adminFormTable">
   <thead><thead>
@@ -23,7 +24,7 @@
     </tr>
     <% end %>
     <tr>
-      <td colspan="2"><%= f.submit -%> <%= link_to 'Cancel', admin_quotes_path %></td>
+      <td colspan="2"><%= f.submit -%> <%= link_to 'Cancel', admin_contents_path %></td>
     </tr>
   </tbody>
 </table>

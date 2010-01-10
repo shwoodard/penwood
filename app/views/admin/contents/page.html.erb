@@ -7,8 +7,16 @@
 <% paginated_section @contents do %>
 <%= render :partial => 'admin/contents/content.html.erb', :collection => @contents %>
 <% end %>
-<h3>Image Slide Shows</h3>
-<p><%= link_to 'Back', admin_contents_path -%></p>
+<h2>Image Slide Shows</h2>
+<h2>Quotes</h2>
+<table class="quotesTable">
+  <thead></thead>
+  <tbody>
+    <%= admin_quotes(@page.path) %>
+  </tbody>
+</table>
+<div><%= link_to 'New Quote', new_admin_quote_path(:page_path => @page.path) -%></div><br /><br />
+<div><%= link_to 'Back', admin_contents_path -%></div>
 
 <% content_for :scripts do %>
 <%= static_asset_javascript 'javascripts/views/admin/contents/page', 'cache/views/admin/contents/page' %>

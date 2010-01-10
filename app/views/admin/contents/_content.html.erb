@@ -1,4 +1,5 @@
 <div class="adminContent">
-  <h3><%= link_to content.title, edit_admin_content_path(content), :style => "color:red;" -%></h3>
+  <div class="float right"><%= link_to 'Edit', edit_admin_content_path(content) %></div>
+  <h3><%= content.title -%></h3>
   <div style="margin-top:25px;position:relative;"><span style="font-size:30px;float:left;">&#8220;</span><%= textilize(content.body) %><span style="font-size:30px;position:absolute;bottom:0;right:0;">&#8221;</span></div>
 </div>

@@ -15,7 +15,12 @@ module ApplicationHelper
       <div class="quote">
         <div class="float">#{image_tag('gbl_qte-left.gif')}</div><div class="body">#{qte.body}<div class="quoteWpr">#{image_tag('gbl_qte-right.gif', :class => 'rightQuote')}</div></div>
         <div class="float right author">- #{qte.author}</div>
-      </div
+      </div>
+      <div class="clear"></div>
     END_S
+  end
+  
+  def quotes
+    @page ? Quote.find_all_by_page_id(@page.id).collect {|qte| quote qte}.join('') : ''
   end
 end

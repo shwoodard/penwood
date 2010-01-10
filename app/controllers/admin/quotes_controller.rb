@@ -1,5 +1,5 @@
 class Admin::QuotesController < Admin::AdminController
-  before_filter :require_super_user, :only => [:index, :new, :create, :destroy]
+  before_filter :require_super_user, :only => [:index]
   
   def index
     @quotes = Quote.all
@@ -11,6 +11,7 @@ class Admin::QuotesController < Admin::AdminController
   
   def new
     @quote = Quote.new
+    @quote.page_id = Page.find_by_path(params[:page_path]).id if params[:page_path]
   end
   
   def create
