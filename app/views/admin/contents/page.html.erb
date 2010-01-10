@@ -1,13 +1,25 @@
 <h1>Content Management System</h1>
+<h2>Step 2</h2>
 <h2>Content for, <i><%= page_display(@page) %></i></h2>
-<h2 class="float">Step 2</h2>
-<p style="line-height:30px;">&nbsp;&nbsp;&nbsp;&nbsp;Please select a content region on the page to edit.</p>
 <div class="clear"></div>
 <h2>Text Content</h2>
 <% paginated_section @contents do %>
 <%= render :partial => 'admin/contents/content.html.erb', :collection => @contents %>
 <% end %>
-<h2>Image Slide Shows</h2>
+<h2>Image Slide Show</h2>
+<table class="quotesTable">
+  <thead></thead>
+  <tbody>
+    <tr>
+      <% iss = ImageSlideShow.find_by_page_id(@page.id) %>
+      <% unless iss.blank? %>
+      <td><%= slide_show iss -%></td>
+      <td><%= link_to 'Edit', edit_admin_image_slide_show_path(iss) -%></td>
+      <% end %>
+    </tr>
+  </tbody>
+</table>
+
 <h2>Quotes</h2>
 <table class="quotesTable">
   <thead></thead>

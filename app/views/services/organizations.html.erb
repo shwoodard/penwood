@@ -2,13 +2,11 @@
 <h1>Organizations</h1>
 <div id="servicesContent">
   <div id="servicesContentRight">
-    <div class="subPictureFrame"><div class="subPictureFrameLiner"><div class="subpage slideShow">
-      <%= render :partial => 'partials/image.html.erb', :collection => ImageSlideShow.find_by_text_identifier('services_organizations').images %>
-    </div></div></div>
+    <%= slide_show ImageSlideShow.find_by_page_id(@page.id) %>
     <div class="servicesQuote"><%= quotes %></div>
   </div>
   <div id="servicesContentLeft"><div id="servicesContentLeftLiner">
-    <%= cms_content_for('services_couples_copy') %>
+    <%= cms_content_for('services_organizations_copy') %>
     <div class="appointmentButtonWpr"><%= link_to image_tag('btn_schedule.gif'), new_appointment_path %></div>
   </div></div>
 </div>

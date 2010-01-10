@@ -1,2 +1,3 @@
 "javascripts/views/admin/contents/page":
+  - "common/jquery.cj-simple-slideshow"
   - "views/admin/contents/page"

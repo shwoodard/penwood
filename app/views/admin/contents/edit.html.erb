@@ -19,6 +19,10 @@
       <td><%= f.label :text_identifier -%></td>
       <td><%= f.text_field :text_identifier %></td>
     </tr>
+    <tr>
+      <td><%= f.label :page_id -%></td>
+      <td><%= f.select :page_id, Page.all.collect{|p| [p.path, p.id]} %></td>
+    </tr>
     <% end %>
     <tr>
       <td colspan="2"><%= f.submit -%> <%= link_to 'Back', page_admin_contents_path(:next => {:page_id => @content.page.id})%></td>

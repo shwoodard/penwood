@@ -10,6 +10,14 @@ module ApplicationHelper
     s
   end
   
+  def slide_show(ss)
+    <<-END_S
+    <div class="subPictureFrame"><div class="subPictureFrameLiner"><div class="subpage slideShow">
+      #{render :partial => 'partials/image.html.erb', :collection => ss.images}
+    </div></div></div>
+    END_S
+  end
+  
   def quote(qte)
     s = <<-END_S
       <div class="quote">

@@ -2,7 +2,7 @@ class Admin::ContentsController < Admin::AdminController
   before_filter :require_super_user, :only => [:new, :create, :destroy]
   
   def index
-    @pages = Page.all.reject {|p| !p.contents.any?}
+    @pages = Page.all.find_all {|p| p.contents.any? || p.quotes.any? || p.image_slide_shows.any?}
   end
   
   def page

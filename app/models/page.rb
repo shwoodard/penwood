@@ -1,5 +1,7 @@
 class Page < ActiveRecord::Base
   has_many :contents
+  has_many :image_slide_shows
+  has_many :quotes
   belongs_to :parent, :class_name => 'Page'
   
   def private?

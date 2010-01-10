@@ -9,9 +9,6 @@
     </tr>
     <% if current_user_super_user? %>
     <tr>
-      <td><%= f.label :text_identifier %></td><td><%= f.text_field :text_identifier -%></td>
-    </tr>
-    <tr>
       <td><%= f.label :page_id -%></td>
       <td><%= f.select :page_id, Page.all.collect{|p| [page_display(p), p.id]} %></td>
     </tr>
@@ -36,7 +33,7 @@
       <td colspan="2"><%= f.submit 'Save and Add image' -%></td>
     </tr>
     <tr>
-      <td colspan="2"><%= f.submit -%></td>
+      <td colspan="2"><%= f.submit -%> <%= link_to 'Back', admin_contents_path -%></td>
     </tr>
   </tbody>
 </table>
