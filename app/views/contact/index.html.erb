@@ -29,7 +29,7 @@
   </ul>
 
   <% unless member? %>
-  <h2>Create an account or just send us a note</h2>
+  <h2>Create an account or just send a note</h2>
   <% form_for @user, :url => create_contact_path do |f| %>
   <%= f.error_messages %>
   <div><%= f.label :name %><br /><%= f.text_field :name, :class => 'gblTextField'%></div>
