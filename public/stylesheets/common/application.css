@@ -88,18 +88,20 @@ label {
   color:#7e6a63;
 }
 
-#gblNav a.nav_about-lnk {
+#gblNav a.nav_about-lnk,
+#gblNav span.about.active {
   width:97px;
   height:37px;
 }
 
-#gblNav a.nav_about-lnk:hover {
+#gblNav a.nav_about-lnk:hover,
+#gblNav span.about.active {
   background:url(/images/gbl_nav/about_bg.gif) no-repeat top left;
 }
 
 #gblNav a.nav_services-lnk,
 #gblNav span.services.active {
-  width:97px;
+  width:98px;
   height:37px;
 }
 
@@ -108,12 +110,14 @@ label {
   background:url(/images/gbl_nav/services_bg.gif) no-repeat top left;
 }
 
-#gblNav a.nav_articles-lnk {
+#gblNav a.nav_articles-lnk,
+#gblNav span.articles.active {
   width:98px;
   height:37px;
 }
 
-#gblNav a.nav_articles-lnk:hover {
+#gblNav a.nav_articles-lnk:hover,
+#gblNav span.articles.active {
   background:url(/images/gbl_nav/articles_bg.gif) no-repeat top left;
 }
 #gblNav a.nav_testimonials-lnk,

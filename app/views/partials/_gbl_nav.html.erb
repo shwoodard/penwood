@@ -1,11 +1,21 @@
 <div id="gblNav" class="float">
-  <%= link_to '<span>About Us</span>', about_us_path, :class => 'nav_about-lnk' %>
+  <%= 
+    link_to_unless_current '<span>About Us</span>', about_us_path, :class => 'nav_services-lnk' do
+      '<span class="about active">About Us</span>'
+    end
+  %>
   <%= 
     link_to_unless controller_name == 'services', '<span>Services</span>', couples_services_path, :class => 'nav_services-lnk' do
       '<span class="services active">Services</span>'
     end
   %>
-  <%= link_to '<span>Readings</span>', about_us_path, :class => 'nav_articles-lnk' %>
+
+  <%= 
+    link_to_unless_current '<span>Readings</span>', articles_path, :class => 'nav_services-lnk' do
+      '<span class="articles active">Readings</span>'
+    end
+  %>
+  
   <%= 
     link_to_unless_current '<span>Testimonials</span>', testimonials_path, :class => 'nav_testimonials-lnk' do
       '<span class="testimonials active">Testimonials</span>'

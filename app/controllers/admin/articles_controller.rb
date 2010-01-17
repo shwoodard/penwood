@@ -1,6 +1,6 @@
 class Admin::ArticlesController < Admin::AdminController
   def index
-    @articles = Article.paginate(:all, :page => params[:page])
+    @articles = Article.paginate(:all, :page => (params[:page] || 1))
   end
   
   def show
