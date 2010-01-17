@@ -1,0 +1,13 @@
+<h1>Edit Reading</h1>
+
+<% form_for @article, :url => admin_article_path(@article), :html => {:multipart => true} do |f| %>
+<%= render :partial => 'admin/articles/form.html.erb', :locals => {:f => f}%>
+<% end %>
+
+<% content_for :scripts do %>
+<%= static_asset_javascript 'javascripts/views/admin/articles/edit', 'cache/views/admin/articles/edit' %>
+<% end %>
+
+<% content_for :styles do %>
+<%= static_asset_stylesheet 'stylesheets/views/admin/articles/edit', 'cache/views/admin/articles/edit' %>
+<% end %>

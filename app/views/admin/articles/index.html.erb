@@ -1,0 +1,27 @@
+<h1>Readings</h1>
+<% paginated_section @articles do %>
+<table class="adminModelIndex">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Publication Date</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render :partial => 'admin/articles/article.html.erb', :collection => @articles %>
+  </tbody>
+</table>
+<div>
+  <span><%= link_to 'New Article', new_admin_article_path %></span>
+</div>
+<% end %>
+
+<% content_for :scripts do %>
+<%= static_asset_javascript 'javascripts/views/admin/articles/index', 'cache/views/admin/articles/index' %>
+<% end %>
+
+<% content_for :styles do %>
+<%= static_asset_stylesheet 'stylesheets/views/admin/articles/index', 'cache/views/admin/articles/index' %>
+<% end %>
