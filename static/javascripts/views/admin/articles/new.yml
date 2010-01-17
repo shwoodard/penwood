@@ -1,0 +1,5 @@
+"javascripts/views/admin/articles/new":
+  - "common/tinymce/jquery.tinymce"
+  - "common/jquery.penwoodmce"
+  - "views/admin/articles/articles"
+  - "views/admin/articles/new"

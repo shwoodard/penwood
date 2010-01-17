@@ -9,7 +9,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100103203545) do
+ActiveRecord::Schema.define(:version => 20100117205241) do
+
+  create_table "articles", :force => true do |t|
+    t.string   "attachment_file_name"
+    t.integer  "attachment_file_size"
+    t.string   "attachment_content_type"
+    t.datetime "attachment_updated_at"
+    t.text     "body"
+    t.string   "title"
+    t.string   "author"
+    t.string   "type"
+    t.text     "tags"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "contents", :force => true do |t|
     t.integer  "page_id"

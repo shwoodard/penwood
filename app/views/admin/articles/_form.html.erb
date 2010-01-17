@@ -1,0 +1,29 @@
+<div><%= f.error_messages %></div>
+<table class="adminFormTable">
+  <thead><thead>
+  <tbody>
+    <tr>
+      <td><%= f.label :type -%></td>
+      <td><%= f.select :type, ['MyArticle', 'OtherArticle'] %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :title -%></td>
+      <td><%= f.text_field :title %></td>
+    </tr>
+    <tr class="article_body_row">
+      <td><%= f.label :body -%></td>
+      <td><%= f.text_area :body, :class => 'rte' %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :author -%></td>
+      <td><%= f.text_field :author %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :attachment -%></td>
+      <td><%= f.file_field :attachment %></td>
+    </tr>
+    <tr>
+      <td colspan="2"><%= f.submit -%> <%= link_to 'Cancel', admin_contents_path %></td>
+    </tr>
+  </tbody>
+</table>

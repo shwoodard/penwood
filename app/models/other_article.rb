@@ -1,0 +1,2 @@
+class OtherArticle < Article
+end

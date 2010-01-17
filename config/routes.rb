@@ -32,6 +32,7 @@ ActionController::Routing::Routes.draw do |map|
     admin.resources :groups
     admin.resources :image_slide_shows
     admin.resources :quotes
+    admin.resources :articles
     admin.with_options :controller => 'calendar' do |cal|
       cal.calendar 'calendar', :action => 'index', :conditions => {:method => :get}
       cal.google_call_login_callback 'calendar/do_login', :action => 'login', :conditions => {:method => :get}

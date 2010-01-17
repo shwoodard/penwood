@@ -1,0 +1,2 @@
+class MyArticle < Article
+end
