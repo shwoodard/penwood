@@ -10,13 +10,17 @@
       <td><%= f.label :title -%></td>
       <td><%= f.text_field :title %></td>
     </tr>
-    <tr class="article_body_row">
-      <td><%= f.label :body -%></td>
-      <td><%= f.text_area :body, :class => 'rte' %></td>
-    </tr>
     <tr>
       <td><%= f.label :author -%></td>
       <td><%= f.text_field :author %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :published -%></td>
+      <td><%= f.text_field :published, :class => 'date_picker' %></td>
+    </tr>
+    <tr class="article_body_row">
+      <td><%= f.label :body -%></td>
+      <td><%= f.text_area :body, :class => 'rte' %></td>
     </tr>
     <tr>
       <td><%= f.label :attachment -%></td>

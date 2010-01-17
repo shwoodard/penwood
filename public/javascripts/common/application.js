@@ -47,6 +47,8 @@ var penwood = penwood || {};
   });
   
   $(document).ready(function () {
+    $('.date_picker').datepicker();
+    
     $('.delete, .put').live('click', function (evt) {
       evt.preventDefault();
 

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100117205241) do
+ActiveRecord::Schema.define(:version => 20100117212356) do
 
   create_table "articles", :force => true do |t|
     t.string   "attachment_file_name"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(:version => 20100117205241) do
     t.text     "tags"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "published"
   end
 
   create_table "contents", :force => true do |t|

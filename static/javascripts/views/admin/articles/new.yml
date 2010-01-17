@@ -1,5 +1,6 @@
 "javascripts/views/admin/articles/new":
   - "common/tinymce/jquery.tinymce"
   - "common/jquery.penwoodmce"
+  - "http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"
   - "views/admin/articles/articles"
   - "views/admin/articles/new"

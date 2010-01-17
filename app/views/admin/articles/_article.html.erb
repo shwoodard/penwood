@@ -1,0 +1,10 @@
+<tr>
+  <td><%= article.title -%></td>
+  <td><%= article.author %></td>
+  <td><%= article.published.strftime('%B %e, %Y') -%></td>
+  <td class="adminModelIndexControls">
+    <span><%= link_to 'Show', admin_article_path(article) -%></span>
+    <span><%= link_to 'Edit', edit_admin_article_path(article) -%></span>
+    <span><%= link_to 'Delete', admin_article_path(article), :method => :delete, :confirm => "Are you sure?" -%></span>
+  </td>
+</tr>
