@@ -1,4 +1,6 @@
-<h1>Readings</h1>
+<h1><%= @article.title %></h1>
+<h2>By: <%= @article.author %>
+<h3><%= full_date @article.published -%></h3>
 
 <% content_for :scripts do %>
 <%= static_asset_javascript 'javascripts/views/articles/show', 'cache/views/articles/show' %>

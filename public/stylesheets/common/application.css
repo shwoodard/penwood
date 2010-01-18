@@ -243,7 +243,8 @@ label {
   padding:0 12px 0 6px;
 }
 
-#servicesLocalNav .last {
+#servicesLocalNav span.last,
+#servicesLocalNav a.last {
   border:none;
 }
 

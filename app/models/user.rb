@@ -5,6 +5,10 @@ class User < ActiveRecord::Base
     conf.merge_validates_length_of_password_field_options(:unless => Proc.new {|user| !user.register })
   end
   
+  has_attached_file :avatar,
+                    :url => '/system/users/:id/avatars/:filename',
+                    :path => ':rails_root/public/system/users/:id/avatars/:filename'
+  
   has_many :user_conversations
   has_many :conversations, :through => :user_conversations
   

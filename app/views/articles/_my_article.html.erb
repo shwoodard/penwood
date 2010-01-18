@@ -1,0 +1,7 @@
+<li>
+  <div class="heading2"><%= article.title -%></div>
+  <p class="heading3">By: <%= article.author %></p>
+  <p>Publication Date: <%= article.published.strftime('%B %e, %Y') %></p>
+  <%= textilize(truncate(article.body, :length => 250))%>
+  <p><%= link_to 'View Full Article', article_path(article) %></p>
+</li>

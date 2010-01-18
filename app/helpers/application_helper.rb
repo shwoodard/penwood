@@ -31,4 +31,8 @@ module ApplicationHelper
   def quotes
     @page ? Quote.find_all_by_page_id(@page.id).collect {|qte| quote qte}.join('') : ''
   end
+  
+  def full_date(date)
+    date.strftime('%B %e, %Y')
+  end
 end

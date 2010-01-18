@@ -15,8 +15,8 @@
       <td><%= f.text_field :author %></td>
     </tr>
     <tr>
-      <td><%= f.label :published -%></td>
-      <td><%= f.text_field :published, :class => 'date_picker' %></td>
+      <td><%= f.label :published, 'Publication Date' -%></td>
+      <td><%= f.text_field :published, :value => f.object.published_to_s, :class => 'date_picker' %></td>
     </tr>
     <tr class="article_body_row">
       <td><%= f.label :body -%></td>
@@ -27,7 +27,7 @@
       <td><%= f.file_field :attachment %></td>
     </tr>
     <tr>
-      <td colspan="2"><%= f.submit -%> <%= link_to 'Cancel', admin_contents_path %></td>
+      <td colspan="2"><%= f.submit -%> <%= link_to 'Cancel', admin_articles_path %></td>
     </tr>
   </tbody>
 </table>

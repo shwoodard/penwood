@@ -1,4 +1,7 @@
 <h1>Readings</h1>
+<ol>
+  <%= render :partial => 'articles/article.html.erb', :collection => @articles %>
+</ol>
 
 <% content_for :scripts do %>
 <%= static_asset_javascript 'javascripts/views/articles/index', 'cache/views/articles/index' %>

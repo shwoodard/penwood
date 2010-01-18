@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100117212356) do
+ActiveRecord::Schema.define(:version => 20100118165950) do
 
   create_table "articles", :force => true do |t|
     t.string   "attachment_file_name"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(:version => 20100117212356) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.datetime "published"
+    t.integer  "user_id"
   end
 
   create_table "contents", :force => true do |t|
@@ -147,6 +148,10 @@ ActiveRecord::Schema.define(:version => 20100117212356) do
     t.boolean  "registered",          :default => true,  :null => false
     t.boolean  "active",              :default => false, :null => false
     t.boolean  "banned",              :default => false, :null => false
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
 end

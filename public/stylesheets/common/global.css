@@ -25,14 +25,18 @@ span.heading2 {
   display:block;
 }
 
-h3 {
+h3, .heading3 {
   font-size:18px;
   color:#585555;
 }
 
-h4 {
+h4, .heading4 {
   font-size:18px;
   padding-bottom:10px;
+}
+
+h1 a, h2 a, h3 a, h4 a, .heading1 a, .heading2 a, .heading3 a, .heading4 a {
+  text-decoration:underline;
 }
 
 p, .para {
