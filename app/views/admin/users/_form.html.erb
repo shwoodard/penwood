@@ -1,0 +1,29 @@
+<div><%= f.error_messages %></div>
+<table class="adminFormTable">
+  <thead><thead>
+  <tbody>
+    <tr>
+      <td><%= f.label :name -%></td>
+      <td><%= f.text_field :name %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :email -%></td>
+      <td><%= f.text_field :email %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :password -%></td>
+      <td><%= f.password_field :password %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :password_confirmation -%></td>
+      <td><%= f.password_field :password_confirmation %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :avatar, "Profile photo" -%></td>
+      <td><%= f.file_field :avatar %></td>
+    </tr>
+    <tr>
+      <td colspan="2"><%= f.submit -%> <%= link_to 'Cancel', admin_users_path %></td>
+    </tr>
+  </tbody>
+</table>

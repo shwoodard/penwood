@@ -29,7 +29,7 @@ ActionController::Routing::Routes.draw do |map|
     admin.root :controller => 'contents'
     admin.resources :contents, :collection => {:page => :get}
     admin.resources :testimonials, :member => {:move => :put}
-    admin.resources :users, :member => {:ban => :put}
+    admin.resources :users, :member => {:ban => :put}, :except => [:destroy]
     admin.resources :groups
     admin.resources :image_slide_shows
     admin.resources :quotes

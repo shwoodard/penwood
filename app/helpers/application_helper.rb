@@ -38,7 +38,7 @@ module ApplicationHelper
   
   def user_status(user)
     status = user.active? ? 'Active' : 'Inactive'
-    status = 'banned' if user.banned?
+    status = 'Banned' if user.banned?
     status
   end
 end

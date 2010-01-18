@@ -37,13 +37,6 @@ class Admin::UsersController < Admin::AdminController
     end
   end
   
-  def destroy
-    user = User.find(params[:id])
-    user.ban!
-    flash[:notice] = 'You have banned the user'
-    redirect_to :action => 'index'
-  end
-  
   def ban
     user = User.find(params[:id])
     unless user.active?

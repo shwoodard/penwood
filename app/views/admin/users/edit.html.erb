@@ -1,0 +1,12 @@
+<h1>Edit User</h1>
+<% form_for @user, :url => admin_user_path(@user), :html => {:multipart => true} do |f| %>
+<%= render :partial => 'admin/users/form.html.erb', :locals => {:f => f} %>
+<% end %>
+
+<% content_for :scripts do %>
+<%= static_asset_javascript 'javascripts/views/admin/users/edit', 'cache/views/admin/users/edit' %>
+<% end %>
+
+<% content_for :styles do %>
+<%= static_asset_stylesheet 'stylesheets/views/admin/users/edit', 'cache/views/admin/users/edit' %>
+<% end %>

@@ -6,8 +6,10 @@ class User < ActiveRecord::Base
   end
   
   has_attached_file :avatar,
-                    :url => '/system/users/:id/avatars/:filename',
-                    :path => ':rails_root/public/system/users/:id/avatars/:filename'
+                    :styles => {:standard => '65x65>', :small => '55x56>'},
+                    :default_url => 'no_picture.png',
+                    :url => '/system/users/:id/avatars/:style.:extension',
+                    :path => ':rails_root/public/system/users/:id/avatars/:style.:extension'
   
   has_many :user_conversations
   has_many :conversations, :through => :user_conversations
