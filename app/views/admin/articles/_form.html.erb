@@ -12,7 +12,7 @@
     </tr>
     <tr>
       <td><%= f.label :author -%></td>
-      <td><%= f.text_field :author %></td>
+      <td><%= f.text_field :author, :value => f.object.author.blank? ? current_user.name : f.object.author %></td>
     </tr>
     <tr>
       <td><%= f.label :published, 'Publication Date' -%></td>
