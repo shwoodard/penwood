@@ -28,6 +28,7 @@ span.heading2 {
 h3, .heading3 {
   font-size:18px;
   color:#585555;
+  padding-bottom:10px;
 }
 
 h4, .heading4 {

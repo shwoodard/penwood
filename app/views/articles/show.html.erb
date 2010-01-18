@@ -1,6 +1,12 @@
 <h1><%= @article.title %></h1>
-<h2>By: <%= @article.author %>
+<h2>By: <%= @article.author %></h2>
 <h3><%= full_date @article.published -%></h3>
+<% unless @article.is_a?(OtherArticle) %>
+<%= textilize @article.body %>
+<% else %>
+<div class="ipaperWpr"><%= @article.display_ipaper %></div>
+<% end %>
+<p><%= link_to "<< All Readings", articles_path -%></p>
 
 <% content_for :scripts do %>
 <%= static_asset_javascript 'javascripts/views/articles/show', 'cache/views/articles/show' %>

@@ -3,6 +3,8 @@ class Article < ActiveRecord::Base
                     :url => '/system/article_attachments/:id/attachments/:filename',
                     :path => ':rails_root/public/system/article_attachments/:id/attachments/:filename'
 
+  has_ipaper_and_uses 'Paperclip'
+    
   def published_to_s
     self.published.blank? ? '' : self.published.strftime('%m/%d/%Y')
   end

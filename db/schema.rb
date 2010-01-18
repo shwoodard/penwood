@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100118191331) do
+ActiveRecord::Schema.define(:version => 20100118213340) do
 
   create_table "articles", :force => true do |t|
     t.string   "attachment_file_name"
@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(:version => 20100118191331) do
     t.datetime "updated_at"
     t.datetime "published"
     t.integer  "user_id"
+    t.integer  "ipaper_id"
+    t.string   "ipaper_access_key"
   end
 
   create_table "contents", :force => true do |t|
