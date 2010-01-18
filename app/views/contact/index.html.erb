@@ -43,8 +43,8 @@
   <div><%= f.submit 'Submit' -%></div>
   <% end %>
   <% else %>
-  <div><%= link_to 'Add a user', 'javascript:;', :class => 'new_user_button contactNewUserButton gblAddButton' -%></div>
-  <div class="new_user_form_wpr hidden">
+  <% unless @user.errors.any? %><div><%= link_to 'Add a user', 'javascript:;', :class => 'new_user_button contactNewUserButton gblAddButton' -%></div><% end %>
+  <div class="new_user_form_wpr <%= 'hidden' unless @user.errors.any? -%>">
     <h2>New User</h2>
     <% form_for @user do |f| %>
     <%= f.error_messages %>

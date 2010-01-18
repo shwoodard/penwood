@@ -1,0 +1,11 @@
+<tr>
+  <td><%= user.email -%></td>
+  <td><%= user.name -%></td>
+  <td><%= user_status(user) -%></td>
+  <td>
+    <span><%= link_to 'show', admin_user_path(user) -%></span>
+    <span><%= link_to 'edit', edit_admin_user_path(user) -%></span>
+    <span><%= link_to 'delete', admin_user_path(user), :method => :delete, :confirm => 'Are you sure?' -%></span>
+    <span><%= link_to 'ban!', ban_admin_user_path(user), :method => :put, :confirm => "#{user.email} will be banned from the site.  This is an irreversible action." -%></span>
+  </td>
+</tr>

@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   
   def create
     @user = User.new(params[:user])
-    if @user.save
+    if @user.save_without_session_maintenance
       @user.reset_perishable_token!
       @user.activation_url = activate_user_url(@user.perishable_token)
       ActivationNotifier.deliver_activation_email(@user)
@@ -11,7 +11,8 @@ class UsersController < ApplicationController
       flash[:notice] = "Account registered! You will receive an email shortly.  Please follow the link in the email to activate your account."
       redirect_back_or_default contact_path
     else
-      render :action => :new
+      @user_session = UserSession.new
+      render :template => 'contact/index'
     end
   end
 

@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   before_filter :set_page
+  before_filter :require_valid_user
   before_filter :clear_static_assets if Rails.env.development?
 
   helper :all 
@@ -47,6 +48,14 @@ class ApplicationController < ActionController::Base
     if current_user
       store_location
       flash[:notice] = 'You must be logged out to do this.'
+      redirect_to root_path
+    end
+  end
+  
+  def require_valid_user
+    if current_user && current_user.banned?
+      flash[:notice] = 'You are banned!'
+      current_user_session.destroy
       redirect_to root_path
     end
   end

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100118165950) do
+ActiveRecord::Schema.define(:version => 20100118191331) do
 
   create_table "articles", :force => true do |t|
     t.string   "attachment_file_name"
@@ -145,7 +145,6 @@ ActiveRecord::Schema.define(:version => 20100118165950) do
     t.boolean  "admin",               :default => false, :null => false
     t.boolean  "super_user",          :default => false, :null => false
     t.string   "name"
-    t.boolean  "registered",          :default => true,  :null => false
     t.boolean  "active",              :default => false, :null => false
     t.boolean  "banned",              :default => false, :null => false
     t.string   "avatar_file_name"

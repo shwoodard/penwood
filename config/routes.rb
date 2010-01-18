@@ -1,7 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
   map.resource :user_session
   map.signout 'signout', :controller => 'user_sessions', :action => 'destroy', :conditions => {:method => :get}
-  map.resources :users, :collection => {:resend_activation_email => :get, :send_activation_email => :post}
+  map.resources :users, :collection => {:resend_activation_email => :get, :send_activation_email => :post}, :except => [:new]
   map.resource :account, :controller => 'users'
   map.activate_user 'account/:activation_code/activate', :controller => 'users', :action => 'activate', :conditions => {:method => :get}
   map.resources :testimonials
@@ -29,7 +29,7 @@ ActionController::Routing::Routes.draw do |map|
     admin.root :controller => 'contents'
     admin.resources :contents, :collection => {:page => :get}
     admin.resources :testimonials, :member => {:move => :put}
-    admin.resources :users
+    admin.resources :users, :member => {:ban => :put}
     admin.resources :groups
     admin.resources :image_slide_shows
     admin.resources :quotes

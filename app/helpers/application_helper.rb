@@ -35,4 +35,10 @@ module ApplicationHelper
   def full_date(date)
     date.strftime('%B %e, %Y')
   end
+  
+  def user_status(user)
+    status = user.active? ? 'Active' : 'Inactive'
+    status = 'banned' if user.banned?
+    status
+  end
 end

@@ -18,6 +18,7 @@ class ContactController < ApplicationController
         flash[:notice] = 'The information you submitted has been sent to Penwood Partners and your registration has been processed. You will receive an email shortly.  Please follow the link in the email to activate your account.'
         redirect_to root_path
       else
+        flash.now[:notice] = "You have been banned!" if !@user.new_record? && @user.banned?
         @user_session = UserSession.new
         render :action => 'index'
       end

@@ -1,7 +1,7 @@
 class Admin::UsersController < Admin::AdminController
   def index
-    @users = User.enabled.paginate(:all, :page => params[:page] || 1, :order => 'created_at DESC')
-    @groups = Group.paginate(:all, :page => params[:page] || 1, :order => 'created_at DESC')
+    @users = User.paginate(:all, :page => params[:page] || 1, :order => 'created_at DESC')
+    # @groups = Group.paginate(:all, :page => params[:page] || 1, :order => 'created_at DESC')
   end
   
   def show
@@ -42,5 +42,16 @@ class Admin::UsersController < Admin::AdminController
     user.ban!
     flash[:notice] = 'You have banned the user'
     redirect_to :action => 'index'
+  end
+  
+  def ban
+    user = User.find(params[:id])
+    unless user.active?
+      flash[:notice] = "The user is not active: they have not responded to their activation email.  You cannot ban them."
+    else
+      flash[:notice] = "#{user.email} has been banned!"
+      user.ban!
+    end
+    redirect_to(:action => 'show', :id => user)
   end
 end
