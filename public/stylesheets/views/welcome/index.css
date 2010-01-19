@@ -26,6 +26,10 @@
   margin-left:5px;
 }
 
+.homePictureFrame .homePictureFrameLiner {
+  padding:9px;
+}
+
 .homeHorizontal {
   background:url(/images/home_horizontal.png) no-repeat top left;
   width:836px;

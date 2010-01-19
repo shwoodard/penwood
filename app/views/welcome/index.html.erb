@@ -1,13 +1,13 @@
 <div class="homeCopy">
   <%= cms_content_for('home_copy') %>
 </div>
-<%= link_to '', '', :class => 'homeLearnMoreButton' %>
-<div class="homePictureFrame"><div class="homePictureFrameLiner"></div></div>
+<%= link_to '', about_us_path, :class => 'homeLearnMoreButton' %>
+<div class="homePictureFrame"><div class="homePictureFrameLiner"><%= image_tag "couple.jpg"-%></div></div>
 <div class="homeHorizontal">
   <ol id="penwoodServices">
-    <li><%= cms_content_for('home_couples') %><%= link_to '', root_path, :class => 'homeLearnMoreSm' -%></li>
-    <li><%= cms_content_for('home_orgs') %><%= link_to '', root_path, :class => 'homeLearnMoreSm' -%></li>
-    <li class="last"><%= cms_content_for('home_families') %><%= link_to '', root_path, :class => 'homeLearnMoreSm' -%></li>
+    <li><%= cms_content_for('home_couples') %><%= link_to '', couples_services_path, :class => 'homeLearnMoreSm' -%></li>
+    <li><%= cms_content_for('home_orgs') %><%= link_to '', organizations_services_path, :class => 'homeLearnMoreSm' -%></li>
+    <li class="last"><%= cms_content_for('home_families') %><%= link_to '', families_services_path, :class => 'homeLearnMoreSm' -%></li>
   </ol>
 </div>
 
