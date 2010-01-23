@@ -330,6 +330,12 @@ label {
   padding:10px;
 }
 
+.avatarImaged {
+    background:no-repeat top left;
+    min-height:60px;
+    padding:16px 0 0px 55px;
+}
+
 .pictureWindowWpr .thumbs .thumb {
     float:left;
     padding:10px;

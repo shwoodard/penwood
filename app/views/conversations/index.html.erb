@@ -3,6 +3,7 @@
 <% form_for @conversation do |f| %>
   <%= f.error_messages %>
   <%= hidden_field_tag 'quick', 'true' %>
+  <%= f.hidden_field :quick_note, :value => true -%>
   <%= f.hidden_field :subject, :value => "A quick note from #{current_user.name}"%>
   <div class="currentParticipants">
     <h2>To</h2>
@@ -23,6 +24,9 @@
   <h2>Add Participants</h2>
   <div class="potentialRecipientsContainer potential_participants_container"></div>
 </div>
+<% if current_user.conversations.any? %>
+<div><%= link_to 'View all Dialogues', list_conversations_path -%></div>
+<% end %>
 
 <% content_for :scripts do %>
 <%= static_asset_javascript 'javascripts/views/conversations/index', 'cache/views/conversations/index' %>

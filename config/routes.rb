@@ -5,7 +5,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resource :account, :controller => 'users'
   map.activate_user 'account/:activation_code/activate', :controller => 'users', :action => 'activate', :conditions => {:method => :get}
   map.resources :testimonials
-  map.resources :conversations
+  map.resources :conversations, :collection => {:list => :get}, :as => "dialogues"
   map.resources :appointments
   map.resources :articles, :only => [:index, :show], :as => 'readings'
 

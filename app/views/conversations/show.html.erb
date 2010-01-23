@@ -1,9 +1,9 @@
 <h1>Dialogues</h1>
-<h2><i><%= @conversation.subject -%></i></h2>
+<% unless @conversation.quick_note? %><h2><i><%= @conversation.subject -%></i></h2><% end %>
 <% @conversation.conversation_entries.each_with_index do |entry, i| %>
-<div>
-  <div><%= entry.user.name %></div>
-  <%= textilize entry.body %>
+<div class="<%= i % 2 == 0 ? 'even' : 'odd'-%> conversationEntry">
+  <div class="conversationBody"><%= textilize entry.body %></div>
+  <%= content_tag 'div', entry.user.name, :style => "background-image:url('/images/#{entry.user.avatar.url}')", :class => "avatarImaged" %>
 </div>
 <% end %>
 

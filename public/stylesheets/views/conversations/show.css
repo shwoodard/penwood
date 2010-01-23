@@ -1,0 +1,12 @@
+.conversationBody {
+    border:1px solid #000000;
+    padding:15px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    float:right;
+    width:650px;
+}
+
+.conversationBody.odd {
+    float:left;
+}
