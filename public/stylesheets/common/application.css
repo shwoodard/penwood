@@ -329,3 +329,20 @@ label {
 .avatarImage {
   padding:10px;
 }
+
+.pictureWindowWpr .thumbs .thumb {
+    float:left;
+    padding:10px;
+}
+
+.pictureWindowWpr {
+    width:320px;
+    overflow:hidden;
+    float:right;
+}
+
+.pictureWindowWpr div,
+.pictureWindowWpr ul {
+    margin:0 auto;
+}
+

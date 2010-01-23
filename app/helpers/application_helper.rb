@@ -10,11 +10,31 @@ module ApplicationHelper
     s
   end
   
+  def image_experience(ie)
+    case ie
+    when ImageSlideShow
+      slide_show(ie)
+    when PictureWindow
+      picture_window(ie)
+    end
+  end
+  
   def slide_show(ss)
     <<-END_S
     <div class="subPictureFrame"><div class="subPictureFrameLiner"><ul class="subpage slideShow">
       #{render :partial => 'partials/image.html.erb', :collection => ss.images}
     </ul></div></div>
+    END_S
+  end
+  
+  def picture_window(pw)
+    <<-END_S
+    <div class="pictureWindowWpr">
+      <div class="picture_window">#{ image_tag pw.images.first.image.url }</div>
+      <ul class="thumbs">
+        #{render :partial => 'partials/thumb_image.html.erb', :collection => pw.images}
+      </ul>
+    </div>
     END_S
   end
   

@@ -1,2 +1,3 @@
 "javascripts/views/welcome/about":
+  - "common/jquery.pictureWindow"
   - "views/welcome/about"

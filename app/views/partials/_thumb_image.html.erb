@@ -1,1 +1,1 @@
-<li><%= image_tag image.image.url(:thumb) %></li>
+<li class="thumb"><%= link_to(image_tag(thumb_image.image.url(:thumb)), 'javascript:;' , :rel => thumb_image.image.url) -%></li>

@@ -17,4 +17,7 @@
 - path: "/services/families"
   title: "Families"
   parent_path: "/services"
+- path: "/about"
+  title: "About Us"
+  parent_path: "/"
     
