@@ -8,6 +8,14 @@
     padding-left:50px;
 }
 
-/*#aboutContent {
-    margin-right:400px;
-}*/
+.pictureWindowWpr .pictureWindowLiner img {
+    border:3px solid #C5351C;
+    display:block;
+    float:left;
+    -moz-box-shadow:4px 4px 3px #999999;
+    -webkit-box-shadow:4px 4px 3px #999999;
+}
+
+.thumbs .thumb a img {
+    border:2px solid #666666;
+}
