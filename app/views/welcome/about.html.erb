@@ -1,3 +1,9 @@
+<div id="pictureWindowWpr">
+  <div class="picture_window"></div>
+  <ul class="thumbs">
+    <%= render :partial => 'partials/thumb_image.html.erb', :collection => @picture_window.images %>
+  </ul>
+</div>
 
 <% content_for :scripts do %>
 <%= static_asset_javascript 'javascripts/views/welcome/about', 'cache/views/welcome/about' %>

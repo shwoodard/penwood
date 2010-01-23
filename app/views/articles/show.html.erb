@@ -1,5 +1,5 @@
 <h1><%= @article.title %><% if @article.is_a?(MyArticle) && @article.user && @article.user.avatar.file? %><%= image_tag @article.user.avatar.url(:standard), :class => 'float right avatarImage' -%><% end %></h1>
-<h2>By: <%= @article.author %></h2>
+<h2>By <%= @article.author %></h2>
 <h3><%= full_date @article.published -%></h3>
 <% unless @article.is_a?(OtherArticle) %>
 <%= textilize @article.body %>

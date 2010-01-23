@@ -4,7 +4,7 @@ class ConversationsController < ApplicationController
   def index
     @conversation = Conversation.new
     @conversation.conversation_entries.build
-    User.basic_admin.each {|u| @conversation.user_conversations.build(:user => u)}
+    User.basic_admin.find_all{|usr| usr.name == 'Doug' || usr.name == 'Terry'}.each {|u| @conversation.user_conversations.build(:user => u)}
   end
   
   def show

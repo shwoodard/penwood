@@ -1,2 +1,3 @@
 "stylesheets/views/welcome/index":
+  - "common/jquery-ui/custom-theme/jquery-ui-1.7.2.custom"
   - "views/welcome/index"

@@ -1,5 +1,5 @@
 <h1>New Image Slide Show</h1>
-<% form_for @slide_show, :url => admin_image_slide_shows_path, :html => {:multipart => true} do |f| %>
+<% form_for @experience, :url => admin_image_slide_shows_path, :html => {:multipart => true} do |f| %>
 <%= f.error_messages %>
 <table class="adminFormTable">
   <thead></thead>
@@ -8,6 +8,10 @@
     <tr>
       <td><%= f.label :page_id -%></td>
       <td><%= f.select :page_id, Page.all.collect{|p| [page_display(p), p.id]} %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :type -%></td>
+      <td><%= f.select :type, ['ImageSlideShow', 'PictureWindow'] %></td>
     </tr>
     <% end %>
     <tr>
@@ -28,7 +32,7 @@
       <td colspan="2"><%= f.submit 'Save and Add image' -%></td>
     </tr>
     <tr>
-      <td colspan="2"><%= f.submit -%> <%= link_to 'Back', admin_contents_path -%></td>
+      <td colspan="2"><%= f.submit -%> <%= link_to 'Back', current_user_super_user? ? {:action => 'index'} : admin_contents_path -%></td>
     </tr>
   </tbody>
 </table>

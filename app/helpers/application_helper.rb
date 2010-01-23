@@ -12,9 +12,9 @@ module ApplicationHelper
   
   def slide_show(ss)
     <<-END_S
-    <div class="subPictureFrame"><div class="subPictureFrameLiner"><div class="subpage slideShow">
+    <div class="subPictureFrame"><div class="subPictureFrameLiner"><ul class="subpage slideShow">
       #{render :partial => 'partials/image.html.erb', :collection => ss.images}
-    </div></div></div>
+    </ul></div></div>
     END_S
   end
   

@@ -3,13 +3,12 @@
   <thead>
     <tr>
       <th>Title</th>
-      <th>Text identifier</th>
       <th>Page</th>
       <th></th>
     </tr>
   </thead>
   <tbody>
-    <%= render :partial => 'admin/image_slide_shows/image_slide_show.html.erb', :collection => @slide_shows %>
+    <%= render :partial => 'admin/image_slide_shows/image_slide_show.html.erb', :collection => @experiences %>
   </tbody>
 </table>
 <div><%= link_to 'New', new_admin_image_slide_show_path -%></div>

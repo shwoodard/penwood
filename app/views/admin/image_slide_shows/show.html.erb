@@ -1,10 +1,10 @@
-<h1><%= @slide_show.title -%></h1>
+<h1><%= @experience.title -%></h1>
 
 <div id="imageSlideShow">
-  <%= render :partial => 'partials/image', :collection => @slide_show.images %>
+  <%= render :partial => 'partials/image', :collection => @experience.images %>
 </div>
 
-<div><%= link_to 'Edit', edit_admin_image_slide_show_path(@slide_show) -%> <%= link_to 'Back', admin_contents_path -%></div>
+<div><%= link_to 'Edit', edit_admin_image_slide_show_path(@experience) -%> <%= link_to 'Back', current_user_super_user? ? {:action => 'index'} : admin_contents_path -%></div>
 
 <% content_for :scripts do %>
 <%= static_asset_javascript 'javascripts/views/admin/image_slide_shows/show', 'cache/views/admin/image_slide_shows/show' %>

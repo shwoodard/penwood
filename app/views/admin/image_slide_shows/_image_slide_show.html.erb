@@ -1,7 +1,6 @@
 <tr>
   <td><%=image_slide_show.title %></td>
-  <td><%=image_slide_show.text_identifier %></td>
-  <td></td>
+  <td><td><%= page_display image_slide_show.page %></td></td>
   <td>
     <span><%= link_to 'Show', admin_image_slide_show_path(image_slide_show) -%></span>
     <span><%= link_to 'Edit', edit_admin_image_slide_show_path(image_slide_show) -%></span>

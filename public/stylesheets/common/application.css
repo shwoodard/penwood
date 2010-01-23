@@ -157,6 +157,7 @@ label {
   padding:0 25px;
   min-height:400px;
   padding-bottom:30px;
+  position:relative;
 }
 
 #gblFooter {
@@ -216,8 +217,8 @@ label {
   height:46px;
   background:url(/images/services_nav-bg.png) no-repeat top left;
   position:absolute;
-  top:145px;
-  right:300px;
+  top:-36px;
+  right:3em;
 }
 
 #servicesLocalNavLiner {

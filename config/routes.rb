@@ -31,7 +31,7 @@ ActionController::Routing::Routes.draw do |map|
     admin.resources :testimonials, :member => {:move => :put}
     admin.resources :users, :member => {:ban => :put}, :except => [:destroy]
     admin.resources :groups
-    admin.resources :image_slide_shows
+    admin.resources :image_slide_shows, :as => 'image_experiences'
     admin.resources :quotes
     admin.resources :articles
     admin.with_options :controller => 'calendar' do |cal|

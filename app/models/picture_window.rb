@@ -1,0 +1,2 @@
+class PictureWindow < ImageExperience
+end

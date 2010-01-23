@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100118213340) do
+ActiveRecord::Schema.define(:version => 20100123185057) do
 
   create_table "articles", :force => true do |t|
     t.string   "attachment_file_name"
@@ -60,12 +60,12 @@ ActiveRecord::Schema.define(:version => 20100118213340) do
     t.datetime "updated_at"
   end
 
-  create_table "image_slide_shows", :force => true do |t|
+  create_table "image_experiences", :force => true do |t|
+    t.string   "type"
     t.string   "title"
-    t.string   "text_identifier"
-    t.integer  "page_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "page_id"
   end
 
   create_table "images", :force => true do |t|
@@ -73,7 +73,7 @@ ActiveRecord::Schema.define(:version => 20100118213340) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
-    t.integer  "image_slide_show_id"
+    t.integer  "image_experience_id"
     t.string   "title"
     t.integer  "position"
     t.integer  "page_id"
