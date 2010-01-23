@@ -1,0 +1,13 @@
+.pictureWindowWpr {
+    float:right;
+    display:inline;
+    width:370px;
+}
+
+.pictureWindowWpr .pictureWindowLiner {
+    padding-left:50px;
+}
+
+/*#aboutContent {
+    margin-right:400px;
+}*/

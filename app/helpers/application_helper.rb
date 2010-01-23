@@ -29,12 +29,12 @@ module ApplicationHelper
   
   def picture_window(pw)
     <<-END_S
-    <div class="pictureWindowWpr">
+    <div class="pictureWindowWpr"><div class="pictureWindowLiner">
       <div class="picture_window">#{ image_tag pw.images.first.image.url }</div>
       <ul class="thumbs">
         #{render :partial => 'partials/thumb_image.html.erb', :collection => pw.images}
       </ul>
-    </div>
+    </div></div>
     END_S
   end
   

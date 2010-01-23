@@ -1,3 +1,4 @@
 "javascripts/views/admin/image_slide_shows/show":
   - "common/jquery.cj-simple-slideshow"
+  - "common/jquery.pictureWindow"
   - "views/admin/image_slide_shows/show"

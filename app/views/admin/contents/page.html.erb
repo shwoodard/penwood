@@ -6,15 +6,15 @@
 <% paginated_section @contents do %>
 <%= render :partial => 'admin/contents/content.html.erb', :collection => @contents %>
 <% end %>
-<h2>Image Slide Show</h2>
+<h2>Image Experience</h2>
 <table class="quotesTable">
   <thead></thead>
   <tbody>
     <tr>
-      <% iss = ImageSlideShow.find_by_page_id(@page.id) %>
-      <% unless iss.blank? %>
-      <td><%= slide_show iss -%></td>
-      <td><%= link_to 'Edit', edit_admin_image_slide_show_path(iss) -%></td>
+      <% ie = ImageExperience.find_by_page_id(@page.id) %>
+      <% unless ie.blank? %>
+      <td><%= image_experience ie -%></td>
+      <td><%= link_to 'Edit', edit_admin_image_slide_show_path(ie) -%></td>
       <% end %>
     </tr>
   </tbody>

@@ -338,7 +338,6 @@ label {
 .pictureWindowWpr {
     width:320px;
     overflow:hidden;
-    float:right;
 }
 
 .pictureWindowWpr div,
