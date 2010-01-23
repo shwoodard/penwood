@@ -39,17 +39,7 @@
       
       thumbLinks.bind('mouseover click', function (evt) {
         evt.preventDefault();
-        var mainWindowSrc = $(this).attr('rel');
-        var to;
-        var doIt = function () { 
-          if (to) { clearTimeout(to); }
-          windowImage.attr('src', mainWindowSrc); 
-        };
-        if (evt.type == 'mouseover') {
-          to = setTimeout(doIt, 350);
-        } else {
-          doIt.call();
-        }
+        windowImage.attr('src', $(this).attr('rel'));
       });
     });
   };
