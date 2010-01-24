@@ -7,6 +7,12 @@
     width:650px;
 }
 
-.conversationBody.odd {
+.conversationEntry.odd .conversationBody {
     float:left;
+}
+
+.conversationEntry.odd .avatarImaged {
+    padding-left:0;
+    padding-right:80px;
+    background:no-repeat top right;
 }

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100123215146) do
+ActiveRecord::Schema.define(:version => 20100124020912) do
 
   create_table "articles", :force => true do |t|
     t.string   "attachment_file_name"
@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(:version => 20100123215146) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
+    t.text     "read_by"
   end
 
   create_table "conversations", :force => true do |t|

@@ -1,6 +1,6 @@
 class Conversation < ActiveRecord::Base
-  has_many :conversation_entries
-  has_many :user_conversations
+  has_many :conversation_entries, :dependent => :destroy
+  has_many :user_conversations, :dependent => :destroy
   has_many :users, :through => :user_conversations do 
     def creator
       find(:first, :conditions => 'user_conversations.creator = 1')

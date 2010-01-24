@@ -1,0 +1,20 @@
+<li class="conversation">
+  <div class="heading3"><%= link_to h(conversation.subject), conversation_path(conversation) %></div>
+  <table>
+    <thead></thead>
+    <tbody>
+      <tr>
+        <td class="heading4 col1">Last Updated At</td>
+        <td class="lastUpdatedAt col2"><%= full_time conversation.updated_at %></td>
+      </tr>
+      <% last_updated_by = conversation.conversation_entries(:order => 'updated_at').last.user %>
+      <tr>
+        <td class="heading4 col1">Last Updated By</td>
+        <td class="col2"><p class="lastUpdatedBy avatarImaged" style="background-image:url('<%= last_updated_by.avatar.url(:small) -%>');"><%= last_updated_by == current_user ? 'You' : last_updated_by.name %> </p></td>
+      </tr>
+    </tbody>
+  </table>
+  <% if conversation.conversation_entries.any? {|ce| !ce.read_by.include?(current_user.email) } %>
+  <p class="newMessageText no underline"><%= link_to '<blink>There are new threads in this dialogue that you have not read.</blink>', conversation_path(conversation) -%></p>
+  <% end %>
+</li>

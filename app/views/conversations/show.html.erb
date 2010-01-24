@@ -1,11 +1,20 @@
 <h1>Dialogues</h1>
 <% unless @conversation.quick_note? %><h2><i><%= @conversation.subject -%></i></h2><% end %>
-<% @conversation.conversation_entries.each_with_index do |entry, i| %>
-<div class="<%= i % 2 == 0 ? 'even' : 'odd'-%> conversationEntry">
+<% curr_user = nil %>
+<% i = -1 %>
+<% @conversation.conversation_entries.each do |entry| %>
+<% i += 1 if curr_user != entry.user %>
+<% curr_user = entry.user %>
+<% even = i % 2 == 0 %>
+<div class="<%= even ? 'even' : 'odd'-%> conversationEntry">
   <div class="conversationBody"><%= textilize entry.body %></div>
-  <%= content_tag 'div', entry.user.name, :style => "background-image:url('/images/#{entry.user.avatar.url}')", :class => "avatarImaged" %>
+  <%= content_tag 'div', entry.user.name, :style => "background-image:url('#{entry.user.avatar.url(:small)}')", :class => "avatarImaged #{'float right' unless even}" %>
 </div>
+<div class="clear"></div>
 <% end %>
+
+<p class="bigText"><%= link_to((curr_user == current_user ? 'Add' : 'Reply'), new_quick_note_conversation_path(@conversation), :class => 'dialog') %></p>
+<p class="bigText"><%= link_to 'All my dialogues', list_conversations_path -%></p>
 
 <% content_for :scripts do %>
 <%= static_asset_javascript 'javascripts/views/conversations/show', 'cache/views/conversations/show' %>

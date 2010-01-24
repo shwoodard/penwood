@@ -198,3 +198,6 @@ a.miniPersonaTagLink.add:hover span.smIcon {
   height:18px;
 }
 
+.no.underline a {
+    text-decoration:none;
+}

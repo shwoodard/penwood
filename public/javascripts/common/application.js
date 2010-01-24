@@ -111,17 +111,6 @@ var penwood = penwood || {};
                 self.trigger('dialog.close');
                 dialogDom.dialog('close');
               });
-      
-              var form = dialogDom[0].tagName === 'FORM' ? dialogDom : dialogDom.find('form');
-	                    
-              if (form) {
-                form.bind('form.submitsuccess', function(evt, resp) {
-                  self.trigger('dialog.form.submitsuccess', resp);
-                  self.trigger('dialog.close');
-                  dialogDom.dialog('close');
-                });
-                form.form();
-              }
             }
           });
         },

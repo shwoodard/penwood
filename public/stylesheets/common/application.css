@@ -328,12 +328,15 @@ label {
 
 .avatarImage {
   padding:10px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
 }
 
 .avatarImaged {
     background:no-repeat top left;
     min-height:60px;
-    padding:16px 0 0px 55px;
+    padding-top:18px;
+    padding-left:60px;
 }
 
 .pictureWindowWpr .thumbs .thumb {
@@ -351,3 +354,7 @@ label {
     margin:0 auto;
 }
 
+.quickNote {
+  height:165px;
+  margin-bottom:10px;
+}

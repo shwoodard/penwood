@@ -1,0 +1,13 @@
+<div>
+  <h2>New Dialogue Entry</h2>
+  <% form_for @conversation do |f| %>
+  
+  <% f.fields_for :conversation_entries do |ces| %>
+    <% if ces.object == @conversation.conversation_entries.last %>
+      <%= ces.hidden_field :user_id, :value => current_user.id %>
+      <%= ces.text_area :body, :class => 'quickNote' %>
+    <% end %>
+  <% end %>
+  <p><%= f.submit "Create" -%></p>
+  <% end %>
+</div>

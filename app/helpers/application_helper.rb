@@ -56,6 +56,10 @@ module ApplicationHelper
     date.strftime('%B %e, %Y')
   end
   
+  def full_time(time)
+    time.strftime('%A, %B %e, %Y, %l:%M %p')
+  end
+  
   def user_status(user)
     status = user.active? ? 'Active' : 'Inactive'
     status = 'Banned' if user.banned?
