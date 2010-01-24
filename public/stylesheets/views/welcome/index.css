@@ -58,3 +58,27 @@
   display:block;
   margin-top:5px;
 }
+
+
+.welcomeDialogWpr .welcomeDialogLiner  {
+  padding:30px 50px 50px 50px;
+}
+
+.welcomeDialogWpr .welcomeDialogLiner h4  {
+  margin-bottom:5px;
+}
+
+.welcomeDialogWpr li {
+  list-style:disc outside none;
+  margin-left:10px;
+  padding:3px 0;
+}
+
+.welcomeDialogWpr .welcomeDialogLiner a {
+  text-decoration:underline;
+}
+
+.whatCanIDo {
+  color:#333333;
+  font-size:16px;
+}

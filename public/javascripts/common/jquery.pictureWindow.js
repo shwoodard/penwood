@@ -37,7 +37,7 @@
         windowImage.attr('src', windowImagePaths[0]);
       }
       
-      thumbLinks.bind('mouseover click', function (evt) {
+      thumbLinks.bind('click', function (evt) {
         evt.preventDefault();
         windowImage.attr('src', $(this).attr('rel'));
       });

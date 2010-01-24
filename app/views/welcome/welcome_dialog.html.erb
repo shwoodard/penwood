@@ -1,0 +1,21 @@
+<div class="welcomeDialogWpr"><div class="welcomeDialogLiner">
+  <h4>Welcome to Penwood Partners</h4>
+  <p class="whatCanIDo">What can I do here?</p>
+  <ol>
+  <% if Conversation.new_messages?(current_user) %>
+  <li>
+    You have dialogue activity!  You have <%= link_to "#{Conversation.n_new_messages(current_user)} #{"dialogue".pluralize(Conversation.n_new_messages(current_user))}", list_conversations_path -%> with new messages.
+  </li>
+  <% end %>
+  <li>
+    <%= link_to "Schedule an appointment", new_appointment_path %>
+  </li>
+  <li>
+    <%= link_to "Make a payment", new_payment_path %>
+  </li>
+  <li>
+    <%= link_to "Get in touch", contact_path %>
+  </li>
+  
+  </ol>
+</div></div>

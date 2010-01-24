@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100124020912) do
+ActiveRecord::Schema.define(:version => 20100124030531) do
 
   create_table "articles", :force => true do |t|
     t.string   "attachment_file_name"
@@ -155,6 +155,7 @@ ActiveRecord::Schema.define(:version => 20100124020912) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+    t.boolean  "show_welcome_dialog", :default => true,  :null => false
   end
 
 end

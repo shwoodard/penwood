@@ -8,6 +8,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :conversations, :collection => {:list => :get}, :member => {:new_quick_note => :get}, :as => "dialogues"
   map.resources :appointments
   map.resources :articles, :only => [:index, :show], :as => 'readings'
+  map.resources :payments
 
   map.with_options :controller => 'services' do |services|
     services.services 'services', :action => 'couples', :conditions => {:method => :get}
@@ -23,6 +24,8 @@ ActionController::Routing::Routes.draw do |map|
   
   map.with_options :controller => 'welcome' do |welcome|
     welcome.about_us 'about', :action => 'about', :conditions => {:method => :get}
+    welcome.welcome_dialog 'welcome_dialog', :action => 'welcome_dialog', :conditions => {:method => :get}
+    welcome.dont_show_welcome_dialog 'welcome_dialog', :action => 'dont_show_welcome_dialog', :conditions => {:method => :put}
   end
   
   map.namespace :admin do |admin|
