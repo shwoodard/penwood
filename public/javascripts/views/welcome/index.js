@@ -26,7 +26,7 @@
                   dialogDom.dialog('close');
                 },
                 
-                "Don't Show Again": function (evt) {
+                "Don't show this window again": function (evt) {
                   dialogDom.dialog('close');
                   $.post($('#dont_show_welcome_dialog_path').val(), {_method: 'put', authenticity_token: $('#dont_show_welcome_dialog_path').attr('rel')});
                 }
