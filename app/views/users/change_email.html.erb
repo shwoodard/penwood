@@ -1,8 +1,8 @@
 <h1>Update Email Address</h1>
 <% form_for @user do |f| %>
 <%= f.error_messages %>
-<%= f.label :email -%><br /><%= f.text_field :email -%><br />
-<%= f.label :email_confirmation -%><br /><%= f.text_field :email_confirmation -%>
+<%= f.label :email -%><br /><%= f.text_field :email -%><br /><br />
+<%= f.label :email_confirmation -%><br /><%= f.text_field :email_confirmation -%><br /><br />
 <div><%= f.submit "Update email"%></div>
 <% end %>
 
