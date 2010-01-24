@@ -5,7 +5,7 @@
 <h2>Confirmed Appointments</h2>
 <div id="confirmed_appts_wpr"><%= image_tag 'ajax-loader-alt.gif'%></div>
 <div class="clear"></div><br /><br />
-<div><%= link_to 'New appointment', new_appointment_path, :class => 'medium rounded-button' %></div>
+<div><%= link_to 'New appointment request', new_appointment_path, :class => 'medium rounded-button' %></div>
 
 <%= hidden_field_tag 'tentative_appointments_path', tentative_appointments_appointments_path %>
 <%= hidden_field_tag 'confirmed_appointments_path', confirmed_appointments_appointments_path %>
