@@ -1,7 +1,6 @@
+<p class="breadcrumbs"><%= link_to 'Home', root_path -%> > <%= link_to 'My Penwood', account_path -%> > Profile Image</p>
 <h1>Profile Image</h1>
-
 <div><span><%= image_tag current_user.avatar.url(:large) -%></span></div>
-
 <% form_for @user, :html => {:multipart => true} do |f| %>
 <%= f.error_messages %>
 <%= f.label :avatar, 'Profile Image' -%><br /><%= f.file_field :avatar -%><br /><br />

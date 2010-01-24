@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
                     :path => ':rails_root/public/system/users/:id/avatars/:style.:extension'
   
   has_many :user_conversations
-  has_many :conversations, :through => :user_conversations
+  has_many :conversations, :through => :user_conversations, :order => 'updated_at DESC'
   
   has_many :user_groups
   has_many :groups, :through => :user_groups

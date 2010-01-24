@@ -1,10 +1,9 @@
+<p class="breadcrumbs"><%= link_to 'Home', root_path -%> > <%= link_to 'My Penwood', account_path -%> > Change Email</p>
 <h1>Update Email Address</h1>
 <% form_for @user do |f| %>
 <%= f.error_messages %>
 <%= f.label :email -%><br /><%= f.text_field :email -%><br /><br />
 <%= f.label :email_confirmation -%><br /><%= f.text_field :email_confirmation -%><br /><br />
-<%= f.label :password -%><br /><%= f.password_field :password -%><br /><br />
-<%= f.label :password_confirmation -%><br /><%= f.password_field :password_confirmation -%><br /><br />
 <div><%= f.submit "Update email"%> <%= link_to 'Back', account_path -%></div>
 <% end %>
 

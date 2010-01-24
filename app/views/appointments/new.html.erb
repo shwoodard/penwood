@@ -1,4 +1,4 @@
-<p class="breadcrumbs"><%= link_to 'My Penwood', edit_account_path -%> > <%= link_to 'My Appointments', appointments_path -%> > New Appointment</p>
+<p class="breadcrumbs"><%= link_to 'Home', root_path -%> > <%= link_to 'My Penwood', account_path -%> > <%= link_to 'My Appointments', appointments_path -%> > New Appointment</p>
 <h1>New Appointment</h1>
 <p>Here, you can submit new appointment requests to Doug and Terry</p>
 <% form_for :appointment, :url => appointments_path, :html => {:class => 'new_appointment_form'} do |f| %>

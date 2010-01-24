@@ -8,9 +8,9 @@ class ConversationsController < ApplicationController
   end
   
   def list
-    @conversations = current_user.conversations(:order => 'updated_at DESC')
+    @conversations = current_user.conversations
     unless @conversations.any?
-      flash[:notice] = 'You do not have any dialogues.  Create one.'
+      flash[:notice] = 'You do not have any conversatoins.  Create one.'
       redirect_to :action => 'index' and return
     end
   end
@@ -36,7 +36,7 @@ class ConversationsController < ApplicationController
     @conversation = Conversation.new(params[:conversation])
     @conversation.user_conversations.build(:user => current_user, :creator => true)
     if @conversation.save
-      flash[:notice] = 'Your dialogue has been created.'
+      flash[:notice] = 'Your conversation has been created.'
       @conversation.deliver_invitations!
       redirect_to @conversation
     else

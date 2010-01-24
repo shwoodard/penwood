@@ -1,4 +1,5 @@
-<h1>Dialogues</h1>
+<p class="breadcrumbs"><%= link_to 'Home', root_path -%> > Conversations</p>
+<h1>Conversations</h1>
 <h2>Drop a quick note</h2>
 <% form_for @conversation do |f| %>
   <%= f.error_messages %>
@@ -25,7 +26,7 @@
   <div class="potentialRecipientsContainer potential_participants_container"></div>
 </div>
 <% if current_user.conversations.any? %>
-<div class="buttonWpr"><%= link_to 'All my dialogues  &#187;', list_conversations_path, :class => 'medium rounded-button' -%></div>
+<div class="buttonWpr"><%= link_to 'All my conversations  &#187;', list_conversations_path, :class => 'medium rounded-button' -%></div>
 <% end %>
 
 <% content_for :scripts do %>

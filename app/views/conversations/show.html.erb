@@ -1,4 +1,5 @@
-<h1>Dialogues</h1>
+<p class="breadcrumbs"><%= link_to 'Home', root_path -%> > <%= link_to 'Conversations', conversations_path -%> > <%= link_to 'My Conversations', list_conversations_path -%> > <i><%= h @conversation.subject %></i></p>
+<h1>Conversations</h1>
 <% unless @conversation.quick_note? %><h2><i><%= @conversation.subject -%></i></h2><% end %>
 <% curr_user = nil %>
 <% i = -1 %>
@@ -13,8 +14,8 @@
 <div class="clear"></div>
 <% end %>
 
-<div class="buttonWpr"><%= link_to((curr_user == current_user ? 'Add' : 'Reply'), new_quick_note_conversation_path(@conversation), :class => 'dialog medium rounded-button') %></div>
-<div class="buttonWpr"><%= link_to '&#171; All my dialogues', list_conversations_path, :class => "medium rounded-button" -%></div>
+<div class="buttonWpr"><%= link_to((curr_user == current_user ? 'Add more to the conversation' : 'Reply'), new_quick_note_conversation_path(@conversation), :class => 'dialog medium rounded-button') %></div>
+<div class="buttonWpr"><%= link_to '&#171; All my conversations', list_conversations_path, :class => "medium rounded-button" -%></div>
 
 <% content_for :scripts do %>
 <%= static_asset_javascript 'javascripts/views/conversations/show', 'cache/views/conversations/show' %>

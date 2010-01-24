@@ -1,3 +1,4 @@
+<p class="breadcrumbs"><%= link_to 'Home', root_path -%> > About Us</p>
 <h1>About Us</h1>
 <%= image_experience ImageExperience.find_by_page_id(@page.id) %>
 <div id="aboutContent"><%= cms_content_for('services_organizations_copy') %></div>

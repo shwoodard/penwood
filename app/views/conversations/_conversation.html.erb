@@ -15,6 +15,6 @@
     </tbody>
   </table>
   <% if conversation.conversation_entries.any? {|ce| !ce.read_by.include?(current_user.email) } %>
-  <p class="newMessageText no underline"><%= link_to '<blink>There are new threads in this dialogue that you have not read.</blink>', conversation_path(conversation) -%></p>
+  <p class="newMessageText no underline"><%= link_to '<blink>There are new threads in this conversation that you have not read.</blink>', conversation_path(conversation) -%></p>
   <% end %>
 </li>

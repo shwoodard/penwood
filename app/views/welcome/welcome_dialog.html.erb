@@ -4,7 +4,7 @@
   <ol>
   <% if Conversation.new_messages?(current_user) %>
   <li>
-    You have dialogue activity!  You have <%= link_to "#{Conversation.n_new_messages(current_user)} #{"dialogue".pluralize(Conversation.n_new_messages(current_user))}", list_conversations_path -%> with new messages.
+    You have conversation activity!  You have <%= link_to "#{Conversation.n_new_messages(current_user)} #{"conversation".pluralize(Conversation.n_new_messages(current_user))}", list_conversations_path -%> with new messages.
   </li>
   <% end %>
   <li>

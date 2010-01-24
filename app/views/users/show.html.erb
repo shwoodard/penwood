@@ -1,3 +1,4 @@
+<p class="breadcrumbs"><%= link_to 'Home', root_path -%> > My Penwood</p>
 <h1>My Penwood</h1>
 
 <ul class="actionItems">
@@ -6,7 +7,7 @@
 <li><%= link_to 'Update Email Address', change_email_users_path %></li>
 <li><%= link_to 'Update Password', change_password_users_path %></li>
 <li class="withProfileImage"><%= link_to @user.avatar.file? ? 'Change Profile Image' : 'Upload Profile Image', avatar_users_path %><%= image_tag current_user.avatar.url(:standard) -%></li>
-<li>View welcome window at Sign in&nbsp;&nbsp;<%= check_box_tag :welcome_dialog, "1", current_user.show_welcome_dialog?, :rel => form_authenticity_token -%></li>
+<li>View welcome window at sign in&nbsp;&nbsp;<%= check_box_tag :welcome_dialog, "1", current_user.show_welcome_dialog?, :rel => form_authenticity_token -%></li>
 </ul>
 
 <%= hidden_field_tag "show_welcome_dialog_path", show_welcome_dialog_users_path %>
