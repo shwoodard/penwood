@@ -1,8 +1,12 @@
 <h1>My Penwood</h1>
 
-<p><%= link_to 'My Appointments', appointments_path %></p>
-<p><%= link_to 'Update Email Address', change_email_users_path %></p>
-<p><%= link_to 'Update Password', change_password_users_path %></p>
+<ul class="actionItems">
+<li><%= link_to 'My Appointments', appointments_path %></li>
+<li><%= link_to 'Update Email Address', change_email_users_path %></li>
+<li><%= link_to 'Update Password', change_password_users_path %></li>
+<li class="withProfileImage"><%= link_to @user.avatar.file? ? 'Change Profile Image' : 'Upload Profile Image', avatar_users_path %><%= image_tag current_user.avatar.url(:standard) -%></li>
+<li>View welcome window at Sign in&nbsp;&nbsp;<%= check_box_tag :welcome_dialog, current_user.show_welcome_dialog? -%></li>
+</ul>
 
 <% content_for :scripts do %>
 <%= static_asset_javascript 'javascripts/views/users/show', 'cache/views/users/show' %>

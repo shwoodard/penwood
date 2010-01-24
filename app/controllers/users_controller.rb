@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_filter :require_user, :only => [:show, :edit, :update]
+  before_filter :require_user, :only => [:show, :edit, :update, :change_email, :change_password, :avatar]
   
   def create
     @user = User.new(params[:user])
@@ -39,6 +39,10 @@ class UsersController < ApplicationController
   end
   
   def change_password
+    @user = current_user
+  end
+  
+  def avatar
     @user = current_user
   end
   

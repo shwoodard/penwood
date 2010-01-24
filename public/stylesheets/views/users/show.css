@@ -1,0 +1,18 @@
+.withProfileImage {
+  width:360px;
+}
+
+.withProfileImage img {
+  margin-top:-5px;
+  float:right;
+}
+
+ul.actionItems {
+  padding-left:70px;
+}
+
+ul.actionItems li {
+  font-size:22px;
+  padding-bottom:40px;
+  color:#333333;
+}

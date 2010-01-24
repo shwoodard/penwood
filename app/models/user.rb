@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   end
   
   has_attached_file :avatar,
-                    :styles => {:standard => '65x65>', :small => '55x56>'},
+                    :styles => {:large => '95x95>', :standard => '65x65>', :small => '55x56>'},
                     :default_url => '/images/no_picture.png',
                     :url => '/system/users/:id/avatars/:style.:extension',
                     :path => ':rails_root/public/system/users/:id/avatars/:style.:extension'
