@@ -1,10 +1,13 @@
 .contactRight {
-  margin-left:380px;
+  margin-left:438px;
   width:420px;
+  position:relative;
 }
 
 .contactRight form div {
   padding:10px 0;
+  float:right;
+  padding-right:65px;
 }
 
 .contactLoginForm {
@@ -26,9 +29,22 @@
   padding-bottom:45px;
 }
 
-.contactNewUserButton {
+.addUserButtonWpr {
   float:right;
+  margin-right:10px;
+  margin-top:160px;
+}
+
+.addUserButtonWpr .contactNewUserButton {
   margin-right:50px;
   margin-top:20px;
   font-size:18px;
+}
+
+.guest .contactInfo {
+  margin-top:-115px;
+}
+
+.contactFormHeader {
+  padding-top:60px;
 }

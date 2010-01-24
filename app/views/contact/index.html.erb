@@ -1,7 +1,6 @@
 <p class="breadcrumbs"><%= link_to 'Home', root_path -%> > Contact Us</p>
 <h1>Contact</h1>
 
-<% unless current_user%>
 <div class="contactLoginForm">
   <div class="contactLoginFormLiner">
     <h2>Login</h2>
@@ -21,25 +20,25 @@
 </div>
 
 
-<div class="contactRight">
+<div class="contactRight <%= 'guest' unless member? -%>">
   <%= render :partial => 'partials/contact_info.html.erb' -%>
 
   <% unless member? %>
-  <h2>Create an account or just send a note</h2>
+  <h2 class="contactFormHeader">Create an account or just send a note</h2>
   <% form_for @user, :url => create_contact_path do |f| %>
   <%= f.error_messages %>
   <div><%= f.label :name %><br /><%= f.text_field :name, :class => 'gblTextField'%></div>
   <div><%= f.label :email %><br /><%= f.text_field :email, :class => 'gblTextField'%></div>
   <div><%= f.label :email_confirmation, "Confirm Email" %><br /><%= f.text_field :email_confirmation, :class => 'gblTextField'%></div>
   <div><%= f.label :phone %><br /><%= f.text_field :phone, :class => 'gblTextField'%></div>
-  <div><%= f.check_box :register, :checked => !!params[:register] -%><%= f.label :register, 'Create an account' -%></div>
+  <div><%= f.label :register, 'Create an account' -%>&nbsp;&nbsp;<%= f.check_box :register, :checked => !!params[:register] -%></div>
   <div class="contactPasswordField hidden"><%= f.label :password -%><%= f.password_field :password -%></div>
   <div class="contactPasswordField hidden"><%= f.label :password_confirmation -%><%= f.password_field :password_confirmation -%></div>
   <div><%= f.label :note, "Send us a note:" %><br /><%= f.text_area :note, :class => 'gblTextArea'%></div>
   <div><%= f.submit 'Submit' -%></div>
   <% end %>
   <% else %>
-  <% unless @user.errors.any? %><div><%= link_to 'Add a user', 'javascript:;', :class => 'new_user_button contactNewUserButton gblAddButton' -%></div><% end %>
+  <% unless @user.errors.any? %><div class="addUserButtonWpr"><%= link_to 'Add a user', 'javascript:;', :class => 'new_user_button contactNewUserButton gblAddButton' -%></div><% end %>
   <div class="new_user_form_wpr <%= 'hidden' unless @user.errors.any? -%>">
     <h2>New User</h2>
     <% form_for @user do |f| %>
@@ -54,12 +53,8 @@
     <% end %>
   </div>
   <% end %>
+  <div class="clear"></div>
 </div>
-<div class="clear"></div>
-<% else %>
-
-<% end %>
-
 <% content_for :scripts do %>
 <%= static_asset_javascript 'javascripts/views/contact/index', 'cache/views/contact/index' %>
 <% end %>

@@ -242,11 +242,13 @@ a.rounded-button.xxlarge {
 }
 
 .contactInfo {
+  position:absolute;
+  right:0;
+  top:0;
   text-align:right;
   font-size:22px;
   margin-bottom:20px;
-  margin-right:50px;
-  margin-top:20px;
+  margin-right:60px;
 }
 
 .contactInfo a {
