@@ -1,0 +1,10 @@
+<h1>Site Map</h1>
+<div id="siteMapWpr"><%= make_site_map(Page.find_by_path("/")) %></div>
+
+<% content_for :scripts do %>
+<%= static_asset_javascript 'javascripts/views/welcome/site_map', 'cache/views/welcome/site_map' %>
+<% end %>
+
+<% content_for :styles do %>
+<%= static_asset_stylesheet 'stylesheets/views/welcome/site_map', 'cache/views/welcome/site_map' %>
+<% end %>

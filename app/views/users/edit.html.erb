@@ -1,9 +1,9 @@
 <h1>My Account</h1>
 <% form_for @user do |f| %>
 <%= f.error_messages %>
-<%= f.label :email -%><%= f.text_field :email -%><br />
-<%= f.label :email_confirmation -%><%= f.text_field :email_confirmation -%><br />
-<%= f.submit %>
+<%= f.label :email -%><br /><%= f.text_field :email -%><br /><br />
+<%= f.label :email_confirmation -%><br /><%= f.text_field :email_confirmation -%><br /><br />
+<div><%= f.submit %></div>
 <% end %>
 <% content_for :scripts do %>
 <%= static_asset_javascript 'javascripts/views/users/edit', 'cache/views/users/edit' %>

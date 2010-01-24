@@ -3,6 +3,9 @@ class Page < ActiveRecord::Base
   has_many :image_experiences
   has_many :quotes
   belongs_to :parent, :class_name => 'Page'
+  has_many :sub_pages, :class_name => 'Page', :foreign_key => 'parent_id'
+  
+  validates_uniqueness_of :path, :title
   
   def private?
     title.blank?

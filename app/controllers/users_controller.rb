@@ -38,6 +38,10 @@ class UsersController < ApplicationController
     @user = current_user
   end
   
+  def change_password
+    @user = current_user
+  end
+  
   def activate
     user = User.find_using_perishable_token(params[:activation_code], 1.week)
     if user

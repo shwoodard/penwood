@@ -47,20 +47,25 @@ label {
 }
 
 #singleCol #gblTop #gblTopLiner {
-  padding:30px;
+  padding:15px 30px;
   position:relative;
 }
 
+#singleCol #gblTop #gblTopLiner #gblLogoLnk {
+  display:block;
+  float:left;
+}
+
 #singleCol #gblTop #gblTopLiner #gblLogo {
-  width:183px;
-  height:88px;
-  background:url(/images/logo.png) top left no-repeat;
+  width:500px;
+  height:120px;
+  background:url(/images/logo_with_tagline.png) top left no-repeat;
 }
 
 #gblNav {
-    float:right;
-    margin-top:30px;
-    margin-right:25px;
+    position:absolute;
+    top:90px;
+    right:25px;
 }
 
 #gblNav a,

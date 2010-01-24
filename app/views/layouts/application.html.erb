@@ -3,7 +3,6 @@
 <html>
 <head>
 <title>Penwood Partners - Transforming Relationships</title>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=7" />
 <meta charset="utf-8" />
 <%= static_asset_stylesheet 'stylesheets/common/global', 'cache/common/global' %>
@@ -18,7 +17,7 @@
           <div id="gblTopLiner">
             <%= render :partial => 'partials/gbl_session_nav.html.erb' unless guest? %>
             <% unless logged_in? || member? %><div class="gblSessionNav"><%= link_to 'Sign in', contact_path-%> | <%= link_to 'Register', contact_path(:register => true)-%></div><% end %>
-            <a href="<%= root_path-%>"><span id="gblLogo" class="block float"></span></a>
+            <a href="<%= root_path-%>" id="gblLogoLnk"><span id="gblLogo" class="block float"></span></a>
             <%= render :partial => 'partials/gbl_nav.html.erb' %>
           </div>
         </div>

@@ -3,7 +3,9 @@
 <%= f.error_messages %>
 <%= f.label :email -%><br /><%= f.text_field :email -%><br /><br />
 <%= f.label :email_confirmation -%><br /><%= f.text_field :email_confirmation -%><br /><br />
-<div><%= f.submit "Update email"%></div>
+<%= f.label :password -%><br /><%= f.password_field :password -%><br /><br />
+<%= f.label :password_confirmation -%><br /><%= f.password_field :password_confirmation -%><br /><br />
+<div><%= f.submit "Update email"%> <%= link_to 'Back', account_path -%></div>
 <% end %>
 
 <% content_for :scripts do %>
