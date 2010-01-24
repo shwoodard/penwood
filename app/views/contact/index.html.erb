@@ -22,12 +22,7 @@
 
 
 <div class="contactRight">
-  <ul class="contactInfo">
-    <li>Terry Pennebaker and Doug Woodard</li>
-    <li>Email <%= mail_to 'terry@penwoodpartners.com', 'Terry'-%> or <%= mail_to 'doug@penwoodpartners.com', 'Doug' -%></li>
-    <li>Phone: 415-524-8400</li>
-    <li>Fax: 415-524-8402</li>
-  </ul>
+  <%= render :partial => 'partials/contact_info.html.erb' -%>
 
   <% unless member? %>
   <h2>Create an account or just send a note</h2>

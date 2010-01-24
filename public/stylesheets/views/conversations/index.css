@@ -1,3 +1,8 @@
+#left {
+  width:400px;
+  float:left;
+}
+
 .currentParticipants h2 {
   float:left;
   line-height:34px;
@@ -11,4 +16,9 @@
 
 .potentialRecipients h2 {
   padding-top:20px;
+}
+
+.contactInfoWpr {
+  margin-top:-25px;
+  margin-right:100px;
 }

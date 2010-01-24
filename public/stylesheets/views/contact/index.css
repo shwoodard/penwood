@@ -1,7 +1,6 @@
 .contactRight {
   margin-left:380px;
-  padding-left:60px;
-  width:360px;
+  width:420px;
 }
 
 .contactRight form div {
@@ -23,25 +22,13 @@
   margin-bottom:15px;
 }
 
-.contactInfo {
-  margin-bottom:20px;
-}
-
-.contactInfo a {
-  color:#585555;
-  text-decoration:underline;
-}
-
-.contactInfo a:hover {
-  text-decoration:none;
-}
-
 #gblContent {
   padding-bottom:45px;
 }
 
 .contactNewUserButton {
-  padding-left:5px;
+  float:right;
+  margin-right:50px;
   margin-top:20px;
   font-size:18px;
 }
