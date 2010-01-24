@@ -1,0 +1,5 @@
+<% if @tentative_appointments.empty? %><p>You do not have any unapproved appointments.</p><% end %>
+<ul class="appointments">
+<%= render :partial => 'appointments/appointment.html.erb', :collection => @tentative_appointments %>
+</ul>
+<div class="clear"></div>

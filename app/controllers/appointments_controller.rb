@@ -2,10 +2,19 @@ require 'gcal4ruby'
 
 class AppointmentsController < ApplicationController
   before_filter :require_user
+  verify :xhr => true, :only => [:tentative_appointments, :confirmed_appointments]
 
   def index
+  end
+  
+  def tentative_appointments
     @tentative_appointments = GCal4Ruby::Calendar.find(service, "Penwood Tentative Appointments", {:scope => :first}).events.find_all {|event| event.attendees.any? {|attendee| attendee[:email] == current_user.email}}
+    render :layout => false
+  end
+  
+  def confirmed_appointments
     @confirmed_appointments = GCal4Ruby::Calendar.find(service, "Penwood Appointments", {:scope => :first}).events.find_all {|event| event.attendees.any? {|attendee| attendee[:email] == current_user.email}}
+    render :layout => false
   end
 
   def new

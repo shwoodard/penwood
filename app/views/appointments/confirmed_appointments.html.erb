@@ -1,0 +1,4 @@
+<% if @confirmed_appointments.empty? %><p>You do not have any confirmed appointments.</p><% end %>
+<ul class="appointments">
+<%= render :partial => 'appointments/appointment.html.erb', :collection => @confirmed_appointments %>
+</ul>
