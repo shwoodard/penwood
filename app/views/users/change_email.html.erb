@@ -1,0 +1,15 @@
+<h1>Update Email Address</h1>
+<% form_for @user do |f| %>
+<%= f.error_messages %>
+<%= f.label :email -%><br /><%= f.text_field :email -%><br />
+<%= f.label :email_confirmation -%><br /><%= f.text_field :email_confirmation -%>
+<div><%= f.submit "Update email"%></div>
+<% end %>
+
+<% content_for :scripts do %>
+<%= static_asset_javascript 'javascripts/views/users/change_email', 'cache/views/users/change_email' %>
+<% end %>
+
+<% content_for :styles do %>
+<%= static_asset_stylesheet 'stylesheets/views/users/change_email', 'cache/views/users/change_email' %>
+<% end %>

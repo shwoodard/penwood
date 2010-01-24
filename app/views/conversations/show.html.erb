@@ -13,8 +13,8 @@
 <div class="clear"></div>
 <% end %>
 
-<p class="bigText"><%= link_to((curr_user == current_user ? 'Add' : 'Reply'), new_quick_note_conversation_path(@conversation), :class => 'dialog') %></p>
-<p class="bigText"><%= link_to 'All my dialogues', list_conversations_path -%></p>
+<div class="buttonWpr"><%= link_to((curr_user == current_user ? 'Add' : 'Reply'), new_quick_note_conversation_path(@conversation), :class => 'dialog medium rounded-button') %></div>
+<div class="buttonWpr"><%= link_to '&#171; All my dialogues', list_conversations_path, :class => "medium rounded-button" -%></div>
 
 <% content_for :scripts do %>
 <%= static_asset_javascript 'javascripts/views/conversations/show', 'cache/views/conversations/show' %>

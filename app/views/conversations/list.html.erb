@@ -2,6 +2,7 @@
 <ol>
   <%= render :partial => 'conversations/conversation.html.erb', :collection => @conversations %>
 </ol>
+<div class="buttonWpr"><%= link_to '&#171; Back', conversations_path, :class => 'medium rounded-button' -%></div>
 
 <% content_for :scripts do %>
 <%= static_asset_javascript 'javascripts/views/conversations/list', 'cache/views/conversations/list' %>

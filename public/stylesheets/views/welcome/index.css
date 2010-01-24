@@ -10,13 +10,11 @@
 }
 
 .homeLearnMoreButton {
-  width:358px;
-  height:53px;
   display:block;
-  background:url(/images/home_learn-more.png) no-repeat top left;
   float:right;
   clear:right;
-  margin-right:70px;
+  margin-right:40px;
+  margin-top:5px;
 }
 
 .homePictureFrame {

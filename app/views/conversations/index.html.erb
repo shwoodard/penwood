@@ -25,7 +25,7 @@
   <div class="potentialRecipientsContainer potential_participants_container"></div>
 </div>
 <% if current_user.conversations.any? %>
-<p class="bigText"><br /><br /><%= link_to 'All My Dialogues', list_conversations_path -%></p>
+<div class="buttonWpr"><%= link_to 'All my dialogues  &#187;', list_conversations_path, :class => 'medium rounded-button' -%></div>
 <% end %>
 
 <% content_for :scripts do %>

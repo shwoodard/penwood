@@ -1,42 +1,43 @@
 li.conversation {
-    margin-bottom:10px;
-    background:#CCCCCC;
-    border:1px solid #000000;
-    padding:20px;
-    -moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
+  margin-bottom:10px;
+  color: #a4483d;
+  background: #fdfaf3;
+  border:1px solid #000000;
+  padding:20px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
 }
 
 li.conversation .newMessageText a {
-    font-size:14px;
-    color:#C5351C !important;
+  font-size:14px;
+  color:#C5351C !important;
 }
 
 li.conversation .lastUpdatedAt,
 li.conversation .lastUpdatedBy {
-    padding-left:15px;
-    font-size:16px;
-    color:#666666;
+  padding-left:15px;
+  font-size:16px;
+  color:#666666;
 }
 
 li.conversation .lastUpdatedBy {
-    min-height:40px;
-    padding-left:70px;
+  min-height:40px;
+  padding-left:70px;
 }
 
 table .heading4 {
-    padding-bottom:0;
+  padding-bottom:0;
 }
 
 td {
-    vertical-align:top;
-    padding:25px;
+  vertical-align:top;
+  padding:25px;
 }
 
 td.col1 {
 }
 
 td .avatarImaged {
-    padding-top:10px;
-    
+  padding-top:10px;
+
 }

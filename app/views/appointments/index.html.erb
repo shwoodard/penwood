@@ -11,7 +11,7 @@
 <%= render :partial => 'appointments/appointment.html.erb', :collection => @confirmed_appointments %>
 </ul>
 
-<p><%= link_to 'New appointment', new_appointment_path %></p>
+<div><%= link_to 'New appointment', new_appointment_path, :class => 'medium rounded-button' %></div>
 
 <% content_for :scripts do %>
 <%= static_asset_javascript 'javascripts/views/appointments/index', 'cache/views/appointments/index' %>

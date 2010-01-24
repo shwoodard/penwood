@@ -5,8 +5,8 @@ body {
 }
 
 a {
-    color:#333333;
-    text-decoration:none;
+  color:#333333;
+  text-decoration:none;
 }
 
 h1, .heading1 {
@@ -65,14 +65,14 @@ p, .para {
 }
 
 .clear {
-    clear:both;
-    display:block;
-    font-size:0px;
-    height:1px;
-    line-height:0px;
-    margin-bottom:-1px;
-    overflow:hidden;
-    width:1px;
+  clear:both;
+  display:block;
+  font-size:0px;
+  height:1px;
+  line-height:0px;
+  margin-bottom:-1px;
+  overflow:hidden;
+  width:1px;
 }
 
 input[type=text],
@@ -125,13 +125,13 @@ input[type=checkbox] {
 }
 
 .flashNotice {
-	width: 840px;
-	padding: 8px;
-	margin: 0 auto 25px auto;
-	background: #FFF3E2;
-	border: solid 1px #C5351C;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
+  width: 840px;
+  padding: 8px;
+  margin: 0 auto 25px auto;
+  background: #FFF3E2;
+  border: solid 1px #C5351C;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
 }
 
 .miniPersonaTag {
@@ -146,7 +146,7 @@ input[type=checkbox] {
   background:#FFFEFC;
   color:#C5351C;
   -moz-border-radius: 5px 0 0 5px;
-	-webkit-border-radius: 5px 0 0 5px;
+  -webkit-border-radius: 5px 0 0 5px;
 }
 
 .miniPersonaTag span.userName {
@@ -199,5 +199,44 @@ a.miniPersonaTagLink.add:hover span.smIcon {
 }
 
 .no.underline a {
-    text-decoration:none;
+  text-decoration:none;
+}
+
+
+a.rounded-button {
+  text-decoration: none;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border: 1px solid #e0c9a7;
+  color: #a4483d;
+  background: #FEFAF4; /*#fdfaf3;*/
+  padding: .5em .75em;
+}
+
+/*a.rounded-button:hover {
+  background: #eeebe3;
+}*/
+a.rounded-button.small {
+  font-size: .75em;
+}
+a.rounded-button.regular {
+  font-size: 1em;
+}
+a.rounded-button.medium {
+  font-size: 1.25em;
+}
+a.rounded-button.large {
+  font-size: 1.5em;
+}
+a.rounded-button.xlarge {
+  font-size: 1.67em;
+}
+a.rounded-button.xxlarge {
+  font-size: 1.75em;
+}
+
+.buttonWpr {
+  margin-top:30px;
+  padding:10px;
+  padding-right:20px;
 }
