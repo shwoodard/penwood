@@ -13,4 +13,12 @@ class ConversationEntry < ActiveRecord::Base
     self.read_by << email_address
     self.attributes[:read_by] = self.read_by.uniq
   end
+  
+  def read?(user)
+    read_by.include?(user.email)
+  end
+  
+  def unread?(user)
+    !read?(user)
+  end
 end

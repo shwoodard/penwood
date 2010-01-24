@@ -1,3 +1,3 @@
 <div class="gblSessionNav">
-  <span>Welcome, <%= current_user.name %></span><span> | </span><span><%= link_to 'My Penwood', account_path %></span><% if current_user_admin? %><span> | </span><span><%= link_to 'Admin', admin_root_path %></span><% end %><span> | </span><span><%= link_to 'Sign out', signout_path %></span>
+  <span>Welcome, <%= current_user.name %></span><span> | </span><span><%= link_to 'My Penwood', account_path %></span><span> | </span><span><%= link_to "Mail (#{current_user.conversations.find_all {|conversation| conversation.conversation_entries.any? {|ce| ce.unread?(current_user)}}.size})", list_conversations_path %></span><% if current_user_admin? %><span> | </span><span><%= link_to 'Admin', admin_root_path %></span><% end %><span> | </span><span><%= link_to 'Sign out', signout_path %></span>
 </div>
