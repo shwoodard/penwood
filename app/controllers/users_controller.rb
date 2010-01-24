@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_filter :require_user, :only => [:show, :edit, :update, :change_email, :change_password, :avatar, :toggle_show_welcome_dialog]
+  verify :xhr => true, :only => [:new_user_quick]
   
   def create
     @user = User.new(params[:user])
@@ -44,6 +45,11 @@ class UsersController < ApplicationController
   
   def avatar
     @user = current_user
+  end
+  
+  def new_user_quick
+    @user = User.new
+    render :layout => false
   end
   
   def show_welcome_dialog

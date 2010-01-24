@@ -3,4 +3,7 @@
   <%= link_to '<span>Users</span>', admin_users_path %>
   <%= link_to '<span>Readings</span>', admin_articles_path %>
   <%= link_to '<span>Testimonials</span>', admin_testimonials_path -%>
+  <% if current_user_super_user? %>
+  <%= link_to '<span>New Content</span>', new_admin_content_path -%>
+  <% end %>
 </div>

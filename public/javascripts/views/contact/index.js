@@ -5,11 +5,11 @@
         });
         $('#user_register').change();
         
-        $('.new_user_button').click(function(evt) {
-          evt.preventDefault();
-          $('.new_user_form_wpr').removeClass('hidden');
-          $(this).remove();
-        });
+        // $('.new_user_button').click(function(evt) {
+        //   evt.preventDefault();
+        //   $('.new_user_form_wpr').removeClass('hidden');
+        //   $(this).remove();
+        // });
     });
 })(jQuery);
  
