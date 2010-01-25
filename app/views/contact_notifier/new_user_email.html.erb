@@ -2,7 +2,15 @@ Hi Dad and Terry,
 
 Somebody signed up on the website.
 
-TODO: Add contact details here.
+Here's the info:
+
+Email <%= @user.email %>
+Name <%= @user.name %>
+<% if @user.phone %>
+Phone <%= @user.phone %>
+<% end %>
+Message
+<%= @user.note %>
 
 Love you guys!
 

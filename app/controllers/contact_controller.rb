@@ -23,7 +23,7 @@ class ContactController < ApplicationController
         render :action => 'index'
       end
     else
-      if @user.valid?
+      unless @user.email.blank? || @user.name.blank?
         ContactNotifier.deliver_new_contact_email(@user)
         flash[:notice] = 'The information you submitted has been sent to Penwood Partners.'
         redirect_to root_path

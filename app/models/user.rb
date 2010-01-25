@@ -21,7 +21,7 @@ class User < ActiveRecord::Base
   named_scope :basic_admin, :conditions => 'admin = 1 AND super_user = 0'
   
   validates_presence_of :name
-  validates_confirmation_of :email
+  validates_confirmation_of :email, :on => :update
   
   attr_accessor :register, :note, :activation_url
   

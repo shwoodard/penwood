@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100124174905) do
+ActiveRecord::Schema.define(:version => 20100124233039) do
 
   create_table "articles", :force => true do |t|
     t.string   "attachment_file_name"
@@ -91,6 +91,7 @@ ActiveRecord::Schema.define(:version => 20100124174905) do
     t.integer  "parent_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "quote_eligible", :default => false, :null => false
   end
 
   create_table "quotes", :force => true do |t|

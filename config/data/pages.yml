@@ -11,12 +11,15 @@
 - path: "/services/couples"
   title: "Couples"
   parent_path: "/services"
+  quote_eligible: 1
 - path: "/services/organizations"
   title: "Organizations"
   parent_path: "/services"
+  quote_eligible: 1
 - path: "/services/families"
   title: "Families"
   parent_path: "/services"
+  quote_eligible: 1
 - path: "/readings"
   title: "Readings"
   parent_path: "/"

@@ -1,10 +1,16 @@
 namespace :import do
   desc "import the pages"
   task :pages => :environment do
-    Page.delete_all
     pages = YAML::load_file("#{RAILS_ROOT}/config/data/pages.yml")
     pages.each do |p|
-      page = Page.new(p)
+      page = Page.find_by_path(p["path"])
+      
+      if page
+        page.attributes = p
+      else
+        page = Page.new(p)
+      end
+      
       page.save!
     end
   end

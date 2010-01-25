@@ -20,6 +20,7 @@
   </tbody>
 </table>
 
+<% if @page.quote_eligible? %>
 <h2>Quotes</h2>
 <table class="quotesTable">
   <thead></thead>
@@ -28,6 +29,8 @@
   </tbody>
 </table>
 <div><%= link_to 'New Quote', new_admin_quote_path(:page_path => @page.path) -%></div><br /><br />
+<% end %>
+
 <div><%= link_to 'Back', admin_contents_path -%></div>
 
 <% content_for :scripts do %>
