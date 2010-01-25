@@ -10,6 +10,16 @@
   padding-right:65px;
 }
 
+.contactRight form div.errorExplanation {
+  padding:6px 6px 6px 11px;
+  margin-right:60px;
+}
+
+.contactRight form div.fieldWithErrors {
+  float:left;
+  padding:0;
+}
+
 .contactLoginForm {
   float:left;
   width:380px;
