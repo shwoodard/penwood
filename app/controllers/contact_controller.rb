@@ -28,6 +28,7 @@ class ContactController < ApplicationController
         flash[:notice] = 'The information you submitted has been sent to Penwood Partners.'
         redirect_to root_path
       else
+        flash[:notice] = "Both email and name are required."
         @user_session = UserSession.new
         render :action => 'index'
       end
