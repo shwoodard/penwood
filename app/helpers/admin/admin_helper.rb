@@ -6,7 +6,7 @@ module Admin::AdminHelper
       <<-S
       <tr>
         <td>#{quote qte}</td>
-        <td>#{link_to 'Edit', edit_admin_quote_path(qte)}</td>
+        <td>#{link_to 'Edit', edit_admin_quote_path(qte)}&nbsp;#{link_to 'Delete', admin_quote_path(qte), :method => 'Delete', :confirm => 'Are you sure'}</td>
       </tr>
       S
     end.join('')

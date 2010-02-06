@@ -1,6 +1,6 @@
 <%= quote @quote %><br /><br />
 
-<div><%= link_to "Edit", edit_admin_quote_path(@quote) -%> <%= link_to 'Back', admin_quotes_path %> <%= link_to('New', new_admin_quote_path) if current_user_super_user? -%></div>
+<div><%= link_to "Edit", edit_admin_quote_path(@quote) -%> <%= link_to 'Back', current_user_super_user? ? admin_quotes_path : admin_root_path %> <%= link_to('New', new_admin_quote_path) if current_user_super_user? -%></div>
 
 <% content_for :scripts do %>
 <%= static_asset_javascript 'javascripts/views/admin/quotes/show', 'cache/views/admin/quotes/show' %>

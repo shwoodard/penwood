@@ -42,6 +42,6 @@ class Admin::QuotesController < Admin::AdminController
     quote = Quote.find(params[:id])
     quote.destroy
     flash[:notice] = 'The quote has been deleted'
-    redirect_to :action => 'index'
+    redirect_to :action => current_user_super_user? ? 'index' : admin_root_path
   end
 end

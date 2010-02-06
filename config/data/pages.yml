@@ -12,7 +12,7 @@
   title: "Couples"
   parent_path: "/services"
   quote_eligible: 1
-- path: "/services/organizations"
+- path: "/services/businesses"
   title: "Organizations"
   parent_path: "/services"
   quote_eligible: 1

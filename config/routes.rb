@@ -13,7 +13,7 @@ ActionController::Routing::Routes.draw do |map|
   map.with_options :controller => 'services' do |services|
     services.services 'services', :action => 'index', :conditions => {:method => :get}
     services.couples_services 'services/couples', :action => 'couples', :conditions => {:method => :get}
-    services.organizations_services 'services/organizations', :action => 'organizations', :conditions => {:method => :get}
+    services.organizations_services 'services/businesses', :action => 'organizations', :conditions => {:method => :get}
     services.families_services 'services/families', :action => 'families', :conditions => {:method => :get}
   end
   
