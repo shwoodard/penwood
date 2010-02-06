@@ -30,4 +30,3 @@ ActionMailer::Base.delivery_method = :sendmail
 # config.threadsafe!
 
 Paperclip.options[:command_path] = "/usr/local/bin"
-
