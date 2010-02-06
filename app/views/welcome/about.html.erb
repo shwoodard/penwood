@@ -1,7 +1,7 @@
 <p class="breadcrumbs"><%= link_to 'Home', root_path -%> > About Us</p>
 <h1>About Us</h1>
 <%= image_experience ImageExperience.find_by_page_id(@page.id) %>
-<div id="aboutContent"><%= cms_content_for('services_organizations_copy') %></div>
+<div id="aboutContent"><%= cms_content_for('about_copy') %></div>
 <div class="float buttonWpr"><%= link_to 'Schedule an appointment &#187;', new_appointment_path, :class => 'rounded-button medium'-%></div>
 <div class="float buttonWpr"><%= link_to 'Contact us &#187;', contact_path, :class => 'rounded-button medium'-%></div>
 <div class="clear"></div>
