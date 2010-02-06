@@ -13,6 +13,7 @@ class Admin::ArticlesController < Admin::AdminController
   
   def create
     @article = Article.new_by_type(params[:article].delete(:type), params[:article])
+    logger.info "#{@artilce.is_a?(OtherArticle)}"
     @article.user = current_user unless @artilce.is_a?(OtherArticle)
     if @article.save
       flash[:notice] = 'You have successfully created the reading.'

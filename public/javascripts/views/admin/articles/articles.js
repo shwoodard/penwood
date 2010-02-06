@@ -4,5 +4,6 @@
       $('.article_body_row').setClass('hidden', $(this).val() !== 'MyArticle');
       $('.article_attachment_row').setClass('hidden', $(this).val() !== 'OtherArticle');
     });
+    $('#article_type').change();
   });
 })(jQuery);
