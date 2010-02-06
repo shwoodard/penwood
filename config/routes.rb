@@ -8,7 +8,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :conversations, :collection => {:list => :get}, :member => {:new_quick_note => :get}
   map.resources :appointments, :collection => {:tentative_appointments => :get, :confirmed_appointments => :get}
   map.resources :articles, :only => [:index, :show], :as => 'readings'
-  map.resources :payments
+  map.resources :payments, :only => [:new]
 
   map.with_options :controller => 'services' do |services|
     services.services 'services', :action => 'index', :conditions => {:method => :get}
