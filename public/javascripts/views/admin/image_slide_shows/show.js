@@ -1,6 +1,6 @@
 (function($){
     $(document).ready(function() {
-      $('#imageSlideShow').cjSimpleSlideShow();
+      $('.slideShow').cjSimpleSlideShow();
       $('.picture_window').pictureWindow();
     });
 })(jQuery);

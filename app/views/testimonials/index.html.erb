@@ -1,5 +1,6 @@
 <p class="breadcrumbs"><%= link_to 'Home', root_path -%> > Testimonials</p>
 <h1>Testimonials</h1>
+<div class="pictureShowWpr"><%= image_experience ImageExperience.find_by_page_id(@page.id) %></div>
 <%= render :partial => 'testimonials/testimonial.html.erb', :collection => @testimonials %>
 
 
