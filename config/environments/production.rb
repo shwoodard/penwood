@@ -29,4 +29,4 @@ ActionMailer::Base.delivery_method = :sendmail
 # Enable threaded mode
 # config.threadsafe!
 
-Paperclip.options[:command_path] = "/usr/local/bin"
+Paperclip.options[:command_path] = "/usr/bin"
