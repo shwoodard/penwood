@@ -1,6 +1,6 @@
 class Admin::ArticlesController < Admin::AdminController
   def index
-    @articles = Article.paginate(:all, :page => (params[:page] || 1))
+    @articles = Article.paginate(:all, :page => (params[:page] || 1), :order => :position)
   end
   
   def show
@@ -40,6 +40,12 @@ class Admin::ArticlesController < Admin::AdminController
     article = Article.find(params[:id])
     article.destroy
     flash[:notice] = "You have deleted the reading."
+    redirect_to :action => 'index'
+  end
+  
+  def move
+    article = Article.find(params[:id])
+    article.send("move_#{params[:direction]}".to_sym)
     redirect_to :action => 'index'
   end
 end

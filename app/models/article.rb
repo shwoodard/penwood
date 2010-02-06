@@ -4,6 +4,7 @@ class Article < ActiveRecord::Base
                     :path => ':rails_root/public/system/article_attachments/:id/attachments/:filename'
 
   has_ipaper_and_uses 'Paperclip'
+  acts_as_list
     
   def published_to_s
     self.published.blank? ? '' : self.published.strftime('%m/%d/%Y')

@@ -39,7 +39,7 @@ ActionController::Routing::Routes.draw do |map|
       slide_shows.resources :images, :member => {:move => :put}
     end
     admin.resources :quotes
-    admin.resources :articles
+    admin.resources :articles, :member => {:move => :put}
     admin.with_options :controller => 'calendar' do |cal|
       cal.calendar 'calendar', :action => 'index', :conditions => {:method => :get}
       cal.google_call_login_callback 'calendar/do_login', :action => 'login', :conditions => {:method => :get}

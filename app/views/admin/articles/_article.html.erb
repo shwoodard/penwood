@@ -6,5 +6,7 @@
     <span><%= link_to 'Show', admin_article_path(article) -%></span>
     <span><%= link_to 'Edit', edit_admin_article_path(article) -%></span>
     <span><%= link_to 'Delete', admin_article_path(article), :method => :delete, :confirm => "Are you sure?" -%></span>
+    <span class="move up"><%= link_to 'Move Up', move_admin_article_path(article, :direction => 'higher'), :method => :put -%></span>
+    <span class="move down"><%= link_to 'Move Down', move_admin_article_path(article, :direction => 'lower'), :method => :put -%></span>
   </td>
 </tr>
