@@ -36,6 +36,7 @@
           dataType: 'html'
         });
       });
+      $('.slideShow').cjSimpleSlideShow();
     });
 })(jQuery);
  
