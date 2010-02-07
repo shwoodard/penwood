@@ -11,7 +11,7 @@
 <p class="timeContainer"><%= f.label :end_time -%><br /><%= f.text_field :end_time, :class => 'end time_picker' -%></p>
 <div class="clear"></div>
 <p class="note"><%= f.label :note -%><br /><%= f.text_area :note %></p>
-<div><%= f.submit 'Submit' %></div>
+<div><%= f.submit 'Submit' %> <%= image_tag 'ajax-loader-alt.gif', :class => 'hidden submit_page_spinner' %></div>
 <% end %>
 
 <% content_for :scripts do %>

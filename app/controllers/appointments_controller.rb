@@ -33,12 +33,18 @@ class AppointmentsController < ApplicationController
     event.attendees = [{:name => current_user.name, :email => current_user.email}]
     event.content = params[:appointment][:note]
     
+    if params[:appointment][:start_date].blank? || params[:appointment][:start_time].blank? || 
+      params[:appointment][:end_date].blank? || params[:appointment][:end_time].blank?
+      flash.now[:notice] = "All date and time fields are required"
+      render :action => 'new' and return
+    end
     
     if event.save
       AppointmentNotifier.deliver_new_appointment_email(params, current_user)
       flash[:notice] = 'Your event request has been submitted.  Thank you.'
       redirect_to :action => 'index'
     else
+      flash.now[:notice] = 'Something went wrong with saving your event.  Please try again.'
       render :action => 'new'
     end
   end
