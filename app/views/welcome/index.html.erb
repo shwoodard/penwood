@@ -2,7 +2,7 @@
   <%= cms_content_for('home_copy') %>
 </div>
 <%= link_to 'Learn More About Penwood &#187;', about_us_path, :class => 'rounded-button xlarge homeLearnMoreButton'  -%>
-<div class="homePictureFrame"><div class="homePictureFrameLiner"><ul class="subpage slideShow"><%= render :partial => 'partials/image.html.erb', :collection => ImageExperience.find_by_page_id(@page.id).images -%></ul></div></div>
+<div class="homePictureFrame"><div class="homePictureFrameLiner"><ul class="slideShow"><%= render :partial => 'partials/image.html.erb', :collection => ImageExperience.find_by_page_id(@page.id).images -%></ul></div></div>
 <div class="homeHorizontal">
   <ol id="penwoodServices">
     <li><%= cms_content_for('home_couples') %><%= link_to '', couples_services_path, :class => 'homeLearnMoreSm' -%></li>
