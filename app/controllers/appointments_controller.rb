@@ -33,7 +33,9 @@ class AppointmentsController < ApplicationController
     event.attendees = [{:name => current_user.name, :email => current_user.email}]
     event.content = params[:appointment][:note]
     
+    
     if event.save
+      AppointmentNotifier.deliver_new_appointment_email(params, current_user)
       flash[:notice] = 'Your event request has been submitted.  Thank you.'
       redirect_to :action => 'index'
     else
