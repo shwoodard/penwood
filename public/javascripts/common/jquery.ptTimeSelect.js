@@ -312,7 +312,7 @@ jQuery.ptTimeSelect.openCntr = function (ele) {
 	var opt				= i.data("ptTimeSelectOptions");
 	var style			= i.offset();
 	style['z-index']	= opt.zIndex;
-	style.top			= (style.top + i.outerHeight());
+	style.top			= (style.top - cntr.outerHeight());
 	if (opt.containerWidth) {
 		style.width = opt.containerWidth;
 	}
