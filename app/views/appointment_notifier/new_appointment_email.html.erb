@@ -4,10 +4,13 @@ Someone has made an appointment on the website.  The details are as follows:
 
 User:
 Name: <%= @user.name -%>
+
 Email: <%= @user.email -%>
+
 
 Appointment:
 Start:  <%= "#{@params[:appointment][:start_date]} #{@params[:appointment][:start_time]}" -%>
+
 End: <%= "#{@params[:appointment][:end_date]} #{@params[:appointment][:end_time]}" -%>
 
 Follow this link to view the Penwood Partners Tentative Appointment Calendar:
