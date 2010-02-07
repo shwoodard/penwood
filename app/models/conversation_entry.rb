@@ -1,7 +1,10 @@
 class ConversationEntry < ActiveRecord::Base
   belongs_to :conversation
   belongs_to :user
+
   validates_presence_of :body
+  
+  after_create :deliver_conversation_updates
   
   serialize :read_by
   
@@ -12,6 +15,12 @@ class ConversationEntry < ActiveRecord::Base
   def read_by=(email_address)
     self.read_by << email_address
     self.attributes[:read_by] = self.read_by.uniq
+  end
+  
+  def deliver_conversation_updates
+    conversation.users.reject {|u| u == user}.each do |usr|
+      ContactNotifier.deliver_conversation_update_email(conversation, self, usr)
+    end unless conversation.new_record?
   end
   
   def read?(user)

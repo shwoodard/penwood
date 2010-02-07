@@ -1,5 +1,7 @@
 class ConversationsController < ApplicationController
+  verify :xhr => true, :only => :new_quick_note
   before_filter :require_user
+  before_filter :require_conversation_member, :only => :show
   
   def index
     @conversation = Conversation.new
@@ -10,13 +12,12 @@ class ConversationsController < ApplicationController
   def list
     @conversations = current_user.conversations
     unless @conversations.any?
-      flash[:notice] = 'You do not have any conversatoins.  Create one.'
+      flash[:notice] = 'You do not have any conversations.  Create one.'
       redirect_to :action => 'index' and return
     end
   end
   
   def show
-    @conversation = Conversation.find(params[:id])
     @conversation.conversation_entries.each {|ce| ce.read_by = current_user.email }
     @conversation.save
   end
@@ -37,7 +38,6 @@ class ConversationsController < ApplicationController
     @conversation.user_conversations.build(:user => current_user, :creator => true)
     if @conversation.save
       flash[:notice] = 'Your conversation has been created.'
-      @conversation.deliver_invitations!
       redirect_to @conversation
     else
       @conversation.user_conversations.clear
@@ -58,5 +58,15 @@ class ConversationsController < ApplicationController
       flash[:notice] = "Something went wrong.  Please try again later"
     end
     redirect_to @conversation
+  end
+  
+  private
+  def require_conversation_member
+    @conversation = Conversation.find(params[:id])
+    logger.info "#{@conversation.users.include?(current_user)}"
+    unless @conversation.users.include?(current_user)
+      flash[:notice] = "You are not a member of that conversation."
+      redirect_to root_path
+    end
   end
 end

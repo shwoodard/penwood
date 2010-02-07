@@ -5,6 +5,10 @@ class Conversation < ActiveRecord::Base
     def creator
       find(:first, :conditions => 'user_conversations.creator = 1')
     end
+    
+    def non_creators
+      find(:all, :conditions => 'user_conversations.creator = 0')
+    end
   end
   
   accepts_nested_attributes_for :user_conversations
@@ -13,12 +17,16 @@ class Conversation < ActiveRecord::Base
   validates_presence_of :subject
   validate :enough_participants
   
+  after_create :deliver_invitations
+  
   def potential_participants
     @potential_participants ||= (User.basic_admin + users.creator.groups.collect {|group| group.users}).flatten.reject {|user| users.include?(user)}
   end
   
-  def deliver_invitations!
-    # Deliver conversation invitations
+  def deliver_invitations
+    users.non_creators.each do |user|
+      ContactNotifier.deliver_new_conversation_email(self, user)
+    end
   end
   
   def enough_participants

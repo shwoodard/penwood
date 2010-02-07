@@ -1,0 +1,12 @@
+Dear <%= @user.name -%>,
+
+There has been an update to the conversation, "<%= @conversation.subject -%>" at penwoodpartners.com!  <%= @conversation_entry.user.name -%> said,
+
+"<%= @conversation_entry.body %>"
+
+To view the full conversation, visit <%= conversation_url(@conversation) -%>.
+
+Thank you,
+
+The Penwood Partners Team
+
