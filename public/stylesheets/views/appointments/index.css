@@ -4,7 +4,9 @@ ul.appointments {
 
 li.appointment {
   padding:8px;
+  width:375px;
   border:1px solid #C5351C;
+  margin-bottom:15px;
   -moz-border-radius:5px;
 	-webkit-border-radius:5px;
 }
