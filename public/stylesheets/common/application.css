@@ -309,6 +309,10 @@ label {
   margin-top:40px;
 }
 
+.quote:first-child {
+  margin-top:20px;
+}
+
 .quote .body {
   padding:0 15px;
 }
