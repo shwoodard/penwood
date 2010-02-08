@@ -1,6 +1,6 @@
 <h1><%= @article.title %></h1>
 <p>Author: <%= @article.author -%></p>
-<p>Published: <%= @article.published.strftime('%B %e, %Y') -%></p>
+<p>Published: <%= @article.published.strftime('%B %e, %Y') unless @article.published.blank? -%></p>
 <%= textilize @article.body %>
 <div><br /><br /><%= link_to 'Edit', edit_admin_article_path(@article) -%>&nbsp;&nbsp;<%= link_to 'Back', admin_articles_path -%></div>
 
