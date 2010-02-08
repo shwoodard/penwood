@@ -310,7 +310,7 @@ label {
 }
 
 .quote .body {
-  margin-left:35px;
+  padding:0 15px;
 }
 
 .quote .rightQuote {
