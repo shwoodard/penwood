@@ -5,6 +5,8 @@ class Article < ActiveRecord::Base
 
   has_ipaper_and_uses 'Paperclip'
   acts_as_list
+  
+  validates_presence_of :published
     
   def published_to_s
     self.published.blank? ? '' : self.published.strftime('%m/%d/%Y')
