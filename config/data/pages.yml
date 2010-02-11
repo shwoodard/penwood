@@ -16,8 +16,8 @@
   title: "Organizations"
   parent_path: "/services"
   quote_eligible: 1
-- path: "/services/families"
-  title: "Families"
+- path: "/services/individuals"
+  title: "Individuals"
   parent_path: "/services"
   quote_eligible: 1
 - path: "/readings"

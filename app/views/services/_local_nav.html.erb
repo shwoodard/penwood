@@ -1,5 +1,5 @@
 <div id="servicesLocalNav"><div id="servicesLocalNavLiner">
   <%= link_to_unless_current 'Couples', couples_services_path do '<span class="active">Couples</span>' end -%>
   <%= link_to_unless_current 'Businesses', organizations_services_path do '<span class="active">Businesses</span>' end  -%>
-  <%= link_to_unless_current 'Families', families_services_path, :class => 'last' do '<span class="last active">Families</span>' end  -%>
+  <%= link_to_unless_current 'Individuals', families_services_path, :class => 'last' do '<span class="last active">Individuals</span>' end  -%>
 </div></div>
