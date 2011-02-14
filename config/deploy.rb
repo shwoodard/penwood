@@ -3,6 +3,7 @@ set :repository,  "git@github.com:shwoodard/penwood.git"
 set :deploy_to, "/home/penwood/sites/corporate"
 
 set :scm, :git
+set :deploy_via, :remote_cache
 
 set :user, "penwood"
 set :use_sudo, false
