@@ -22,7 +22,7 @@
     </tr>
     <% unless images.object.new_record? %>
     <tr>
-      <td><%= images.label :_delete -%></td><td><%= images.check_box :_delete -%> <%= link_to 'Move up', move_admin_image_slide_show_image_path(@experience, images.object, :direction => 'higher'), :method => :put -%> <%= link_to 'Move down', move_admin_image_slide_show_image_path(@experience, images.object, :direction => 'lower'), :method => :put -%></td>
+      <td><%= images.label :_destroy -%></td><td><%= images.check_box :_destroy -%> <%= link_to 'Move up', move_admin_image_slide_show_image_path(@experience, images.object, :direction => 'higher'), :method => :put -%> <%= link_to 'Move down', move_admin_image_slide_show_image_path(@experience, images.object, :direction => 'lower'), :method => :put -%></td>
     </tr>
     <% end %>
     <tr>

@@ -15,6 +15,7 @@ AppConfig.merge!(YAML::load(File.open("#{RAILS_ROOT}/config/environments/#{RAILS
 # END APPLICATION CONFIGURATION
 
 Rails::Initializer.run do |config|
+  config.gem 'mysql'
   config.gem 'mislav-will_paginate', :lib => 'will_paginate', :source => 'http://gems.github.com'
   config.gem 'RedCloth', :lib => 'redcloth'
   config.gem 'authlogic'
