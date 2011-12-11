@@ -1,7 +1,7 @@
 <div class="homeCopy">
   <%= cms_content_for('home_copy') %>
 </div>
-<%= link_to 'Learn More About Penwood &#187;', about_us_path, :class => 'rounded-button xlarge homeLearnMoreButton'  -%>
+<%= link_to raw('Learn More About Penwood &#187;'), about_us_path, :class => 'rounded-button xlarge homeLearnMoreButton'  -%>
 <div class="homePictureFrame"><div class="homePictureFrameLiner"><ul class="slideShow"><%= render :partial => 'partials/image.html.erb', :collection => ImageExperience.find_by_page_id(@page.id).images -%></ul></div></div>
 <div class="homeHorizontal">
   <ol id="penwoodServices">
@@ -13,12 +13,4 @@
 <% if logged_in? && flash[:signin] && current_user.show_welcome_dialog? %>
 <%= hidden_field_tag "welcome_dialog_link", welcome_dialog_path %>
 <%= hidden_field_tag "dont_show_welcome_dialog_path", dont_show_welcome_dialog_path, :rel => form_authenticity_token %>
-<% end %>
-
-<% content_for :scripts do %>
-<%= static_asset_javascript 'javascripts/views/welcome/index', 'cache/views/welcome/index' %>
-<% end %>
-
-<% content_for :styles do %>
-<%= static_asset_stylesheet 'stylesheets/views/welcome/index', 'cache/views/welcome/index' %>
 <% end %>

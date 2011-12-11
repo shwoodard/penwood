@@ -1,6 +1,6 @@
 module ApplicationHelper
   def cms_content_for(key)
-    Content.find_by_text_identifier(key).body
+    Content.find_by_text_identifier(key).body.html_safe
   end
   
   def page_display(page)
@@ -20,15 +20,17 @@ module ApplicationHelper
   end
   
   def slide_show(ss)
-    <<-END_S
+    s = <<-END_S
     <div class="subPictureFrame"><div class="subPictureFrameLiner"><ul class="subpage slideShow">
       #{render :partial => 'partials/image.html.erb', :collection => ss.images}
     </ul></div></div>
     END_S
+
+    s.html_safe
   end
   
   def picture_window(pw)
-    <<-END_S
+    s = <<-END_S
     <div class="pictureWindowWpr"><div class="pictureWindowLiner">
       <div class="picture_window">#{ image_tag pw.images.first.image.url }</div>
       <ul class="thumbs">
@@ -36,6 +38,8 @@ module ApplicationHelper
       </ul>
     </div></div>
     END_S
+
+    s.html_safe
   end
   
   def quote(qte)
@@ -46,10 +50,12 @@ module ApplicationHelper
       </div>
       <div class="clear"></div>
     END_S
+
+    s.html_safe
   end
   
   def quotes
-    @page ? Quote.find_all_by_page_id(@page.id).collect {|qte| quote qte}.join('') : ''
+    (@page ? Quote.find_all_by_page_id(@page.id).collect {|qte| quote qte}.join('') : '').html_safe
   end
   
   def full_date(date)

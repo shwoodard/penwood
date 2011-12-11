@@ -27,12 +27,3 @@ height="1"> </form>
 <input type="image" src="https://www.paypal.com/en_US/i/btn/btn_viewcart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
 <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
 </form>
-
-
-<% content_for :scripts do %>
-<%= static_asset_javascript 'javascripts/views/payments/new', 'cache/views/payments/new' %>
-<% end %>
-
-<% content_for :styles do %>
-<%= static_asset_stylesheet 'stylesheets/views/payments/new', 'cache/views/payments/new' %>
-<% end %>

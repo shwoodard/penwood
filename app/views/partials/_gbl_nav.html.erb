@@ -1,36 +1,36 @@
 <div id="gblNav" class="float">
   <%= 
-    link_to_unless_current '<span>About Us</span>', about_us_path, :class => 'nav_services-lnk' do
-      '<span class="about active">About Us</span>'
+    link_to_unless_current raw('<span>About Us</span>'), about_us_path, :class => 'nav_services-lnk' do
+      raw('<span class="about active">About Us</span>')
     end
   %>
   <%= 
-    link_to_unless controller_name == 'services', '<span>Services</span>', couples_services_path, :class => 'nav_services-lnk' do
-      '<span class="services active">Services</span>'
+    link_to_unless controller_name == 'services', raw('<span>Services</span>'), couples_services_path, :class => 'nav_services-lnk' do
+      raw('<span class="services active">Services</span>')
     end
   %>
 
   <%= 
-    link_to_unless_current '<span>Articles</span>', articles_path, :class => 'nav_services-lnk' do
-      '<span class="articles active">Articles</span>'
+    link_to_unless_current raw('<span>Articles</span>'), articles_path, :class => 'nav_services-lnk' do
+      raw('<span class="articles active">Articles</span>')
     end
   %>
   
   <%= 
-    link_to_unless_current '<span>Testimonials</span>', testimonials_path, :class => 'nav_testimonials-lnk' do
-      '<span class="testimonials active">Testimonials</span>'
+    link_to_unless_current raw('<span>Testimonials</span>'), testimonials_path, :class => 'nav_testimonials-lnk' do
+      raw('<span class="testimonials active">Testimonials</span>')
     end
   %>
   <% if member? && !current_user  %>
   <%= 
-    link_to_unless_current '<span>Sign in</span>', contact_path, :class => 'nav_signin-lnk' do
-      '<span class="signin active">Sign in</span>'
+    link_to_unless_current raw('<span>Sign in</span>'), contact_path, :class => 'nav_signin-lnk' do
+      raw('<span class="signin active">Sign in</span>')
     end  
   %>
   <% else %>
   <%= 
-    link_to_unless_current '<span>Contact Us</span>', contact_path, :class => 'nav_contact-lnk' do
-      '<span class="contact active">Contact Us</span>'
+    link_to_unless_current raw('<span>Contact Us</span>'), contact_path, :class => 'nav_contact-lnk' do
+      raw('<span class="contact active">Contact Us</span>')
     end  
   %>
   <% end %>

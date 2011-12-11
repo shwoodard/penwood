@@ -13,11 +13,3 @@
 <p class="note"><%= f.label :note -%><br /><%= f.text_area :note %></p>
 <div><%= f.submit 'Submit' %> <%= image_tag 'ajax-loader-alt.gif', :class => 'hidden submit_page_spinner' %></div>
 <% end %>
-
-<% content_for :scripts do %>
-<%= static_asset_javascript 'javascripts/views/appointments/new', 'cache/views/appointments/new' %>
-<% end %>
-
-<% content_for :styles do %>
-<%= static_asset_stylesheet 'stylesheets/views/appointments/new', 'cache/views/appointments/new' %>
-<% end %>

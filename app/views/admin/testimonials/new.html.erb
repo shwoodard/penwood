@@ -2,11 +2,3 @@
 <% form_for @testimonial, :url => admin_testimonials_path do |f| %>
 <%= render :partial => 'admin/testimonials/form.html.erb', :locals => {:f => f} %>
 <% end %>
-
-<% content_for :scripts do %>
-<%= static_asset_javascript 'javascripts/views/admin/testimonials/new', 'cache/views/admin/testimonials/new' %>
-<% end %>
-
-<% content_for :styles do %>
-<%= static_asset_stylesheet 'stylesheets/views/admin/testimonials/new', 'cache/views/admin/testimonials/new' %>
-<% end %>

@@ -1,9 +1,1 @@
 <%= render :partial => 'admin/calendar/event.html.erb', :collection => @events %>
-
-<% content_for :scripts do %>
-<%= static_asset_javascript 'javascripts/views/admin/calendar/index', 'cache/views/admin/calendar/index' %>
-<% end %>
-
-<% content_for :styles do %>
-<%= static_asset_stylesheet 'stylesheets/views/admin/calendar/index', 'cache/views/admin/calendar/index' %>
-<% end %>

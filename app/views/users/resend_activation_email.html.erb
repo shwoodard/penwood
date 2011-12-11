@@ -3,11 +3,3 @@
 <p><%= f.label :email %>: <%= f.text_field :email%></p>
 <p><%= f.submit 'Submit' -%></p>
 <% end %>
-  
-<% content_for :scripts do %>
-<%= static_asset_javascript 'javascripts/views/users/resend_activation_email', 'cache/views/users/resend_activation_email' %>
-<% end %>
-
-<% content_for :styles do %>
-<%= static_asset_stylesheet 'stylesheets/views/users/resend_activation_email', 'cache/views/users/resend_activation_email' %>
-<% end %>

@@ -1,0 +1,373 @@
+html, body {
+    background:url(/assets/bg-pattern.gif) top left repeat;
+    color:#C5351C;
+}
+
+p a {
+  text-decoration:underline;
+}
+
+label {
+  font-size:14px;
+  color:#999999;
+  padding-bottom:3px;
+}
+
+.breadcrumbs {
+  margin-bottom:15px;
+}
+
+.breadcrumbs,
+.breadcrumbs a {
+  font-size:14px;
+}
+
+.breadcrumbs a {
+  color:#C5351C;
+}
+
+#singleColWpr {
+    text-align:center;
+}
+
+#singleCol {
+    width:946px;
+    margin:0 auto;
+    background:url(/assets/main-container-bg.png) top left repeat-y;
+    text-align:left;
+    padding-top:5px;
+}
+
+#singleColLiner {
+  padding-left:12px;
+  padding-right:16px;
+}
+
+#singleCol #gblTop {
+  width:918px;
+  height:146px;
+  background:url(/assets/main-container-top.png) top left no-repeat;
+  margin-bottom:30px;
+}
+
+#singleCol #gblTop #gblTopLiner {
+  padding:15px 30px;
+  position:relative;
+}
+
+#singleCol #gblTop #gblTopLiner #gblLogoLnk {
+  display:block;
+  float:left;
+}
+
+#singleCol #gblTop #gblTopLiner #gblLogo {
+  width:500px;
+  height:120px;
+  background:url(/assets/logo_with_tagline.png) top left no-repeat;
+}
+
+#gblNav {
+    position:absolute;
+    top:90px;
+    right:25px;
+}
+
+#gblNav a,
+#gblNav span.active {
+    margin:0 5px;
+    font-family:Georgia,serif;
+    color:#a3483f;
+    font-size:16pt;
+    display:block;
+    position:relative;
+    float:left;
+}
+
+#gblNav a span {
+  line-height:28pt;
+  text-align:center;
+  display:block;
+  float:left;
+  width:100%;
+}
+
+#gblNav span.active {
+  line-height:28pt;
+  text-align:center;
+  color:#7e6a63;
+}
+
+#gblNav a.nav_about-lnk,
+#gblNav span.about.active {
+  width:97px;
+  height:37px;
+}
+
+#gblNav a.nav_about-lnk:hover,
+#gblNav span.about.active {
+  background:url(/assets/gbl_nav/about_bg.gif) no-repeat top left;
+}
+
+#gblNav a.nav_services-lnk,
+#gblNav span.services.active {
+  width:98px;
+  height:37px;
+}
+
+#gblNav a.nav_services-lnk:hover,
+#gblNav span.services.active {
+  background:url(/assets/gbl_nav/services_bg.gif) no-repeat top left;
+}
+
+#gblNav a.nav_articles-lnk,
+#gblNav span.articles.active {
+  width:98px;
+  height:37px;
+}
+
+#gblNav a.nav_articles-lnk:hover,
+#gblNav span.articles.active {
+  background:url(/assets/gbl_nav/articles_bg.gif) no-repeat top left;
+}
+#gblNav a.nav_testimonials-lnk,
+#gblNav span.testimonials.active {
+  width:130px;
+  height:37px;
+}
+
+#gblNav a.nav_testimonials-lnk:hover,
+#gblNav span.testimonials.active {
+  background:url(/assets/gbl_nav/testimonials_bg.gif) no-repeat top left;
+}
+
+#gblNav a.nav_contact-lnk,
+#gblNav span.contact.active {
+  width:114px;
+  height:37px;
+}
+
+#gblNav a.nav_contact-lnk:hover,
+#gblNav span.contact.active {
+  background:url(/assets/gbl_nav/contact_bg.gif) no-repeat top left;
+}
+
+#gblNav a.nav_signin-lnk,
+#gblNav span.signin.active {
+  width:100px;
+  height:37px;
+}
+
+#gblNav a.nav_signin-lnk:hover,
+#gblNav span.signin.active {
+  background:url(/assets/gbl_nav/signin_bg.gif) no-repeat top left;
+}
+
+#gblContent {
+  padding:0 25px;
+  min-height:400px;
+  padding-bottom:30px;
+  position:relative;
+}
+
+#gblFooter {
+  background:url(/assets/gbl_footer-bg.jpg) no-repeat top left;
+  height:138px;
+}
+
+#gblFooter #gblFooterLiner {
+  padding:44px;
+  text-align:center;
+}
+
+#gblFooter #gblFooterLiner #gblFooterContent {
+  width:600px;
+  margin:0 auto;
+  text-align:center;
+}
+
+#gblFooter #gblFooterLiner ul li {
+  display:inline;
+  padding-right:5px;
+  border-right:1px solid #e7d4b8;
+}
+
+#gblFooter #gblFooterLiner ul li.last {
+  border-right:none;
+}
+
+#gblFooter #gblFooterLiner ul li a {
+  font-size:12px;
+}
+
+#gblFooter #gblFooterLiner ul li a:hover {
+  color:#C5351C;
+}
+
+#gblCopyright {
+  clear:both;
+  font-size:12px;
+  padding-top:15px;
+  color:#b1b1b1;
+}
+
+.gblAddButton {
+  background:url(/assets/gbl_add-button.gif) no-repeat top right;
+  padding-right:30px;
+  display:block;
+  float:left;
+  height:27px;
+}
+
+
+/*Services Section*/
+
+#servicesLocalNav {
+  width:325px;
+  height:46px;
+  background:url(/assets/services_nav-bg.png) no-repeat top left;
+  position:absolute;
+  top:-36px;
+  right:3em;
+}
+
+#servicesLocalNavLiner {
+  padding:13px;
+  padding-left:25px;
+}
+
+#servicesLocalNav a {
+  color:#C5351C;
+}
+
+#servicesLocalNav a:hover {
+  text-decoration:underline;
+}
+
+#servicesLocalNav span.active {
+  color:#7e6a63;
+}
+
+#servicesLocalNav a,
+#servicesLocalNav span.active {
+  border-right:2px solid #f0e5d3;
+  padding:0 12px 0 6px;
+}
+
+#servicesLocalNav span.last,
+#servicesLocalNav a.last {
+  border:none;
+}
+
+#servicesContent #servicesContentRight {
+  float:right;
+  width:300px;
+}
+
+#servicesContent #servicesContentLeft {
+  margin-right:300px;
+  width:550px;
+  border-right:1px solid #ececec;
+  margin-bottom:50px;
+}
+
+#servicesContent #servicesContentLeft #servicesContentLeftLiner {
+  padding-right:30px;
+}
+
+
+/*End Services Styles*/
+
+.subPictureFrame {
+  width:278px;
+  height:319px;
+  background:url(/assets/sub_pic-frame.png) no-repeat top left;
+}
+
+.subPictureFrame .subPictureFrameLiner {
+  padding-left:13px;
+  padding-top:14px;
+}
+
+.slideShow {
+  display:none;
+}
+
+.subpage.slideShow {
+  width:249px;
+  height:289px;
+}
+
+.servicesQuote {
+  padding-top:30px;
+}
+
+.quote {
+  font-style:italic;
+  color:#7e7e7e;
+  font-size:16px;
+  width:300px;
+  margin-top:40px;
+}
+
+.quote:first-child {
+  margin-top:20px;
+}
+
+.quote .body {
+  padding:0 15px;
+}
+
+.quote .rightQuote {
+  position:absolute;
+  padding-top:5px;
+  padding-left:10px;
+}
+
+.quote .quoteWpr {
+  position:relative;
+  display:inline;
+}
+
+.quote .author {
+  font-size:12px;
+  font-style:normal;
+  padding-top:20px;
+  padding-right:30px;
+}
+
+.appointmentButtonWpr {
+  padding-top:20px;
+}
+
+.avatarImage {
+  padding:10px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+.avatarImaged {
+    background:no-repeat top left;
+    min-height:60px;
+    padding-top:18px;
+    padding-left:60px;
+}
+
+.pictureWindowWpr .thumbs .thumb {
+    float:left;
+    padding:10px;
+}
+
+.pictureWindowWpr {
+    width:320px;
+    overflow:hidden;
+}
+
+.pictureWindowWpr div,
+.pictureWindowWpr ul {
+    margin:0 auto;
+}
+
+.quickNote {
+  height:165px;
+  margin-bottom:10px;
+}

@@ -6,11 +6,3 @@
 <%= f.label :email_confirmation -%><br /><%= f.text_field :email_confirmation -%><br /><br />
 <div><%= f.submit "Update email"%> <%= link_to 'Back', account_path -%></div>
 <% end %>
-
-<% content_for :scripts do %>
-<%= static_asset_javascript 'javascripts/views/users/change_email', 'cache/views/users/change_email' %>
-<% end %>
-
-<% content_for :styles do %>
-<%= static_asset_stylesheet 'stylesheets/views/users/change_email', 'cache/views/users/change_email' %>
-<% end %>

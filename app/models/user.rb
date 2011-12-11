@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   
   has_attached_file :avatar,
                     :styles => {:large => '95x95>', :standard => '65x65>', :small => '55x56>'},
-                    :default_url => '/images/no_picture.png',
+                    :default_url => '/assets/no_picture.png',
                     :url => '/system/users/:id/avatars/:style.:extension',
                     :path => ':rails_root/public/system/users/:id/avatars/:style.:extension'
   
@@ -17,8 +17,8 @@ class User < ActiveRecord::Base
   has_many :user_groups
   has_many :groups, :through => :user_groups
   
-  named_scope :enabled, :conditions => 'active = 1 AND banned = 0'
-  named_scope :basic_admin, :conditions => 'admin = 1 AND super_user = 0'
+  scope :enabled, where(:active => true, :banned => false)
+  scope :basic_admin, where(:admin => true, :super_user => false)
   
   validates_presence_of :name
   validates_confirmation_of :email, :on => :update

@@ -15,12 +15,3 @@
 <div>
   <span><%= link_to 'New User', new_admin_user_path %></span>
 </div>
-
-
-<% content_for :scripts do %>
-<%= static_asset_javascript 'javascripts/views/admin/users/index', 'cache/views/admin/users/index' %>
-<% end %>
-
-<% content_for :styles do %>
-<%= static_asset_stylesheet 'stylesheets/views/admin/users/index', 'cache/views/admin/users/index' %>
-<% end %>

@@ -32,11 +32,3 @@
 <% end %>
 
 <div><%= link_to 'Back', admin_contents_path -%></div>
-
-<% content_for :scripts do %>
-<%= static_asset_javascript 'javascripts/views/admin/contents/page', 'cache/views/admin/contents/page' %>
-<% end %>
-
-<% content_for :styles do %>
-<%= static_asset_stylesheet 'stylesheets/views/admin/contents/page', 'cache/views/admin/contents/page' %>
-<% end %>

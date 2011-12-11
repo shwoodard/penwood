@@ -1,0 +1,262 @@
+body {
+  font-family:Georgia,serif;
+  padding:0;
+  margin:0;
+}
+
+a {
+  color:#333333;
+  text-decoration:none;
+}
+
+h1, .heading1 {
+  font-size:30pt;
+  color:#585555;
+  padding-bottom:30px;
+}
+
+h2, .heading2 {
+  font-size:22px;
+  color:#585555;
+  padding-bottom:15px;
+}
+
+span.heading2 {
+  display:block;
+}
+
+h3, .heading3 {
+  font-size:18px;
+  color:#585555;
+  padding-bottom:10px;
+}
+
+h4, .heading4 {
+  font-size:18px;
+  padding-bottom:10px;
+}
+
+h1 a, h2 a, h3 a, h4 a, .heading1 a, .heading2 a, .heading3 a, .heading4 a {
+  text-decoration:underline;
+}
+
+p, .para {
+  font-size:13px;
+  color:#7e7e7e;
+  padding-bottom:10px;
+}
+
+.bigText {
+  font-size:16px;
+  color:#7e7e7e;
+  padding-bottom:10px;
+}
+
+.float {
+  float:left;
+}
+
+.float.right {
+  float:right;
+}
+
+.block {
+  display:block;
+}
+
+.clear {
+  clear:both;
+  display:block;
+  font-size:0px;
+  height:1px;
+  line-height:0px;
+  margin-bottom:-1px;
+  overflow:hidden;
+  width:1px;
+}
+
+input[type=text],
+input[type=file],
+input[type=password] {
+  font-size:20px;
+  padding-top:2px;
+  height:25px;
+}
+
+input[type=checkbox] {
+  margin-right:5px;
+}
+
+.gblTextArea {
+  height:95px;
+}
+
+.errorExplanation {
+  margin-bottom:20px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border:1px solid #666666;
+  padding:6px;
+  padding-left:11px;
+}
+
+.errorExplanation h2 {
+  display:none;
+}
+
+.fieldWithErrors {
+  display:inline;
+}
+
+.fieldWithErrors label {
+  color:#C5351C;
+}
+
+.hidden {
+  display:none;
+}
+
+.gblSessionNav {
+  text-align:right;
+  font-size:13px;
+  position:absolute;
+  top:25px;
+  right:20px;
+}
+
+.flashNotice {
+  width: 850px;
+  padding: 8px;
+  margin: 0 auto 25px auto;
+  background: #FFF3E2;
+  border: solid 1px #C5351C;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+.miniPersonaTag {
+  display:block;
+  float:left;
+  position:relative;
+  margin-left:10px;
+  margin-top:4px;
+  height:24px;
+  width:90px;
+  border:1px solid #585555;
+  background:#FFFEFC;
+  color:#C5351C;
+  -moz-border-radius: 5px 0 0 5px;
+  -webkit-border-radius: 5px 0 0 5px;
+}
+
+.miniPersonaTag span.userName {
+  float:left;
+  display:block;
+  padding:3px 15px 0 30px;
+}
+
+a.miniPersonaTagLink:hover .miniPersonaTag {
+  border:1px solid #C5351C;
+  color:#C5351C;
+  background:#FFF3E2;
+}
+
+a.miniPersonaTagLink.remove:hover span.smIcon {
+  background:url(/assets/gbl_subtract-button-sm-alt.gif) no-repeat top left;
+}
+
+span.smIcon {
+  position:absolute;
+  display:block;
+  top:8px;
+  left:6px;
+  width:10px;
+  height:8px;
+}
+
+a.remove span.smIcon {
+  background:url(/assets/gbl_subtract-button-sm.gif) no-repeat top left;
+}
+
+a.miniPersonaTagLink:hover span.smIcon {
+  top:4px;
+  left:3px;
+  width:16px;
+  height:16px;
+}
+
+a.miniPersonaTagLink.add:hover span.smIcon {
+  background:url(/assets/gbl_add-button-sm-alt.gif) no-repeat top left;
+}
+
+a.add span.smIcon {
+  background:url(/assets/gbl_add-button-sm.gif) no-repeat top left;
+}
+
+a.miniPersonaTagLink.add:hover span.smIcon {
+  width:18px;
+  height:18px;
+}
+
+.no.underline a {
+  text-decoration:none;
+}
+
+
+a.rounded-button {
+  text-decoration: none;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border: 1px solid #e0c9a7;
+  color: #a4483d;
+  background: #FEFAF4; /*#fdfaf3;*/
+  padding: .5em .75em;
+}
+
+/*a.rounded-button:hover {
+  background: #eeebe3;
+}*/
+a.rounded-button.small {
+  font-size: .75em;
+}
+a.rounded-button.regular {
+  font-size: 1em;
+}
+a.rounded-button.medium {
+  font-size: 1.25em;
+}
+a.rounded-button.large {
+  font-size: 1.5em;
+}
+a.rounded-button.xlarge {
+  font-size: 1.6em;
+}
+a.rounded-button.xxlarge {
+  font-size: 1.75em;
+}
+
+.buttonWpr {
+  margin-top:30px;
+  padding:10px;
+  padding-right:20px;
+}
+
+.contactInfo {
+  position:absolute;
+  right:0;
+  top:0;
+  text-align:right;
+  font-size:22px;
+  margin-bottom:20px;
+  margin-right:60px;
+}
+
+.contactInfo a {
+  color:#585555;
+  text-decoration:underline;
+}
+
+.contactInfo a:hover {
+  text-decoration:none;
+}
+

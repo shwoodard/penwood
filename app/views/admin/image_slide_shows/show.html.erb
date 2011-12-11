@@ -2,11 +2,3 @@
 <%= image_experience @experience %>
 
 <div><%= link_to 'Edit', edit_admin_image_slide_show_path(@experience) -%> <%= link_to 'Back', current_user_super_user? ? {:action => 'index'} : admin_contents_path -%></div>
-
-<% content_for :scripts do %>
-<%= static_asset_javascript 'javascripts/views/admin/image_slide_shows/show', 'cache/views/admin/image_slide_shows/show' %>
-<% end %>
-
-<% content_for :styles do %>
-<%= static_asset_stylesheet 'stylesheets/views/admin/image_slide_shows/show', 'cache/views/admin/image_slide_shows/show' %>
-<% end %>

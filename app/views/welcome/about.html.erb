@@ -5,11 +5,3 @@
 <div class="float buttonWpr"><%= link_to 'Schedule an appointment &#187;', new_appointment_path, :class => 'rounded-button medium'-%></div>
 <div class="float buttonWpr"><%= link_to 'Contact us &#187;', contact_path, :class => 'rounded-button medium'-%></div>
 <div class="clear"></div>
-
-<% content_for :scripts do %>
-<%= static_asset_javascript 'javascripts/views/welcome/about', 'cache/views/welcome/about' %>
-<% end %>
-
-<% content_for :styles do %>
-<%= static_asset_stylesheet 'stylesheets/views/welcome/about', 'cache/views/welcome/about' %>
-<% end %>

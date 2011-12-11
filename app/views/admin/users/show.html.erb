@@ -3,10 +3,3 @@
 <h2><%= @user.email %></h2>
 <h3><%= user_status @user -%></h3>
 <p><%= link_to 'Back', admin_users_path -%>&nbsp;&nbsp;<%= link_to 'Edit', edit_admin_user_path(@user) -%></p>
-<% content_for :scripts do %>
-<%= static_asset_javascript 'javascripts/views/admin/users/show', 'cache/views/admin/users/show' %>
-<% end %>
-
-<% content_for :styles do %>
-<%= static_asset_stylesheet 'stylesheets/views/admin/users/show', 'cache/views/admin/users/show' %>
-<% end %>

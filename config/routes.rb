@@ -1,50 +1,107 @@
-ActionController::Routing::Routes.draw do |map|
-  map.resource :user_session
-  map.signout 'signout', :controller => 'user_sessions', :action => 'destroy', :conditions => {:method => :get}
-  map.resources :users, :collection => {:resend_activation_email => :get, :send_activation_email => :post, :change_email => :get, :change_password => :get, :avatar => :get, :show_welcome_dialog => :put, :new_user_quick => :get}, :except => [:new]
-  map.resource :account, :controller => 'users'
-  map.activate_user 'account/:activation_code/activate', :controller => 'users', :action => 'activate', :conditions => {:method => :get}
-  map.resources :testimonials
-  map.resources :conversations, :collection => {:list => :get}, :member => {:new_quick_note => :get}
-  map.resources :appointments, :collection => {:tentative_appointments => :get, :confirmed_appointments => :get}
-  map.resources :articles, :only => [:index, :show], :as => 'readings'
-  map.resources :payments, :only => [:new]
+Penwood::Application.routes.draw do
+  resource :user_sessions
 
-  map.with_options :controller => 'services' do |services|
-    services.services 'services', :action => 'index', :conditions => {:method => :get}
-    services.couples_services 'services/couples', :action => 'couples', :conditions => {:method => :get}
-    services.organizations_services 'services/businesses', :action => 'organizations', :conditions => {:method => :get}
-    services.families_services 'services/individuals', :action => 'families', :conditions => {:method => :get}
-  end
-  
-  map.with_options :controller => 'contact' do |contact|
-    contact.contact 'contact', :action => 'index', :conditions => {:method => :get}
-    contact.create_contact 'contact', :action => 'create', :conditions => {:method => :post}
-  end
-  
-  map.with_options :controller => 'welcome' do |welcome|
-    welcome.about_us 'about', :action => 'about', :conditions => {:method => :get}
-    welcome.welcome_dialog 'welcome_dialog', :action => 'welcome_dialog', :conditions => {:method => :get}
-    welcome.dont_show_welcome_dialog 'welcome_dialog', :action => 'dont_show_welcome_dialog', :conditions => {:method => :put}
-    welcome.site_map 'sitemap', :action => 'site_map', :conditions => {:method => :get}
-  end
-  
-  map.namespace :admin do |admin|
-    admin.root :controller => 'contents'
-    admin.resources :contents, :collection => {:page => :get}
-    admin.resources :testimonials, :member => {:move => :put}
-    admin.resources :users, :member => {:ban => :put}, :except => [:destroy]
-    admin.resources :groups
-    admin.resources :image_slide_shows, :as => 'image_experiences' do |slide_shows|
-      slide_shows.resources :images, :member => {:move => :put}
-    end
-    admin.resources :quotes
-    admin.resources :articles, :member => {:move => :put}
-    admin.with_options :controller => 'calendar' do |cal|
-      cal.calendar 'calendar', :action => 'index', :conditions => {:method => :get}
-      cal.google_call_login_callback 'calendar/do_login', :action => 'login', :conditions => {:method => :get}
+  get '/signout' => "user_sesssions#destroy", :as => :signout
+
+  resources :users, :except => :new do
+    collection do
+      get :resend_activa
+      post :send_activation_email
+      get :change_email
+      get :change_password
+      get :avatar
+      put :show_welcome_dialog
+      get :new_user_quick
     end
   end
+
+  resource :account, :controller => 'users'
+
+  get '/account/:activation_code/activate' => "users#activate", :as => :activate_user
+
+  resources :testimonials
+  resources :conversations do
+    collection do
+      get :list
+    end
+    
+    member do
+     get :new_quick_note
+    end
+  end
+
+  resources :appointments do
+    collection do
+      get :tentative_appointments
+      get :confirmed_appointments
+    end
+  end
+
+  resources :articles, :only => [:index, :show]
+  resources :payments, :only => [:new]
+
+  controller :services do
+    get "/services" => :index, :as => :services
+    get "/services/couples" => :couples, :as => :couples_services
+    get "/services/businesses" => :organizations, :as => :organizations_services
+    get "/services/individuals" => :families, :as => :families_services
+  end
   
-  map.root :controller => "welcome"
+  controller :contact do
+    get '/contact' => :index, :as => :contact
+    post '/contact' => :create, :as => :create_contact
+  end
+  
+  controller :welcome do
+    get '/about' => :about, :as => :about_us
+    get '/welcome_dialog' => :welcome_dialog, :as => :welcome_dialog
+    put '/welcome_dialog' => :dont_show_welcome_dialog, :as => :dont_show_welcome_dialog
+    get '/sitemap' => :site_map, :as => :site_map
+  end
+  
+  namespace :admin do
+    resources :contents do
+      collection do
+        get :page
+      end
+    end
+
+    resources :testimonials do
+      member do
+        put :move
+      end
+    end
+
+    resources :users, :except => [:destroy] do
+      member do
+        put :ban
+      end
+    end
+
+    resources :groups
+
+    resources :image_slide_shows, :as => :image_experiences do
+      resources :images do
+        member do
+          put :move
+        end
+      end
+    end
+
+    resources :quotes
+    resources :articles do
+      member do
+        put :move
+      end
+    end
+
+    controller :calendar do
+      get '/calendar' => :index, :as => :calendar 
+      get '/calendar/do_login' => :login, :as => :google_call_login_callback
+    end
+
+    root :to => 'contents#index'
+  end
+  
+  root :to => "welcome#index"
 end

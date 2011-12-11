@@ -1,14 +1,10 @@
 class ApplicationController < ActionController::Base
   before_filter :set_page
   before_filter :require_valid_user
-  before_filter :clear_static_assets if Rails.env.development?
 
-  helper :all 
   helper_method :current_user_session, :current_user, :member?, :logged_in?, :guest?, :current_user_admin?
 
   protect_from_forgery 
-  filter_parameter_logging :password, :password_confirmation
-
 
   def current_user_session
     return @current_user_session if defined?(@current_user_session)
@@ -72,11 +68,7 @@ class ApplicationController < ActionController::Base
   def set_member_cookie
     cookies[:member] = true
   end
-  
-  def clear_static_assets 
-    Static::Asset.descriptor.clear
-  end
-  
+    
   def set_page
     @page = Page.find_by_path(request.path)
   end

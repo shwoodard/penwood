@@ -9,11 +9,3 @@
 
 <%= hidden_field_tag 'tentative_appointments_path', tentative_appointments_appointments_path %>
 <%= hidden_field_tag 'confirmed_appointments_path', confirmed_appointments_appointments_path %>
-
-<% content_for :scripts do %>
-<%= static_asset_javascript 'javascripts/views/appointments/index', 'cache/views/appointments/index' %>
-<% end %>
-
-<% content_for :styles do %>
-<%= static_asset_stylesheet 'stylesheets/views/appointments/index', 'cache/views/appointments/index' %>
-<% end %>

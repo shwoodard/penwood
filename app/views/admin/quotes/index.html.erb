@@ -17,12 +17,3 @@
   <span><%= link_to 'New Quote', new_admin_quote_path %></span>
 </div>
 <% end %>
-
-
-<% content_for :scripts do %>
-<%= static_asset_javascript 'javascripts/views/admin/quotes/index', 'cache/views/admin/quotes/index' %>
-<% end %>
-
-<% content_for :styles do %>
-<%= static_asset_stylesheet 'stylesheets/views/admin/quotes/index', 'cache/views/admin/quotes/index' %>
-<% end %>
