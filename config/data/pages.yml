@@ -20,8 +20,8 @@
   title: "Individuals"
   parent_path: "/services"
   quote_eligible: 1
-- path: "/readings"
-  title: "Readings"
+- path: "/articles"
+  title: "Articles"
   parent_path: "/"
 - path: "/testimonials"
   title: "Testimonials"
