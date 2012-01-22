@@ -63,7 +63,7 @@ label {
 #singleCol #gblTop #gblTopLiner #gblLogo {
   width:500px;
   height:120px;
-  background:url(/images/logo_with_tagline.png) top left no-repeat;
+  background:url(/images/logo_without_tagline.png) top left no-repeat;
 }
 
 #gblNav {
